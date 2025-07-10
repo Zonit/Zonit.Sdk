@@ -25,9 +25,6 @@
 [submodule "Source/Extensions/Zonit.Extensions.Identity"]
 	path = Source/Extensions/Zonit.Extensions.Identity
 	url = https://github.com/Zonit/Zonit.Extensions.Identity
-[submodule "Source/Extensions/Zonit.Core"]
-	path = Source/Extensions/Zonit.Core
-	url = https://github.com/Zonit/Zonit.Core
 [submodule "Source/Extensions/Zonit.Extensions.Cultures"]
 	path = Source/Extensions/Zonit.Extensions.Cultures
 	url = https://github.com/Zonit/Zonit.Extensions.Cultures
