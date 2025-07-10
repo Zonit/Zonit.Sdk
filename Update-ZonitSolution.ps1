@@ -88,7 +88,7 @@ function Find-ProjectsInPath {
         # Okreœl kategoriê projektu na podstawie œcie¿ki
         $category = Get-ProjectCategory -Path $relativePath
         
-        $projects += @{
+        $projects += [PSCustomObject]@{
             Name = $projectName
             Path = $relativePath
             FullPath = $projectFile.FullName
@@ -155,7 +155,7 @@ function Get-ExistingSolutionItems {
     
     # ZnajdŸ istniej¹ce projekty - poprawiony regex
     $existingProjects = @()
-    $projectMatches = [regex]::Matches($content, '(?m)^Project\("([^"]+)"\)\s*=\s*"([^"]+)",\s*"([^"]+)",\s*"([^"]+"')
+    $projectMatches = [regex]::Matches($content, '(?m)^Project\("([^"]+)"\)\s*=\s*"([^"]+)",\s*"([^"]+)",\s*"([^"]+)"')
     
     foreach ($match in $projectMatches) {
         $projectTypeGuid = $match.Groups[1].Value
@@ -268,7 +268,7 @@ function Update-SolutionFile {
         $exists = $ExistingItems.Projects | Where-Object { $_.Path -eq $project.Path }
         if (-not $exists) {
             $projectGuid = New-ProjectGuid
-            $newProjects += @{
+            $newProjects += [PSCustomObject]@{
                 Name = $project.Name
                 Path = $project.Path
                 Guid = $projectGuid
