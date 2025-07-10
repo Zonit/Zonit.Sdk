@@ -5,7 +5,7 @@
 
 .DESCRIPTION
     Skrypt skanuje wszystkie œcie¿ki zdefiniowane w .gitmodules, znajduje pliki .csproj i .vbproj,
-    a nastêpnie dodaje je do pliku rozwi¹zania Visual Studio z odpowiednimi folderami rozwi¹zania.
+    a nastêpnie dodaje je do pliku rozwi¹zania Visual Studio z logicznie pogrupowan¹ struktur¹ folderów.
 
 .PARAMETER SolutionPath
     Œcie¿ka do pliku .sln (domyœlnie "Zonit.sln")
@@ -77,41 +77,144 @@ function Find-ProjectsInPath {
     $projectFiles = Get-ChildItem -Path $Path -Recurse -Include "*.csproj", "*.vbproj", "*.fsproj" -ErrorAction SilentlyContinue
     
     foreach ($projectFile in $projectFiles) {
-        $relativePath = $projectFile.FullName.Replace((Get-Location).Path, "").TrimStart('\', '/')
+        $relativePath = $projectFile.FullName.Replace((Get-Location).Path, "").TrimStart('\', '/').Replace('/', '\')
         $projectName = $projectFile.BaseName
+        
+        # Okreœl kategoriê projektu na podstawie œcie¿ki
+        $category = Get-ProjectCategory -Path $relativePath
         
         $projects += @{
             Name = $projectName
             Path = $relativePath
             FullPath = $projectFile.FullName
             Extension = $projectFile.Extension
+            Category = $category
+            SubmodulePath = $Path
         }
     }
     
     return $projects
 }
 
-# Funkcja do tworzenia struktury folderów rozwi¹zania
-function Get-SolutionFolderStructure {
-    param([array]$Projects)
+# Funkcja do okreœlenia kategorii projektu
+function Get-ProjectCategory {
+    param([string]$Path)
+    
+    $pathLower = $Path.ToLower()
+    
+    # Mapowanie kategorii na podstawie œcie¿ki
+    if ($pathLower -match "\\services\\") {
+        return "Services"
+    }
+    elseif ($pathLower -match "\\plugins\\") {
+        return "Plugins"
+    }
+    elseif ($pathLower -match "\\extensions\\") {
+        return "Extensions"
+    }
+    elseif ($pathLower -match "\\tests?\\") {
+        return "Tests"
+    }
+    elseif ($pathLower -match "\\samples?\\") {
+        return "Samples"
+    }
+    elseif ($pathLower -match "\\tools?\\") {
+        return "Tools"
+    }
+    else {
+        return "Other"
+    }
+}
+
+# Funkcja do parsowania istniej¹cego pliku .sln
+function Get-ExistingSolutionItems {
+    param([string]$SolutionPath)
+    
+    if (-not (Test-Path $SolutionPath)) {
+        return @{
+            Projects = @()
+            Folders = @()
+        }
+    }
+    
+    $content = Get-Content $SolutionPath -Raw
+    
+    # ZnajdŸ istniej¹ce projekty
+    $existingProjects = @()
+    $projectMatches = [regex]::Matches($content, '(?m)^Project\("([^"]+)"\)\s*=\s*"([^"]+)",\s*"([^"]+)",\s*"([^"]+)"')
+    
+    foreach ($match in $projectMatches) {
+        $projectTypeGuid = $match.Groups[1].Value
+        $existingProjects += @{
+            TypeGuid = $projectTypeGuid
+            Name = $match.Groups[2].Value
+            Path = $match.Groups[3].Value
+            Guid = $match.Groups[4].Value
+            IsFolder = $projectTypeGuid -eq "{2150E333-8FDC-42A3-9474-1A3956D46DE8}"
+        }
+    }
+    
+    return @{
+        Projects = $existingProjects | Where-Object { -not $_.IsFolder }
+        Folders = $existingProjects | Where-Object { $_.IsFolder }
+    }
+}
+
+# Funkcja do tworzenia logicznej struktury folderów
+function New-LogicalFolderStructure {
+    param(
+        [array]$Projects,
+        [array]$ExistingFolders
+    )
     
     $folders = @{}
+    $existingFolderNames = $ExistingFolders | ForEach-Object { $_.Name }
     
-    foreach ($project in $Projects) {
-        $pathParts = $project.Path.Split('\', '/') | Where-Object { $_ -ne "" }
+    # Grupuj projekty wed³ug kategorii
+    $projectsByCategory = $Projects | Group-Object Category
+    
+    foreach ($categoryGroup in $projectsByCategory) {
+        $category = $categoryGroup.Name
+        $categoryProjects = $categoryGroup.Group
         
-        # Buduj hierarchiê folderów
-        for ($i = 0; $i -lt ($pathParts.Count - 1); $i++) {
-            $folderPath = ($pathParts[0..$i] -join '\')
-            $folderName = $pathParts[$i]
+        # Pomiñ jeœli folder kategorii ju¿ istnieje
+        if ($existingFolderNames -contains $category) {
+            continue
+        }
+        
+        # Dodaj folder g³ównej kategorii
+        if (-not $folders.ContainsKey($category)) {
+            $folders[$category] = @{
+                Name = $category
+                Path = $category
+                ParentPath = ""
+                Guid = New-ProjectGuid
+                Level = 0
+            }
+        }
+        
+        # Grupuj projekty w kategorii wed³ug submodu³ów
+        $projectsBySubmodule = $categoryProjects | Group-Object SubmodulePath
+        
+        foreach ($submoduleGroup in $projectsBySubmodule) {
+            $submodulePath = $submoduleGroup.Name
+            $submoduleProjects = $submoduleGroup.Group
             
-            if (-not $folders.ContainsKey($folderPath)) {
-                $parentPath = if ($i -eq 0) { "" } else { ($pathParts[0..($i-1)] -join '\') }
-                $folders[$folderPath] = @{
-                    Name = $folderName
-                    Path = $folderPath
-                    ParentPath = $parentPath
-                    Guid = New-ProjectGuid
+            # Wyci¹gnij nazwê submodu³u z œcie¿ki
+            $submoduleName = ($submodulePath -split '[/\\]')[-1]
+            
+            # Jeœli w kategorii jest wiêcej ni¿ jeden submodu³, utwórz podfolder
+            if ($projectsBySubmodule.Count -gt 1) {
+                $subfolderKey = "$category\$submoduleName"
+                
+                if (-not $folders.ContainsKey($subfolderKey)) {
+                    $folders[$subfolderKey] = @{
+                        Name = $submoduleName
+                        Path = $subfolderKey
+                        ParentPath = $category
+                        Guid = New-ProjectGuid
+                        Level = 1
+                    }
                 }
             }
         }
@@ -126,34 +229,16 @@ function Update-SolutionFile {
         [string]$SolutionPath,
         [array]$Projects,
         [hashtable]$Folders,
+        [hashtable]$ExistingItems,
         [switch]$DryRun
     )
-    
-    if (-not (Test-Path $SolutionPath)) {
-        Write-Error "Plik rozwi¹zania nie zosta³ znaleziony: $SolutionPath"
-        return
-    }
-    
-    $solutionContent = Get-Content $SolutionPath -Raw
-    
-    # ZnajdŸ istniej¹ce projekty
-    $existingProjects = @()
-    $projectMatches = [regex]::Matches($solutionContent, '(?m)^Project\("[^"]+"\)\s*=\s*"([^"]+)",\s*"([^"]+)",\s*"([^"]+)"')
-    
-    foreach ($match in $projectMatches) {
-        $existingProjects += @{
-            Name = $match.Groups[1].Value
-            Path = $match.Groups[2].Value
-            Guid = $match.Groups[3].Value
-        }
-    }
     
     # Przygotuj nowe projekty do dodania
     $newProjects = @()
     $newFolders = @()
     
     foreach ($project in $Projects) {
-        $exists = $existingProjects | Where-Object { $_.Path -eq $project.Path }
+        $exists = $ExistingItems.Projects | Where-Object { $_.Path -eq $project.Path }
         if (-not $exists) {
             $projectGuid = New-ProjectGuid
             $newProjects += @{
@@ -161,99 +246,179 @@ function Update-SolutionFile {
                 Path = $project.Path
                 Guid = $projectGuid
                 Extension = $project.Extension
+                Category = $project.Category
+                SubmodulePath = $project.SubmodulePath
             }
         }
     }
     
     # Dodaj nowe foldery
     foreach ($folder in $Folders.Values) {
-        $exists = $existingProjects | Where-Object { $_.Name -eq $folder.Name -and $_.Path -eq $folder.Name }
+        $exists = $ExistingItems.Folders | Where-Object { $_.Name -eq $folder.Name }
         if (-not $exists) {
             $newFolders += $folder
         }
     }
     
     if ($DryRun) {
-        Write-Host "=== DRY RUN - Podgl¹d zmian ===" -ForegroundColor Yellow
-        Write-Host "Nowe foldery do dodania:" -ForegroundColor Green
-        foreach ($folder in $newFolders) {
-            Write-Host "  - $($folder.Name) ($($folder.Path))" -ForegroundColor Cyan
+        Write-Host "=== DRY RUN - Podgl¹d struktury folderów ===" -ForegroundColor Yellow
+        
+        Write-Host "Struktura folderów:" -ForegroundColor Green
+        $sortedFolders = $newFolders | Sort-Object Level, Name
+        foreach ($folder in $sortedFolders) {
+            $indent = "  " * $folder.Level
+            Write-Host "$indent- $($folder.Name)" -ForegroundColor Cyan
         }
         
-        Write-Host "Nowe projekty do dodania:" -ForegroundColor Green
-        foreach ($project in $newProjects) {
-            Write-Host "  - $($project.Name) -> $($project.Path)" -ForegroundColor Cyan
+        Write-Host "`nProjekty pogrupowane:" -ForegroundColor Green
+        $projectsByCategory = $newProjects | Group-Object Category
+        foreach ($categoryGroup in $projectsByCategory) {
+            Write-Host "  $($categoryGroup.Name):" -ForegroundColor Cyan
+            $projectsBySubmodule = $categoryGroup.Group | Group-Object SubmodulePath
+            foreach ($submoduleGroup in $projectsBySubmodule) {
+                $submoduleName = ($submoduleGroup.Name -split '[/\\]')[-1]
+                if ($projectsBySubmodule.Count -gt 1) {
+                    Write-Host "    $($submoduleName):" -ForegroundColor Yellow
+                    foreach ($project in $submoduleGroup.Group) {
+                        Write-Host "      - $($project.Name)" -ForegroundColor Gray
+                    }
+                } else {
+                    foreach ($project in $submoduleGroup.Group) {
+                        Write-Host "    - $($project.Name)" -ForegroundColor Gray
+                    }
+                }
+            }
         }
         
-        Write-Host "£¹cznie: $($newFolders.Count) folderów, $($newProjects.Count) projektów" -ForegroundColor Yellow
+        Write-Host "`nPodsumowanie: $($newFolders.Count) folderów, $($newProjects.Count) projektów" -ForegroundColor Yellow
         return
     }
     
-    # Aktualizuj plik .sln
-    if ($newProjects.Count -gt 0 -or $newFolders.Count -gt 0) {
-        $lines = $solutionContent -split "`r?`n"
-        $newLines = @()
-        $inGlobalSection = $false
-        
-        foreach ($line in $lines) {
-            $newLines += $line
-            
-            # Dodaj nowe foldery po ostatnim istniej¹cym projekcie
-            if ($line -match '^Project\(' -and $newFolders.Count -gt 0) {
-                $nextLineIndex = $lines.IndexOf($line) + 1
-                if ($nextLineIndex -lt $lines.Count -and $lines[$nextLineIndex] -match '^EndProject') {
-                    # Dodaj foldery po tym projekcie
-                    foreach ($folder in $newFolders) {
-                        $newLines += "Project(`"{2150E333-8FDC-42A3-9474-1A3956D46DE8}`") = `"$($folder.Name)`", `"$($folder.Name)`", `"$($folder.Guid)`""
-                        $newLines += "EndProject"
-                    }
-                    $newFolders = @() # Dodano ju¿ wszystkie foldery
-                }
-            }
-            
-            # Dodaj nowe projekty po ostatnim istniej¹cym projekcie
-            if ($line -match '^EndProject' -and $newProjects.Count -gt 0) {
-                foreach ($project in $newProjects) {
-                    $projectTypeGuid = "{9A19103F-16F7-4668-BE54-9A1E7A4F7556}" # C# Project
-                    $newLines += "Project(`"$projectTypeGuid`") = `"$($project.Name)`", `"$($project.Path)`", `"$($project.Guid)`""
-                    $newLines += "EndProject"
-                }
-                $newProjects = @() # Dodano ju¿ wszystkie projekty
-            }
-            
-            # Dodaj konfiguracje dla nowych projektów
-            if ($line -match 'GlobalSection\(ProjectConfigurationPlatforms\)') {
-                $inGlobalSection = $true
-            }
-            
-            if ($inGlobalSection -and $line -match 'EndGlobalSection') {
-                # Dodaj konfiguracje przed EndGlobalSection
-                foreach ($project in $Projects) {
-                    $exists = $existingProjects | Where-Object { $_.Path -eq $project.Path }
-                    if (-not $exists) {
-                        $guid = ($newProjects | Where-Object { $_.Path -eq $project.Path }).Guid
-                        if ($guid) {
-                            $newLines = $newLines[0..($newLines.Count-2)] + @(
-                                "		$guid.Debug|Any CPU.ActiveCfg = Debug|Any CPU",
-                                "		$guid.Debug|Any CPU.Build.0 = Debug|Any CPU",
-                                "		$guid.Release|Any CPU.ActiveCfg = Release|Any CPU",
-                                "		$guid.Release|Any CPU.Build.0 = Release|Any CPU"
-                            ) + $newLines[-1]
-                        }
-                    }
-                }
-                $inGlobalSection = $false
-            }
-        }
-        
-        $updatedContent = $newLines -join "`r`n"
-        Set-Content -Path $SolutionPath -Value $updatedContent -Encoding UTF8
-        
-        Write-Host "Zaktualizowano plik $SolutionPath" -ForegroundColor Green
-        Write-Host "Dodano $($newFolders.Count) folderów i $($newProjects.Count) projektów" -ForegroundColor Green
-    } else {
-        Write-Host "Wszystkie projekty s¹ ju¿ w pliku rozwi¹zania" -ForegroundColor Yellow
+    if ($newProjects.Count -eq 0 -and $newFolders.Count -eq 0) {
+        Write-Host "Wszystkie projekty i foldery s¹ ju¿ w pliku rozwi¹zania" -ForegroundColor Yellow
+        return
     }
+    
+    # Czytaj plik .sln
+    $content = Get-Content $SolutionPath -Raw
+    $lines = $content -split "`r?`n"
+    
+    # ZnajdŸ miejsce do wstawienia nowych projektów
+    $insertIndex = -1
+    for ($i = 0; $i -lt $lines.Count; $i++) {
+        if ($lines[$i] -match '^Global$') {
+            $insertIndex = $i
+            break
+        }
+    }
+    
+    if ($insertIndex -eq -1) {
+        Write-Error "Nie mo¿na znaleŸæ sekcji Global w pliku .sln"
+        return
+    }
+    
+    # Przygotuj nowe linie do wstawienia
+    $newLines = @()
+    
+    # Dodaj nowe foldery (sortowane wed³ug poziomu)
+    $sortedFolders = $newFolders | Sort-Object Level, Name
+    foreach ($folder in $sortedFolders) {
+        $newLines += "Project(`"{2150E333-8FDC-42A3-9474-1A3956D46DE8}`") = `"$($folder.Name)`", `"$($folder.Name)`", `"$($folder.Guid)`""
+        $newLines += "EndProject"
+    }
+    
+    # Dodaj nowe projekty
+    foreach ($project in $newProjects) {
+        $projectTypeGuid = "{9A19103F-16F7-4668-BE54-9A1E7A4F7556}" # C# Project
+        $newLines += "Project(`"$projectTypeGuid`") = `"$($project.Name)`", `"$($project.Path)`", `"$($project.Guid)`""
+        $newLines += "EndProject"
+    }
+    
+    # Wstaw nowe linie
+    $updatedLines = $lines[0..($insertIndex-1)] + $newLines + $lines[$insertIndex..($lines.Count-1)]
+    
+    # Dodaj konfiguracje projektów
+    $configInserted = $false
+    for ($i = 0; $i -lt $updatedLines.Count; $i++) {
+        if ($updatedLines[$i] -match 'GlobalSection\(ProjectConfigurationPlatforms\) = postSolution' -and -not $configInserted) {
+            $configLines = @()
+            foreach ($project in $newProjects) {
+                $configLines += "		$($project.Guid).Debug|Any CPU.ActiveCfg = Debug|Any CPU"
+                $configLines += "		$($project.Guid).Debug|Any CPU.Build.0 = Debug|Any CPU"
+                $configLines += "		$($project.Guid).Release|Any CPU.ActiveCfg = Release|Any CPU"
+                $configLines += "		$($project.Guid).Release|Any CPU.Build.0 = Release|Any CPU"
+            }
+            
+            # ZnajdŸ EndGlobalSection i wstaw przed nim
+            for ($j = $i + 1; $j -lt $updatedLines.Count; $j++) {
+                if ($updatedLines[$j] -match 'EndGlobalSection') {
+                    $updatedLines = $updatedLines[0..($j-1)] + $configLines + $updatedLines[$j..($updatedLines.Count-1)]
+                    $configInserted = $true
+                    break
+                }
+            }
+            break
+        }
+    }
+    
+    # Dodaj mapowanie folderów (NestedProjects)
+    $nestedInserted = $false
+    for ($i = 0; $i -lt $updatedLines.Count; $i++) {
+        if ($updatedLines[$i] -match 'GlobalSection\(NestedProjects\) = preSolution' -and -not $nestedInserted) {
+            $nestedLines = @()
+            
+            # Mapuj projekty do folderów
+            foreach ($project in $newProjects) {
+                $category = $project.Category
+                $submoduleName = ($project.SubmodulePath -split '[/\\]')[-1]
+                
+                # ZnajdŸ odpowiedni folder
+                $targetFolder = $null
+                $projectsByCategory = $newProjects | Where-Object { $_.Category -eq $category }
+                $projectsBySubmodule = $projectsByCategory | Group-Object SubmodulePath
+                
+                if ($projectsBySubmodule.Count -gt 1) {
+                    # Projekt idzie do podfolderu submodu³u
+                    $subfolderKey = "$category\$submoduleName"
+                    $targetFolder = $Folders[$subfolderKey]
+                } else {
+                    # Projekt idzie bezpoœrednio do folderu kategorii
+                    $targetFolder = $Folders[$category]
+                }
+                
+                if ($targetFolder) {
+                    $nestedLines += "		$($project.Guid) = $($targetFolder.Guid)"
+                }
+            }
+            
+            # Mapuj podfoldery do folderów g³ównych
+            foreach ($folder in $newFolders) {
+                if ($folder.ParentPath -ne "") {
+                    $parentFolder = $Folders[$folder.ParentPath]
+                    if ($parentFolder) {
+                        $nestedLines += "		$($folder.Guid) = $($parentFolder.Guid)"
+                    }
+                }
+            }
+            
+            # ZnajdŸ EndGlobalSection i wstaw przed nim
+            for ($j = $i + 1; $j -lt $updatedLines.Count; $j++) {
+                if ($updatedLines[$j] -match 'EndGlobalSection') {
+                    $updatedLines = $updatedLines[0..($j-1)] + $nestedLines + $updatedLines[$j..($updatedLines.Count-1)]
+                    $nestedInserted = $true
+                    break
+                }
+            }
+            break
+        }
+    }
+    
+    # Zapisz plik
+    $updatedContent = $updatedLines -join "`r`n"
+    Set-Content -Path $SolutionPath -Value $updatedContent -Encoding UTF8
+    
+    Write-Host "Zaktualizowano plik $SolutionPath" -ForegroundColor Green
+    Write-Host "Dodano $($newFolders.Count) folderów i $($newProjects.Count) projektów" -ForegroundColor Green
 }
 
 # G³ówna logika skryptu
@@ -286,15 +451,29 @@ try {
     
     Write-Host "£¹cznie znaleziono $($allProjects.Count) projektów" -ForegroundColor Green
     
-    # Utwórz strukturê folderów
-    $folders = Get-SolutionFolderStructure -Projects $allProjects
+    # Pogrupuj projekty wed³ug kategorii
+    $projectsByCategory = $allProjects | Group-Object Category
+    Write-Host "Kategorie projektów:" -ForegroundColor Cyan
+    foreach ($group in $projectsByCategory) {
+        Write-Host "  $($group.Name): $($group.Count) projektów" -ForegroundColor Gray
+    }
+    
+    # Pobierz istniej¹ce elementy z pliku .sln
+    $existingItems = Get-ExistingSolutionItems -SolutionPath $SolutionPath
+    Write-Host "Istniej¹ce projekty: $($existingItems.Projects.Count)" -ForegroundColor Cyan
+    Write-Host "Istniej¹ce foldery: $($existingItems.Folders.Count)" -ForegroundColor Cyan
+    
+    # Utwórz logiczn¹ strukturê folderów
+    $folders = New-LogicalFolderStructure -Projects $allProjects -ExistingFolders $existingItems.Folders
     
     # Aktualizuj plik rozwi¹zania
-    Update-SolutionFile -SolutionPath $SolutionPath -Projects $allProjects -Folders $folders -DryRun:$DryRun
+    Update-SolutionFile -SolutionPath $SolutionPath -Projects $allProjects -Folders $folders -ExistingItems $existingItems -DryRun:$DryRun
     
     Write-Host "Zakoñczono pomyœlnie!" -ForegroundColor Green
     
 } catch {
     Write-Error "Wyst¹pi³ b³¹d: $($_.Exception.Message)"
+    Write-Host "Stack trace:" -ForegroundColor Red
+    Write-Host $_.ScriptStackTrace -ForegroundColor Red
     exit 1
 }
