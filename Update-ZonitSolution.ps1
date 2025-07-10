@@ -86,14 +86,15 @@ function Find-ProjectsInPath {
         $projectName = $projectFile.BaseName
         
         # Okreúl kategoriÍ projektu na podstawie úcieøki
-        $category = Get-ProjectCategory -Path $relativePath
+        $categoryInfo = Get-ProjectCategory -Path $relativePath
         
         $projects += [PSCustomObject]@{
             Name = $projectName
             Path = $relativePath
             FullPath = $projectFile.FullName
             Extension = $projectFile.Extension
-            Category = $category
+            Category = $categoryInfo.Category
+            FolderPath = $categoryInfo.FolderPath
             SubmodulePath = $Path
         }
     }
@@ -101,7 +102,7 @@ function Find-ProjectsInPath {
     return $projects
 }
 
-# Funkcja do okreúlenia kategorii projektu
+# Funkcja do okreúlenia kategorii projektu i tworzenia úcieøki folderu
 function Get-ProjectCategory {
     param([string]$Path)
     
@@ -109,34 +110,80 @@ function Get-ProjectCategory {
     
     Write-Host "    DEBUG: Checking path: $pathLower" -ForegroundColor DarkGray
     
-    # Mapowanie kategorii na podstawie úcieøki - poprawione regex
-    if ($pathLower -match "[/\\]services[/\\]") {
-        Write-Host "    DEBUG: Matched Services" -ForegroundColor DarkGray
-        return "Services"
+    # Mapowanie kategorii na podstawie úcieøki - utworz pe≥nπ úcieøkÍ folderu
+    if ($pathLower -match "source[/\\]services[/\\]([^/\\]+)") {
+        $serviceName = $matches[1] -replace "zonit\.services\.", ""
+        # Specjalne przypadki
+        if ($serviceName -eq "eventmessage") {
+            $serviceName = "EventMessage"
+        } else {
+            # Kapitalizuj pierwszπ literÍ
+            $serviceName = $serviceName.Substring(0,1).ToUpper() + $serviceName.Substring(1)
+        }
+        $folderPath = "Source\Services\$serviceName"
+        Write-Host "    DEBUG: Matched Services -> $folderPath" -ForegroundColor DarkGray
+        return @{
+            Category = "Services"
+            FolderPath = $folderPath
+        }
     }
-    elseif ($pathLower -match "[/\\]plugins[/\\]") {
-        Write-Host "    DEBUG: Matched Plugins" -ForegroundColor DarkGray
-        return "Plugins"
+    elseif ($pathLower -match "source[/\\]plugins[/\\]([^/\\]+)") {
+        $pluginName = $matches[1] -replace "zonit\.plugins\.", ""
+        # Kapitalizuj pierwszπ literÍ lub uøyj nazwy modu≥u
+        if ($pluginName -eq "zonit.plugins") {
+            $pluginName = "Core"
+        } else {
+            $pluginName = $pluginName.Substring(0,1).ToUpper() + $pluginName.Substring(1)
+        }
+        $folderPath = "Source\Plugins\$pluginName"
+        Write-Host "    DEBUG: Matched Plugins -> $folderPath" -ForegroundColor DarkGray
+        return @{
+            Category = "Plugins"
+            FolderPath = $folderPath
+        }
     }
-    elseif ($pathLower -match "[/\\]extensions[/\\]") {
-        Write-Host "    DEBUG: Matched Extensions" -ForegroundColor DarkGray
-        return "Extensions"
+    elseif ($pathLower -match "source[/\\]extensions[/\\]([^/\\]+)") {
+        $extensionName = $matches[1] -replace "zonit\.extensions\.", ""
+        if ($extensionName -eq "zonit.extensions") {
+            $extensionName = "Core"
+        } else {
+            # Kapitalizuj pierwszπ literÍ
+            $extensionName = $extensionName.Substring(0,1).ToUpper() + $extensionName.Substring(1)
+        }
+        $folderPath = "Source\Extensions\$extensionName"
+        Write-Host "    DEBUG: Matched Extensions -> $folderPath" -ForegroundColor DarkGray
+        return @{
+            Category = "Extensions"
+            FolderPath = $folderPath
+        }
     }
     elseif ($pathLower -match "[/\\]tests?[/\\]") {
         Write-Host "    DEBUG: Matched Tests" -ForegroundColor DarkGray
-        return "Tests"
+        return @{
+            Category = "Tests"
+            FolderPath = "Tests"
+        }
     }
     elseif ($pathLower -match "[/\\]samples?[/\\]") {
         Write-Host "    DEBUG: Matched Samples" -ForegroundColor DarkGray
-        return "Samples"
+        return @{
+            Category = "Samples"
+            FolderPath = "Samples"
+        }
     }
     elseif ($pathLower -match "[/\\]tools?[/\\]") {
         Write-Host "    DEBUG: Matched Tools" -ForegroundColor DarkGray
-        return "Tools"
+        return @{
+            Category = "Tools"
+            FolderPath = "Tools"
+        }
     }
     else {
         Write-Host "    DEBUG: No match, defaulting to Other" -ForegroundColor DarkGray
-        return "Other"
+        return @{
+            Category = "Other"
+            FolderPath = "Other"
+        }
     }
 }
 
@@ -184,66 +231,54 @@ function New-LogicalFolderStructure {
     $folders = @{}
     $existingFolderNames = $ExistingFolders | ForEach-Object { $_.Name }
     
-    # Grupuj projekty wed≥ug kategorii
-    $projectsByCategory = $Projects | Group-Object Category
+    # Grupuj projekty wed≥ug FolderPath
+    $projectsByFolderPath = $Projects | Group-Object FolderPath
     
-    foreach ($categoryGroup in $projectsByCategory) {
-        $category = $categoryGroup.Name
-        $categoryProjects = $categoryGroup.Group
+    foreach ($folderGroup in $projectsByFolderPath) {
+        $folderPath = $folderGroup.Name
+        $folderProjects = $folderGroup.Group
         
-        # Sprawdü czy kategoria nie jest pusta
-        if ([string]::IsNullOrWhiteSpace($category)) {
-            $category = "Other"
-            Write-Warning "Znaleziono projekty bez kategorii, przypisano do 'Other'"
+        # Sprawdü czy úcieøka folderu nie jest pusta
+        if ([string]::IsNullOrWhiteSpace($folderPath)) {
+            $folderPath = "Other"
+            Write-Warning "Znaleziono projekty bez úcieøki folderu, przypisano do 'Other'"
         }
         
-        # PomiÒ jeúli folder kategorii juø istnieje
-        if ($existingFolderNames -contains $category) {
-            Write-Host "Pomijanie istniejπcego folderu: $category" -ForegroundColor Yellow
-            continue
-        }
+        # Podziel úcieøkÍ na czÍúci (np. "Source\Extensions\Ai" -> ["Source", "Extensions", "Ai"])
+        $pathParts = $folderPath -split '[/\\]'
         
-        # Dodaj folder g≥Ûwnie kategorii
-        if (-not $folders.ContainsKey($category)) {
-            $folders[$category] = @{
-                Name = $category
-                Path = $category
-                ParentPath = ""
-                Guid = New-ProjectGuid
-                Level = 0
-            }
-        }
+        # UtwÛrz wszystkie potrzebne foldery w hierarchii
+        $currentPath = ""
+        $parentPath = ""
         
-        # Grupuj projekty w kategorii wed≥ug submodu≥Ûw
-        $projectsBySubmodule = $categoryProjects | Group-Object SubmodulePath
-        
-        foreach ($submoduleGroup in $projectsBySubmodule) {
-            $submodulePath = $submoduleGroup.Name
-            $submoduleProjects = $submoduleGroup.Group
+        for ($i = 0; $i -lt $pathParts.Length; $i++) {
+            $pathPart = $pathParts[$i]
             
-            # Wyciπgnij nazwÍ submodu≥u z úcieøki
-            $submoduleName = ($submodulePath -split '[/\\]')[-1]
-            
-            # Sprawdü czy nazwa submodu≥u nie jest pusta
-            if ([string]::IsNullOrWhiteSpace($submoduleName)) {
-                $submoduleName = "Unknown"
-                Write-Warning "Nie moøna okreúliÊ nazwy submodu≥u dla úcieøki: $submodulePath"
+            if ($i -eq 0) {
+                $currentPath = $pathPart
+            } else {
+                $currentPath = "$parentPath\$pathPart"
             }
             
-            # Jeúli w kategorii jest wiÍcej niø jeden submodu≥, utwÛrz podfolder
-            if ($projectsBySubmodule.Count -gt 1) {
-                $subfolderKey = "$category\$submoduleName"
-                
-                if (-not $folders.ContainsKey($subfolderKey)) {
-                    $folders[$subfolderKey] = @{
-                        Name = $submoduleName
-                        Path = $subfolderKey
-                        ParentPath = $category
-                        Guid = New-ProjectGuid
-                        Level = 1
-                    }
+            # Sprawdü czy folder juø istnieje w rozwiπzaniu
+            if ($existingFolderNames -contains $pathPart) {
+                Write-Host "Pomijanie istniejπcego folderu: $pathPart" -ForegroundColor Yellow
+                $parentPath = $currentPath
+                continue
+            }
+            
+            # Dodaj folder jeúli jeszcze nie istnieje
+            if (-not $folders.ContainsKey($currentPath)) {
+                $folders[$currentPath] = @{
+                    Name = $pathPart
+                    Path = $currentPath
+                    ParentPath = $parentPath
+                    Guid = New-ProjectGuid
+                    Level = $i
                 }
             }
+            
+            $parentPath = $currentPath
         }
     }
     
@@ -274,6 +309,7 @@ function Update-SolutionFile {
                 Guid = $projectGuid
                 Extension = $project.Extension
                 Category = $project.Category
+                FolderPath = $project.FolderPath
                 SubmodulePath = $project.SubmodulePath
             }
         }
@@ -298,29 +334,15 @@ function Update-SolutionFile {
         }
         
         Write-Host "`nProjekty pogrupowane:" -ForegroundColor Green
-        $projectsByCategory = $newProjects | Group-Object Category
-        foreach ($categoryGroup in $projectsByCategory) {
-            $categoryName = $categoryGroup.Name
-            if ([string]::IsNullOrWhiteSpace($categoryName)) {
-                $categoryName = "Other"
+        $projectsByFolderPath = $newProjects | Group-Object FolderPath
+        foreach ($folderGroup in $projectsByFolderPath) {
+            $folderPath = $folderGroup.Name
+            if ([string]::IsNullOrWhiteSpace($folderPath)) {
+                $folderPath = "Other"
             }
-            Write-Host "  $($categoryName):" -ForegroundColor Cyan
-            $projectsBySubmodule = $categoryGroup.Group | Group-Object SubmodulePath
-            foreach ($submoduleGroup in $projectsBySubmodule) {
-                $submoduleName = ($submoduleGroup.Name -split '[/\\]')[-1]
-                if ([string]::IsNullOrWhiteSpace($submoduleName)) {
-                    $submoduleName = "Unknown"
-                }
-                if ($projectsBySubmodule.Count -gt 1) {
-                    Write-Host "    $($submoduleName):" -ForegroundColor Yellow
-                    foreach ($project in $submoduleGroup.Group) {
-                        Write-Host "      - $($project.Name)" -ForegroundColor Gray
-                    }
-                } else {
-                    foreach ($project in $submoduleGroup.Group) {
-                        Write-Host "    - $($project.Name)" -ForegroundColor Gray
-                    }
-                }
+            Write-Host "  $($folderPath):" -ForegroundColor Cyan
+            foreach ($project in $folderGroup.Group) {
+                Write-Host "    - $($project.Name)" -ForegroundColor Gray
             }
         }
         
@@ -403,32 +425,15 @@ function Update-SolutionFile {
             
             # Mapuj projekty do folderÛw
             foreach ($project in $newProjects) {
-                $category = $project.Category
-                $submoduleName = ($project.SubmodulePath -split '[/\\]')[-1]
+                $folderPath = $project.FolderPath
                 
-                # Sprawdü czy kategoria nie jest pusta
-                if ([string]::IsNullOrWhiteSpace($category)) {
-                    $category = "Other"
+                # Sprawdü czy úcieøka folderu nie jest pusta
+                if ([string]::IsNullOrWhiteSpace($folderPath)) {
+                    $folderPath = "Other"
                 }
                 
-                # Sprawdü czy nazwa submodu≥u nie jest pusta
-                if ([string]::IsNullOrWhiteSpace($submoduleName)) {
-                    $submoduleName = "Unknown"
-                }
-                
-                # Znajdü odpowiedni folder
-                $targetFolder = $null
-                $projectsByCategory = $newProjects | Where-Object { $_.Category -eq $project.Category }
-                $projectsBySubmodule = $projectsByCategory | Group-Object SubmodulePath
-                
-                if ($projectsBySubmodule.Count -gt 1) {
-                    # Projekt idzie do podfolderu submodu≥u
-                    $subfolderKey = "$category\$submoduleName"
-                    $targetFolder = $Folders[$subfolderKey]
-                } else {
-                    # Projekt idzie bezpoúrednio do folderu kategorii
-                    $targetFolder = $Folders[$category]
-                }
+                # Znajdü odpowiedni folder (najg≥Íbszy w hierarchii)
+                $targetFolder = $Folders[$folderPath]
                 
                 if ($targetFolder) {
                     $nestedLines += "		$($project.Guid) = $($targetFolder.Guid)"
@@ -466,32 +471,15 @@ function Update-SolutionFile {
         
         # Mapuj projekty do folderÛw
         foreach ($project in $newProjects) {
-            $category = $project.Category
-            $submoduleName = ($project.SubmodulePath -split '[/\\]')[-1]
+            $folderPath = $project.FolderPath
             
-            # Sprawdü czy kategoria nie jest pusta
-            if ([string]::IsNullOrWhiteSpace($category)) {
-                $category = "Other"
+            # Sprawdü czy úcieøka folderu nie jest pusta
+            if ([string]::IsNullOrWhiteSpace($folderPath)) {
+                $folderPath = "Other"
             }
             
-            # Sprawdü czy nazwa submodu≥u nie jest pusta
-            if ([string]::IsNullOrWhiteSpace($submoduleName)) {
-                $submoduleName = "Unknown"
-            }
-            
-            # Znajdü odpowiedni folder
-            $targetFolder = $null
-            $projectsByCategory = $newProjects | Where-Object { $_.Category -eq $project.Category }
-            $projectsBySubmodule = $projectsByCategory | Group-Object SubmodulePath
-            
-            if ($projectsBySubmodule.Count -gt 1) {
-                # Projekt idzie do podfolderu submodu≥u
-                $subfolderKey = "$category\$submoduleName"
-                $targetFolder = $Folders[$subfolderKey]
-            } else {
-                # Projekt idzie bezpoúrednio do folderu kategorii
-                $targetFolder = $Folders[$category]
-            }
+            # Znajdü odpowiedni folder (najg≥Íbszy w hierarchii)
+            $targetFolder = $Folders[$folderPath]
             
             if ($targetFolder) {
                 $nestedLines += "		$($project.Guid) = $($targetFolder.Guid)"
@@ -566,6 +554,17 @@ try {
             $categoryName = "Other"
         }
         Write-Host "  $($categoryName): $($group.Count) projektÛw" -ForegroundColor Gray
+    }
+    
+    # Pogrupuj projekty wed≥ug úcieøek folderÛw
+    $projectsByFolderPath = $allProjects | Group-Object FolderPath
+    Write-Host "Foldery docelowe:" -ForegroundColor Cyan
+    foreach ($group in $projectsByFolderPath) {
+        $folderPath = $group.Name
+        if ([string]::IsNullOrWhiteSpace($folderPath)) {
+            $folderPath = "Other"
+        }
+        Write-Host "  $($folderPath): $($group.Count) projektÛw" -ForegroundColor Gray
     }
     
     # Pobierz istniejπce elementy z pliku .sln
