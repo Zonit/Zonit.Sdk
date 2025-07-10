@@ -1,47 +1,45 @@
-[submodule "Extensions/Zonit.Extensions"]
-    path = Extensions/Zonit.Extensions
-    url = https://github.com/Zonit/Zonit.Extensions
-    
-[submodule "Extensions/Zonit.Extensions.Ai"]
-    path = Extensions/Zonit.Extensions.Ai
-    url = https://github.com/Zonit/Zonit.Extensions.Ai
-
-[submodule "Extensions/Zonit.Extensions.Tenants"]
-    path = Extensions/Zonit.Extensions.Tenants
-    url = https://github.com/Zonit/Zonit.Extensions.Tenants
-
-[submodule "Extensions/Zonit.Extensions.Databases"]
-    path = Extensions/Zonit.Extensions.Databases
-    url = https://github.com/Zonit/Zonit.Extensions.Databases
-
-[submodule "Extensions/Zonit.Extensions.Cultures"]
-    path = Extensions/Zonit.Extensions.Cultures
-    url = https://github.com/Zonit/Zonit.Extensions.Cultures
-
-[submodule "Extensions/Zonit.Core"]
-    path = Extensions/Zonit.Core
-    url = https://github.com/Zonit/Zonit.Core
-
-[submodule "Extensions/Zonit.Extensions.Identity"]
-    path = Extensions/Zonit.Extensions.Identity
-    url = https://github.com/Zonit/Zonit.Extensions.Identity
-
-[submodule "Extensions/Zonit.Extensions.Organizations"]
-    path = Extensions/Zonit.Extensions.Organizations
-    url = https://github.com/Zonit/Zonit.Extensions.Organizations
-
-[submodule "Extensions/Zonit.Extensions.Projects"]
-    path = Extensions/Zonit.Extensions.Projects
-    url = https://github.com/Zonit/Zonit.Extensions.Projects
-    
-[submodule "Services/Zonit.Services.Dashboard"]
-    path = Services/Zonit.Services.Dashboard
-    url = https://github.com/Zonit/Zonit.Services.Dashboard
-
-[submodule "Services/Zonit.Services.EventMessage"]
-    path = Services/Zonit.Services.EventMessage
-    url = https://github.com/Zonit/Zonit.Services.EventMessage
-
-[submodule "Plugins/Zonit.Plugins"]
-    path = Plugins/Zonit.Plugins
-    url = https://github.com/Zonit/Zonit.Plugins
+[submodule "Source/Zonit.Extensions.Ai"]
+	path = Source/Zonit.Extensions.Ai
+	url = https://github.com/Zonit/Zonit.Extensions.Ai
+[submodule "Source/Zonit.Extensions"]
+	path = Source/Zonit.Extensions
+	url = https://github.com/Zonit/Zonit.Extensions
+[submodule "Source/Zonit.Extensions.Tenants"]
+	path = Source/Zonit.Extensions.Tenants
+	url = https://github.com/Zonit/Zonit.Extensions.Tenants
+[submodule "Source/Plugins/Zonit.Plugins"]
+	path = Source/Plugins/Zonit.Plugins
+	url = https://github.com/Zonit/Zonit.Plugins
+[submodule "Source/Services/Zonit.Services.EventMessage"]
+	path = Source/Services/Zonit.Services.EventMessage
+	url = https://github.com/Zonit/Zonit.Services.EventMessage
+[submodule "Source/Services/Zonit.Services.Dashboard"]
+	path = Source/Services/Zonit.Services.Dashboard
+	url = https://github.com/Zonit/Zonit.Services.Dashboard
+[submodule "Source/Extensions/Zonit.Extensions.Projects"]
+	path = Source/Extensions/Zonit.Extensions.Projects
+	url = https://github.com/Zonit/Zonit.Extensions.Projects
+[submodule "Source/Extensions/Zonit.Extensions.Organizations"]
+	path = Source/Extensions/Zonit.Extensions.Organizations
+	url = https://github.com/Zonit/Zonit.Extensions.Organizations
+[submodule "Source/Extensions/Zonit.Extensions.Identity"]
+	path = Source/Extensions/Zonit.Extensions.Identity
+	url = https://github.com/Zonit/Zonit.Extensions.Identity
+[submodule "Source/Extensions/Zonit.Core"]
+	path = Source/Extensions/Zonit.Core
+	url = https://github.com/Zonit/Zonit.Core
+[submodule "Source/Extensions/Zonit.Extensions.Cultures"]
+	path = Source/Extensions/Zonit.Extensions.Cultures
+	url = https://github.com/Zonit/Zonit.Extensions.Cultures
+[submodule "Source/Extensions/Zonit.Extensions.Databases"]
+	path = Source/Extensions/Zonit.Extensions.Databases
+	url = https://github.com/Zonit/Zonit.Extensions.Databases
+[submodule "Source/Extensions/Zonit.Extensions.Tenants"]
+	path = Source/Extensions/Zonit.Extensions.Tenants
+	url = https://github.com/Zonit/Zonit.Extensions.Tenants
+[submodule "Source/Extensions/Zonit.Extensions.Ai"]
+	path = Source/Extensions/Zonit.Extensions.Ai
+	url = https://github.com/Zonit/Zonit.Extensions.Ai
+[submodule "Source/Extensions/Zonit.Extensions"]
+	path = Source/Extensions/Zonit.Extensions
+	url = https://github.com/Zonit/Zonit.Extensions
