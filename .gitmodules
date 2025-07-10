@@ -1,21 +1,12 @@
-[submodule "Source/Zonit.Extensions.Ai"]
-	path = Source/Zonit.Extensions.Ai
+[submodule "Source/Extensions/Zonit.Extensions.Ai"]
+	path = Source/Extensions/Zonit.Extensions.Ai
 	url = https://github.com/Zonit/Zonit.Extensions.Ai
-[submodule "Source/Zonit.Extensions"]
-	path = Source/Zonit.Extensions
+[submodule "Source/Extensions/Zonit.Extensions"]
+	path = Source/Extensions/Zonit.Extensions
 	url = https://github.com/Zonit/Zonit.Extensions
-[submodule "Source/Zonit.Extensions.Tenants"]
-	path = Source/Zonit.Extensions.Tenants
+[submodule "Source/Extensions/Zonit.Extensions.Tenants"]
+	path = Source/Extensions/Zonit.Extensions.Tenants
 	url = https://github.com/Zonit/Zonit.Extensions.Tenants
-[submodule "Source/Plugins/Zonit.Plugins"]
-	path = Source/Plugins/Zonit.Plugins
-	url = https://github.com/Zonit/Zonit.Plugins
-[submodule "Source/Services/Zonit.Services.EventMessage"]
-	path = Source/Services/Zonit.Services.EventMessage
-	url = https://github.com/Zonit/Zonit.Services.EventMessage
-[submodule "Source/Services/Zonit.Services.Dashboard"]
-	path = Source/Services/Zonit.Services.Dashboard
-	url = https://github.com/Zonit/Zonit.Services.Dashboard
 [submodule "Source/Extensions/Zonit.Extensions.Projects"]
 	path = Source/Extensions/Zonit.Extensions.Projects
 	url = https://github.com/Zonit/Zonit.Extensions.Projects
@@ -40,3 +31,12 @@
 [submodule "Source/Extensions/Zonit.Extensions"]
 	path = Source/Extensions/Zonit.Extensions
 	url = https://github.com/Zonit/Zonit.Extensions
+[submodule "Source/Services/Zonit.Services.EventMessage"]
+	path = Source/Services/Zonit.Services.EventMessage
+	url = https://github.com/Zonit/Zonit.Services.EventMessage
+[submodule "Source/Services/Zonit.Services.Dashboard"]
+	path = Source/Services/Zonit.Services.Dashboard
+	url = https://github.com/Zonit/Zonit.Services.Dashboard
+[submodule "Source/Plugins/Zonit.Plugins"]
+	path = Source/Plugins/Zonit.Plugins
+	url = https://github.com/Zonit/Zonit.Plugins
