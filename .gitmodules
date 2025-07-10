@@ -1,55 +1,47 @@
-[submodule "libs/Zonit.Extensions.Ai"]
-    path = libs/Zonit.Extensions.Ai
+[submodule "Extensions/Zonit.Extensions"]
+    path = Extensions/Zonit.Extensions
+    url = https://github.com/Zonit/Zonit.Extensions
+    
+[submodule "Extensions/Zonit.Extensions.Ai"]
+    path = Extensions/Zonit.Extensions.Ai
     url = https://github.com/Zonit/Zonit.Extensions.Ai
 
-[submodule "libs/Zonit.Services.Dashboard"]
-    path = libs/Zonit.Services.Dashboard
-    url = https://github.com/Zonit/Zonit.Services.Dashboard
-
-[submodule "libs/Zonit.Extensions"]
-    path = libs/Zonit.Extensions
-    url = https://github.com/Zonit/Zonit.Extensions
-
-[submodule "libs/Zonit.Extensions.Tenants"]
-    path = libs/Zonit.Extensions.Tenants
+[submodule "Extensions/Zonit.Extensions.Tenants"]
+    path = Extensions/Zonit.Extensions.Tenants
     url = https://github.com/Zonit/Zonit.Extensions.Tenants
 
-[submodule "libs/Zonit.Extensions.Databases"]
-    path = libs/Zonit.Extensions.Databases
+[submodule "Extensions/Zonit.Extensions.Databases"]
+    path = Extensions/Zonit.Extensions.Databases
     url = https://github.com/Zonit/Zonit.Extensions.Databases
 
-[submodule "libs/Zonit.Extensions.Cultures"]
-    path = libs/Zonit.Extensions.Cultures
+[submodule "Extensions/Zonit.Extensions.Cultures"]
+    path = Extensions/Zonit.Extensions.Cultures
     url = https://github.com/Zonit/Zonit.Extensions.Cultures
 
-[submodule "libs/Zonit.Services.EventMessage"]
-    path = libs/Zonit.Services.EventMessage
-    url = https://github.com/Zonit/Zonit.Services.EventMessage
-
-[submodule "libs/Zonit.Plugins"]
-    path = libs/Zonit.Plugins
-    url = https://github.com/Zonit/Zonit.Plugins
-
-[submodule "libs/Zonit.SDK"]
-    path = libs/Zonit.SDK
-    url = https://github.com/Zonit/Zonit.SDK
-
-[submodule "libs/Zonit.Core"]
-    path = libs/Zonit.Core
+[submodule "Extensions/Zonit.Core"]
+    path = Extensions/Zonit.Core
     url = https://github.com/Zonit/Zonit.Core
 
-[submodule "libs/Zonit.Extensions.Identity"]
-    path = libs/Zonit.Extensions.Identity
+[submodule "Extensions/Zonit.Extensions.Identity"]
+    path = Extensions/Zonit.Extensions.Identity
     url = https://github.com/Zonit/Zonit.Extensions.Identity
 
-[submodule "libs/Zonit.Extensions.Organizations"]
-    path = libs/Zonit.Extensions.Organizations
+[submodule "Extensions/Zonit.Extensions.Organizations"]
+    path = Extensions/Zonit.Extensions.Organizations
     url = https://github.com/Zonit/Zonit.Extensions.Organizations
 
-[submodule "libs/Zonit.Extensions.Projects"]
-    path = libs/Zonit.Extensions.Projects
+[submodule "Extensions/Zonit.Extensions.Projects"]
+    path = Extensions/Zonit.Extensions.Projects
     url = https://github.com/Zonit/Zonit.Extensions.Projects
+    
+[submodule "Services/Zonit.Services.Dashboard"]
+    path = Services/Zonit.Services.Dashboard
+    url = https://github.com/Zonit/Zonit.Services.Dashboard
 
-[submodule "libs/Documentation"]
-    path = libs/Documentation
-    url = https://github.com/Zonit/Documentation
+[submodule "Services/Zonit.Services.EventMessage"]
+    path = Services/Zonit.Services.EventMessage
+    url = https://github.com/Zonit/Zonit.Services.EventMessage
+
+[submodule "Plugins/Zonit.Plugins"]
+    path = Plugins/Zonit.Plugins
+    url = https://github.com/Zonit/Zonit.Plugins
