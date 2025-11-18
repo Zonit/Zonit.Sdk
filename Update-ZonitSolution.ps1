@@ -151,7 +151,8 @@ function Get-SubmoduleStructure {
     param(
         [string]$SubmodulePath,
         [string]$SubmoduleName,
-        [string]$Category
+        [string]$Category,
+        [string]$BasePath  # Dodany parametr - œcie¿ka do katalogu g³ównego
     )
     
     if (-not (Test-Path $SubmodulePath)) {
@@ -209,16 +210,26 @@ function Get-SubmoduleStructure {
         '.nuget'
     )
     
-    # Pobierz pe³n¹ œcie¿kê bazow¹ do normalizacji
-    $basePath = (Get-Location).Path
+    # Funkcja pomocnicza do konwersji pe³nej œcie¿ki na wzglêdn¹ od solution
+    function Get-RelativePathFromSolution {
+        param([string]$FullPath)
+        
+        if ($FullPath.StartsWith($BasePath)) {
+            $relativePath = $FullPath.Substring($BasePath.Length).TrimStart('\', '/')
+            return $relativePath.Replace('/', '\')
+        }
+        return $FullPath
+    }
     
     # Pliki w katalogu g³ównym submodu³u
     foreach ($pattern in $filePatterns) {
         Get-ChildItem -Path $SubmodulePath -Filter $pattern -File -ErrorAction SilentlyContinue | 
             ForEach-Object {
+                $relativePath = Get-RelativePathFromSolution -FullPath $_.FullName
+                
                 $files += @{
                     Name = $_.Name
-                    RelativePath = "$SubmoduleName\$($_.Name)"
+                    RelativePath = $relativePath
                     ParentPath = $SubmoduleName
                     ParentGuid = $rootFolder.Guid
                 }
@@ -250,9 +261,11 @@ function Get-SubmoduleStructure {
             foreach ($pattern in $filePatterns) {
                 Get-ChildItem -Path $dirFullPath -Filter $pattern -File -ErrorAction SilentlyContinue | 
                     ForEach-Object {
+                        $relativePath = Get-RelativePathFromSolution -FullPath $_.FullName
+                        
                         $files += @{
                             Name = $_.Name
-                            RelativePath = "$dirRelPath\$($_.Name)"
+                            RelativePath = $relativePath
                             ParentPath = $dirRelPath
                             ParentGuid = $folder.Guid
                         }
@@ -265,12 +278,8 @@ function Get-SubmoduleStructure {
             }
             
             foreach ($projFile in $folderProjects) {
-                # Normalizuj œcie¿kê - usuñ bazow¹ œcie¿kê workspace
-                $projRelPath = $projFile.FullName
-                if ($projRelPath.StartsWith($basePath)) {
-                    $projRelPath = $projRelPath.Substring($basePath.Length).TrimStart('\', '/')
-                }
-                $projRelPath = $projRelPath.Replace('/', '\')
+                # Normalizuj œcie¿kê - u¿yj funkcji pomocniczej
+                $projRelPath = Get-RelativePathFromSolution -FullPath $projFile.FullName
                 
                 $projects += @{
                     Name = $projFile.BaseName
@@ -511,6 +520,9 @@ try {
     $categoryFolders = @{
     }
     
+    # Pobierz œcie¿kê bazow¹ (katalog g³ówny solution)
+    $basePath = (Get-Location).Path
+    
     foreach ($submodule in $submodules) {
         $name = Split-Path $submodule -Leaf
         $category = Get-CategoryFromPath -SubmodulePath $submodule
@@ -525,7 +537,8 @@ try {
         
         Write-Host "  ?? $name ($category)" -ForegroundColor Gray
         
-        $structure = Get-SubmoduleStructure -SubmodulePath $submodule -SubmoduleName $name -Category $category
+        # Przeka¿ $basePath do funkcji
+        $structure = Get-SubmoduleStructure -SubmodulePath $submodule -SubmoduleName $name -Category $category -BasePath $basePath
         
         if ($structure.RootFolder) {
             $allStructures += $structure
