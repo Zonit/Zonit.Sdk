@@ -1,0 +1,42 @@
+<Project>
+  <!-- 
+    Zonit SDK Global Build Configuration
+    This file is automatically imported by ALL projects in the Zonit.Sdk workspace.
+    It will NOT be imported when projects are used standalone.
+  -->
+  
+  <PropertyGroup>
+    <!-- Mark that we're in Zonit.Sdk workspace -->
+    <IsZonitSdkWorkspace>true</IsZonitSdkWorkspace>
+    
+    <!-- Display info during build -->
+    <ZonitSdkWorkspaceRoot>$(MSBuildThisFileDirectory)</ZonitSdkWorkspaceRoot>
+  </PropertyGroup>
+  
+  <!-- Display info at the start of every build -->
+  <Target Name="DisplayZonitSdkInfo" BeforeTargets="BeforeBuild" Condition="'$(BuildingInsideVisualStudio)' == 'true'">
+    <Message Text="????????????????????????????????????????????????????????" Importance="high" />
+    <Message Text="?? Zonit SDK Workspace - Local Development Mode" Importance="high" />
+    <Message Text="   Workspace Root: $(ZonitSdkWorkspaceRoot)" Importance="high" />
+    <Message Text="   Using ProjectReference for cross-module dependencies" Importance="high" />
+    <Message Text="????????????????????????????????????????????????????????" Importance="high" />
+  </Target>
+  
+  <!-- Common properties for all projects in Zonit.Sdk -->
+  <PropertyGroup>
+    <!-- Enable nullable reference types by default -->
+    <Nullable>enable</Nullable>
+    
+    <!-- Treat warnings as errors in Debug builds -->
+    <TreatWarningsAsErrors Condition="'$(Configuration)' == 'Debug'">false</TreatWarningsAsErrors>
+    
+    <!-- Enable deterministic builds -->
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+  
+  <!-- Common package versions (optional - for consistency) -->
+  <ItemGroup>
+    <!-- Add common packages here if needed -->
+  </ItemGroup>
+</Project>
