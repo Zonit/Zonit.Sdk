@@ -1,0 +1,7 @@
+# Zonit SDK Workspace Marker
+# This file marks the root of the Zonit.Sdk workspace
+# Used by project files to detect local development mode
+
+workspace-name: Zonit.Sdk
+workspace-type: multi-module-development
+version: 1.0.0
