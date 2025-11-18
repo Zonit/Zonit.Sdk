@@ -1,6 +1,7 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11206.111 d18.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions", "Extensions", "{1A026ED6-59F7-4297-AE5C-A3439FE88D0D}"
 EndProject
@@ -10,88 +11,84 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{91
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions", "Zonit.Extensions", "{B011882E-6603-4929-B8A0-70E86E68B17D}"
 	ProjectSection(SolutionItems) = preProject
-		Source\Extensions\Zonit.Extensions\Readme.md = Source\Extensions\Zonit.Extensions\Readme.md
-		Source\Extensions\Zonit.Extensions\LICENSE.txt = Source\Extensions\Zonit.Extensions\LICENSE.txt
-		Source\Extensions\Zonit.Extensions\.gitignore = Source\Extensions\Zonit.Extensions\.gitignore
 		Source\Extensions\Zonit.Extensions\.gitattributes = Source\Extensions\Zonit.Extensions\.gitattributes
+		Source\Extensions\Zonit.Extensions\.gitignore = Source\Extensions\Zonit.Extensions\.gitignore
 		Source\Extensions\Zonit.Extensions\LICENSE.txt = Source\Extensions\Zonit.Extensions\LICENSE.txt
+		Source\Extensions\Zonit.Extensions\Readme.md = Source\Extensions\Zonit.Extensions\Readme.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions.Ai", "Zonit.Extensions.Ai", "{5016AC64-134C-4B58-B249-62CAE76E75A0}"
 	ProjectSection(SolutionItems) = preProject
-		Source\Extensions\Zonit.Extensions.Ai\Readme.md = Source\Extensions\Zonit.Extensions.Ai\Readme.md
-		Source\Extensions\Zonit.Extensions.Ai\LICENSE.txt = Source\Extensions\Zonit.Extensions.Ai\LICENSE.txt
-		Source\Extensions\Zonit.Extensions.Ai\.gitignore = Source\Extensions\Zonit.Extensions.Ai\.gitignore
 		Source\Extensions\Zonit.Extensions.Ai\.gitattributes = Source\Extensions\Zonit.Extensions.Ai\.gitattributes
+		Source\Extensions\Zonit.Extensions.Ai\.gitignore = Source\Extensions\Zonit.Extensions.Ai\.gitignore
 		Source\Extensions\Zonit.Extensions.Ai\Directory.Packages.props = Source\Extensions\Zonit.Extensions.Ai\Directory.Packages.props
 		Source\Extensions\Zonit.Extensions.Ai\LICENSE.txt = Source\Extensions\Zonit.Extensions.Ai\LICENSE.txt
+		Source\Extensions\Zonit.Extensions.Ai\Readme.md = Source\Extensions\Zonit.Extensions.Ai\Readme.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions.Cultures", "Zonit.Extensions.Cultures", "{09331D18-1D75-4DCF-B0C0-911F9FDDA6DC}"
 	ProjectSection(SolutionItems) = preProject
-		Source\Extensions\Zonit.Extensions.Cultures\Readme.md = Source\Extensions\Zonit.Extensions.Cultures\Readme.md
-		Source\Extensions\Zonit.Extensions.Cultures\.gitignore = Source\Extensions\Zonit.Extensions.Cultures\.gitignore
 		Source\Extensions\Zonit.Extensions.Cultures\.gitattributes = Source\Extensions\Zonit.Extensions.Cultures\.gitattributes
+		Source\Extensions\Zonit.Extensions.Cultures\.gitignore = Source\Extensions\Zonit.Extensions.Cultures\.gitignore
+		Source\Extensions\Zonit.Extensions.Cultures\Readme.md = Source\Extensions\Zonit.Extensions.Cultures\Readme.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions.Databases", "Zonit.Extensions.Databases", "{0EC399E3-A157-454A-8AEB-17BA41EA6EFB}"
 	ProjectSection(SolutionItems) = preProject
-		Source\Extensions\Zonit.Extensions.Databases\Readme.md = Source\Extensions\Zonit.Extensions.Databases\Readme.md
-		Source\Extensions\Zonit.Extensions.Databases\.gitignore = Source\Extensions\Zonit.Extensions.Databases\.gitignore
 		Source\Extensions\Zonit.Extensions.Databases\.gitattributes = Source\Extensions\Zonit.Extensions.Databases\.gitattributes
+		Source\Extensions\Zonit.Extensions.Databases\.gitignore = Source\Extensions\Zonit.Extensions.Databases\.gitignore
+		Source\Extensions\Zonit.Extensions.Databases\Readme.md = Source\Extensions\Zonit.Extensions.Databases\Readme.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions.Identity", "Zonit.Extensions.Identity", "{F0A70E5B-E394-4877-BB3E-20E47A3FD16B}"
 	ProjectSection(SolutionItems) = preProject
-		Source\Extensions\Zonit.Extensions.Identity\Readme.md = Source\Extensions\Zonit.Extensions.Identity\Readme.md
-		Source\Extensions\Zonit.Extensions.Identity\.gitignore = Source\Extensions\Zonit.Extensions.Identity\.gitignore
 		Source\Extensions\Zonit.Extensions.Identity\.gitattributes = Source\Extensions\Zonit.Extensions.Identity\.gitattributes
+		Source\Extensions\Zonit.Extensions.Identity\.gitignore = Source\Extensions\Zonit.Extensions.Identity\.gitignore
+		Source\Extensions\Zonit.Extensions.Identity\Readme.md = Source\Extensions\Zonit.Extensions.Identity\Readme.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions.Organizations", "Zonit.Extensions.Organizations", "{A6ACDB08-3E1E-4923-BC13-01C02131972B}"
 	ProjectSection(SolutionItems) = preProject
-		Source\Extensions\Zonit.Extensions.Organizations\Readme.md = Source\Extensions\Zonit.Extensions.Organizations\Readme.md
-		Source\Extensions\Zonit.Extensions.Organizations\.gitignore = Source\Extensions\Zonit.Extensions.Organizations\.gitignore
 		Source\Extensions\Zonit.Extensions.Organizations\.gitattributes = Source\Extensions\Zonit.Extensions.Organizations\.gitattributes
+		Source\Extensions\Zonit.Extensions.Organizations\.gitignore = Source\Extensions\Zonit.Extensions.Organizations\.gitignore
+		Source\Extensions\Zonit.Extensions.Organizations\Readme.md = Source\Extensions\Zonit.Extensions.Organizations\Readme.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions.Projects", "Zonit.Extensions.Projects", "{024CB391-710F-4930-B293-6B5470B3FD88}"
 	ProjectSection(SolutionItems) = preProject
-		Source\Extensions\Zonit.Extensions.Projects\Readme.md = Source\Extensions\Zonit.Extensions.Projects\Readme.md
-		Source\Extensions\Zonit.Extensions.Projects\.gitignore = Source\Extensions\Zonit.Extensions.Projects\.gitignore
 		Source\Extensions\Zonit.Extensions.Projects\.gitattributes = Source\Extensions\Zonit.Extensions.Projects\.gitattributes
+		Source\Extensions\Zonit.Extensions.Projects\.gitignore = Source\Extensions\Zonit.Extensions.Projects\.gitignore
+		Source\Extensions\Zonit.Extensions.Projects\Readme.md = Source\Extensions\Zonit.Extensions.Projects\Readme.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions.Tenants", "Zonit.Extensions.Tenants", "{8863BA87-A776-487B-BBD0-1951D0B80C21}"
 	ProjectSection(SolutionItems) = preProject
-		Source\Extensions\Zonit.Extensions.Tenants\Readme.md = Source\Extensions\Zonit.Extensions.Tenants\Readme.md
-		Source\Extensions\Zonit.Extensions.Tenants\LICENSE.txt = Source\Extensions\Zonit.Extensions.Tenants\LICENSE.txt
-		Source\Extensions\Zonit.Extensions.Tenants\.gitignore = Source\Extensions\Zonit.Extensions.Tenants\.gitignore
 		Source\Extensions\Zonit.Extensions.Tenants\.gitattributes = Source\Extensions\Zonit.Extensions.Tenants\.gitattributes
+		Source\Extensions\Zonit.Extensions.Tenants\.gitignore = Source\Extensions\Zonit.Extensions.Tenants\.gitignore
 		Source\Extensions\Zonit.Extensions.Tenants\LICENSE.txt = Source\Extensions\Zonit.Extensions.Tenants\LICENSE.txt
+		Source\Extensions\Zonit.Extensions.Tenants\Readme.md = Source\Extensions\Zonit.Extensions.Tenants\Readme.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Plugins", "Zonit.Plugins", "{7FEEA9E7-C06A-40F5-86E3-02C1F62D6B54}"
 	ProjectSection(SolutionItems) = preProject
-		Source\Plugins\Zonit.Plugins\Readme.md = Source\Plugins\Zonit.Plugins\Readme.md
-		Source\Plugins\Zonit.Plugins\LICENSE.txt = Source\Plugins\Zonit.Plugins\LICENSE.txt
-		Source\Plugins\Zonit.Plugins\.gitignore = Source\Plugins\Zonit.Plugins\.gitignore
 		Source\Plugins\Zonit.Plugins\.gitattributes = Source\Plugins\Zonit.Plugins\.gitattributes
+		Source\Plugins\Zonit.Plugins\.gitignore = Source\Plugins\Zonit.Plugins\.gitignore
 		Source\Plugins\Zonit.Plugins\LICENSE.txt = Source\Plugins\Zonit.Plugins\LICENSE.txt
+		Source\Plugins\Zonit.Plugins\Readme.md = Source\Plugins\Zonit.Plugins\Readme.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Services.Dashboard", "Zonit.Services.Dashboard", "{E3616E2C-B5C9-4435-B50B-E15707D19198}"
 	ProjectSection(SolutionItems) = preProject
-		Source\Services\Zonit.Services.Dashboard\Readme.md = Source\Services\Zonit.Services.Dashboard\Readme.md
-		Source\Services\Zonit.Services.Dashboard\.gitignore = Source\Services\Zonit.Services.Dashboard\.gitignore
 		Source\Services\Zonit.Services.Dashboard\.gitattributes = Source\Services\Zonit.Services.Dashboard\.gitattributes
+		Source\Services\Zonit.Services.Dashboard\.gitignore = Source\Services\Zonit.Services.Dashboard\.gitignore
+		Source\Services\Zonit.Services.Dashboard\Readme.md = Source\Services\Zonit.Services.Dashboard\Readme.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Services.EventMessage", "Zonit.Services.EventMessage", "{F7FB306B-E986-47B0-A47E-9F021E0C74AD}"
 	ProjectSection(SolutionItems) = preProject
-		Source\Services\Zonit.Services.EventMessage\Readme.md = Source\Services\Zonit.Services.EventMessage\Readme.md
-		Source\Services\Zonit.Services.EventMessage\.gitignore = Source\Services\Zonit.Services.EventMessage\.gitignore
 		Source\Services\Zonit.Services.EventMessage\.gitattributes = Source\Services\Zonit.Services.EventMessage\.gitattributes
+		Source\Services\Zonit.Services.EventMessage\.gitignore = Source\Services\Zonit.Services.EventMessage\.gitignore
+		Source\Services\Zonit.Services.EventMessage\Readme.md = Source\Services\Zonit.Services.EventMessage\Readme.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{1A5CCA23-948E-41F3-83A1-62727029C915}"
@@ -266,6 +263,14 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Services.EventMessage", "Source\Services\Zonit.Services.EventMessage\Source\Zonit.Services.EventMessage\Zonit.Services.EventMessage.csproj", "{2E6C931C-53C3-4D03-A9D6-CA2A5625D458}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Services.EventMessage.Abstractions", "Source\Services\Zonit.Services.EventMessage\Source\Zonit.Services.EventMessage.Abstractions\Zonit.Services.EventMessage.Abstractions.csproj", "{2577C228-AC8B-4201-B949-A47AFF299549}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementy rozwiązania", "Elementy rozwiązania", "{9FEAD799-9A55-4AEC-BC95-B12177A122EB}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE.txt = LICENSE.txt
+		README-UpdateZonitSolution.md = README-UpdateZonitSolution.md
+		README.md = README.md
+		Update-ZonitSolution.ps1 = Update-ZonitSolution.ps1
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -446,21 +451,54 @@ Global
 		{2577C228-AC8B-4201-B949-A47AFF299549}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2577C228-AC8B-4201-B949-A47AFF299549}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B011882E-6603-4929-B8A0-70E86E68B17D} = {1A026ED6-59F7-4297-AE5C-A3439FE88D0D}
+		{5016AC64-134C-4B58-B249-62CAE76E75A0} = {1A026ED6-59F7-4297-AE5C-A3439FE88D0D}
+		{09331D18-1D75-4DCF-B0C0-911F9FDDA6DC} = {1A026ED6-59F7-4297-AE5C-A3439FE88D0D}
+		{0EC399E3-A157-454A-8AEB-17BA41EA6EFB} = {1A026ED6-59F7-4297-AE5C-A3439FE88D0D}
+		{F0A70E5B-E394-4877-BB3E-20E47A3FD16B} = {1A026ED6-59F7-4297-AE5C-A3439FE88D0D}
+		{A6ACDB08-3E1E-4923-BC13-01C02131972B} = {1A026ED6-59F7-4297-AE5C-A3439FE88D0D}
+		{024CB391-710F-4930-B293-6B5470B3FD88} = {1A026ED6-59F7-4297-AE5C-A3439FE88D0D}
+		{8863BA87-A776-487B-BBD0-1951D0B80C21} = {1A026ED6-59F7-4297-AE5C-A3439FE88D0D}
+		{7FEEA9E7-C06A-40F5-86E3-02C1F62D6B54} = {0CB78D52-C77E-4D6B-9063-18B1EF52EA50}
+		{E3616E2C-B5C9-4435-B50B-E15707D19198} = {91A27E12-9845-4DD4-AB34-6FA3531E2734}
+		{F7FB306B-E986-47B0-A47E-9F021E0C74AD} = {91A27E12-9845-4DD4-AB34-6FA3531E2734}
 		{1A5CCA23-948E-41F3-83A1-62727029C915} = {B011882E-6603-4929-B8A0-70E86E68B17D}
 		{DE42C320-ED82-4863-BC67-546B9C82AA55} = {B011882E-6603-4929-B8A0-70E86E68B17D}
 		{BF56E844-2959-41BB-817B-6BF563CD7BFA} = {B011882E-6603-4929-B8A0-70E86E68B17D}
+		{53CB6271-C4D7-4950-B8D3-56102F7DFD56} = {5016AC64-134C-4B58-B249-62CAE76E75A0}
+		{34E9A270-9A0F-4B46-8EC5-8EFF5B779EE1} = {5016AC64-134C-4B58-B249-62CAE76E75A0}
+		{D1A280F9-6B03-4899-8857-9321487E7B9C} = {5016AC64-134C-4B58-B249-62CAE76E75A0}
+		{97B3429B-1E60-4FFD-AA18-284B7A445077} = {09331D18-1D75-4DCF-B0C0-911F9FDDA6DC}
+		{7F5BC6DC-1F1B-44F2-8747-0526B6EE6DB6} = {09331D18-1D75-4DCF-B0C0-911F9FDDA6DC}
+		{565A1ACB-7BBB-4257-9B71-06CE26EFC70C} = {0EC399E3-A157-454A-8AEB-17BA41EA6EFB}
+		{A5771C9E-6131-4525-8DCB-AAF072E653A5} = {0EC399E3-A157-454A-8AEB-17BA41EA6EFB}
+		{621CB244-AA88-4E0F-BB24-845B374CDFA6} = {F0A70E5B-E394-4877-BB3E-20E47A3FD16B}
+		{4948D601-A600-46C6-89DA-760120E13740} = {F0A70E5B-E394-4877-BB3E-20E47A3FD16B}
+		{0C2E080A-5B17-4800-991D-CCA779F26BC9} = {A6ACDB08-3E1E-4923-BC13-01C02131972B}
+		{863AB565-C83F-4913-AB26-CC03BFBA3AFB} = {A6ACDB08-3E1E-4923-BC13-01C02131972B}
+		{455C8A11-B7C7-4B90-906B-7069C87E50E7} = {024CB391-710F-4930-B293-6B5470B3FD88}
+		{AC894D08-4959-454E-8AAA-E672FDC1A7E2} = {024CB391-710F-4930-B293-6B5470B3FD88}
+		{8522AF30-ACFC-4F5A-8735-265CAD8455D6} = {8863BA87-A776-487B-BBD0-1951D0B80C21}
+		{8BBD4FD8-75EC-44FE-BE3D-858C5104A3A2} = {8863BA87-A776-487B-BBD0-1951D0B80C21}
+		{882F08F0-DACF-4749-8D86-660CC32C8B83} = {8863BA87-A776-487B-BBD0-1951D0B80C21}
+		{E44B0AFC-615A-4C05-AC91-DC794B138D3A} = {7FEEA9E7-C06A-40F5-86E3-02C1F62D6B54}
+		{A13452EB-106C-4B68-9F53-3B1380DAACE0} = {7FEEA9E7-C06A-40F5-86E3-02C1F62D6B54}
+		{25ADA7E3-6861-4793-AEE1-22D10F31A1A3} = {E3616E2C-B5C9-4435-B50B-E15707D19198}
+		{2E5652EE-FC9D-4A1B-88D7-7823B318AAF7} = {E3616E2C-B5C9-4435-B50B-E15707D19198}
+		{D2FBF4E7-159F-407E-B61E-19336356C7F4} = {E3616E2C-B5C9-4435-B50B-E15707D19198}
+		{BAD43F10-350F-4A63-974B-6B1D01B82623} = {F7FB306B-E986-47B0-A47E-9F021E0C74AD}
+		{9A819970-C0A0-478F-BB1A-0714AF80E2D8} = {F7FB306B-E986-47B0-A47E-9F021E0C74AD}
+		{5AE97872-141A-4402-B299-3BA700D4F0E7} = {F7FB306B-E986-47B0-A47E-9F021E0C74AD}
 		{AFB0603B-4841-4680-8CB9-153A22EF462D} = {1A5CCA23-948E-41F3-83A1-62727029C915}
 		{0F750DE1-CA8D-4E20-B769-206CA36A9877} = {1A5CCA23-948E-41F3-83A1-62727029C915}
 		{606E31BD-A728-47DF-ADCE-DA574EBAD160} = {DE42C320-ED82-4863-BC67-546B9C82AA55}
 		{D1234592-7268-4EA8-9033-448350DFD3A6} = {DE42C320-ED82-4863-BC67-546B9C82AA55}
 		{EE4D100B-B48C-4094-B313-663CC1976218} = {DE42C320-ED82-4863-BC67-546B9C82AA55}
 		{A206ACCB-FCAE-46D1-B2B9-04DDA2B53FD2} = {DE42C320-ED82-4863-BC67-546B9C82AA55}
-		{5016AC64-134C-4B58-B249-62CAE76E75A0} = {1A026ED6-59F7-4297-AE5C-A3439FE88D0D}
-		{53CB6271-C4D7-4950-B8D3-56102F7DFD56} = {5016AC64-134C-4B58-B249-62CAE76E75A0}
-		{34E9A270-9A0F-4B46-8EC5-8EFF5B779EE1} = {5016AC64-134C-4B58-B249-62CAE76E75A0}
-		{D1A280F9-6B03-4899-8857-9321487E7B9C} = {5016AC64-134C-4B58-B249-62CAE76E75A0}
 		{CEA7D904-DC72-4160-B558-561C84CF36CA} = {53CB6271-C4D7-4950-B8D3-56102F7DFD56}
 		{48FA8F36-B54A-4B2A-BA29-CEA9CCDF9CFC} = {34E9A270-9A0F-4B46-8EC5-8EFF5B779EE1}
 		{70DD6F4B-D250-442D-AD52-9B6914D46857} = {34E9A270-9A0F-4B46-8EC5-8EFF5B779EE1}
@@ -469,51 +507,25 @@ Global
 		{F3C52CF8-D7C9-436A-A49A-FF0746313BB5} = {34E9A270-9A0F-4B46-8EC5-8EFF5B779EE1}
 		{C81750AB-C6AF-4A75-ABC1-8700A4C542EB} = {34E9A270-9A0F-4B46-8EC5-8EFF5B779EE1}
 		{4C43A0FC-3E69-40D9-90B9-D28446C0CA23} = {34E9A270-9A0F-4B46-8EC5-8EFF5B779EE1}
-		{09331D18-1D75-4DCF-B0C0-911F9FDDA6DC} = {1A026ED6-59F7-4297-AE5C-A3439FE88D0D}
-		{97B3429B-1E60-4FFD-AA18-284B7A445077} = {09331D18-1D75-4DCF-B0C0-911F9FDDA6DC}
-		{7F5BC6DC-1F1B-44F2-8747-0526B6EE6DB6} = {09331D18-1D75-4DCF-B0C0-911F9FDDA6DC}
 		{F2112162-A8AB-4B73-A7DD-1E4B20A57D24} = {97B3429B-1E60-4FFD-AA18-284B7A445077}
 		{707E5731-3122-4CB5-BD46-7AF5DF4EF44A} = {97B3429B-1E60-4FFD-AA18-284B7A445077}
 		{AA715B2A-002C-4010-B002-E3D6FB150280} = {97B3429B-1E60-4FFD-AA18-284B7A445077}
-		{0EC399E3-A157-454A-8AEB-17BA41EA6EFB} = {1A026ED6-59F7-4297-AE5C-A3439FE88D0D}
-		{565A1ACB-7BBB-4257-9B71-06CE26EFC70C} = {0EC399E3-A157-454A-8AEB-17BA41EA6EFB}
-		{A5771C9E-6131-4525-8DCB-AAF072E653A5} = {0EC399E3-A157-454A-8AEB-17BA41EA6EFB}
 		{4E579CC7-E16F-402D-82D1-70BE917E424D} = {565A1ACB-7BBB-4257-9B71-06CE26EFC70C}
 		{23E5AF91-6C41-46EF-8375-3D1CAA9BBBE3} = {A5771C9E-6131-4525-8DCB-AAF072E653A5}
 		{A61A9DD9-9EEC-4DE7-BA47-5FB5037842D8} = {A5771C9E-6131-4525-8DCB-AAF072E653A5}
-		{F0A70E5B-E394-4877-BB3E-20E47A3FD16B} = {1A026ED6-59F7-4297-AE5C-A3439FE88D0D}
-		{621CB244-AA88-4E0F-BB24-845B374CDFA6} = {F0A70E5B-E394-4877-BB3E-20E47A3FD16B}
-		{4948D601-A600-46C6-89DA-760120E13740} = {F0A70E5B-E394-4877-BB3E-20E47A3FD16B}
 		{E0FDB86A-3E3F-4009-BCD8-CD9314F4B457} = {621CB244-AA88-4E0F-BB24-845B374CDFA6}
 		{C0C37947-A301-4513-BA88-627052CC0879} = {621CB244-AA88-4E0F-BB24-845B374CDFA6}
-		{A6ACDB08-3E1E-4923-BC13-01C02131972B} = {1A026ED6-59F7-4297-AE5C-A3439FE88D0D}
-		{0C2E080A-5B17-4800-991D-CCA779F26BC9} = {A6ACDB08-3E1E-4923-BC13-01C02131972B}
-		{863AB565-C83F-4913-AB26-CC03BFBA3AFB} = {A6ACDB08-3E1E-4923-BC13-01C02131972B}
 		{D9D64C75-0BB7-4F5C-9D3F-C5B133BBC9C7} = {0C2E080A-5B17-4800-991D-CCA779F26BC9}
 		{D3447788-7875-4E1C-98CA-BE3961E262B1} = {0C2E080A-5B17-4800-991D-CCA779F26BC9}
-		{024CB391-710F-4930-B293-6B5470B3FD88} = {1A026ED6-59F7-4297-AE5C-A3439FE88D0D}
-		{455C8A11-B7C7-4B90-906B-7069C87E50E7} = {024CB391-710F-4930-B293-6B5470B3FD88}
-		{AC894D08-4959-454E-8AAA-E672FDC1A7E2} = {024CB391-710F-4930-B293-6B5470B3FD88}
 		{837F3A3E-0AEF-4EEE-AB08-AE02CF682895} = {455C8A11-B7C7-4B90-906B-7069C87E50E7}
 		{D2EE2EA3-E09B-4C1F-B847-8472BCD91D2B} = {455C8A11-B7C7-4B90-906B-7069C87E50E7}
-		{8863BA87-A776-487B-BBD0-1951D0B80C21} = {1A026ED6-59F7-4297-AE5C-A3439FE88D0D}
-		{8522AF30-ACFC-4F5A-8735-265CAD8455D6} = {8863BA87-A776-487B-BBD0-1951D0B80C21}
-		{8BBD4FD8-75EC-44FE-BE3D-858C5104A3A2} = {8863BA87-A776-487B-BBD0-1951D0B80C21}
-		{882F08F0-DACF-4749-8D86-660CC32C8B83} = {8863BA87-A776-487B-BBD0-1951D0B80C21}
 		{288D680D-134D-443A-BD4B-9A81D9221DF6} = {8522AF30-ACFC-4F5A-8735-265CAD8455D6}
 		{61440403-06DA-4CEA-9325-016B846AC9A7} = {8BBD4FD8-75EC-44FE-BE3D-858C5104A3A2}
 		{2B87B8BF-AC70-4237-8E60-258775438EA2} = {8BBD4FD8-75EC-44FE-BE3D-858C5104A3A2}
 		{9378885E-6310-4A3D-9347-A66EFD5254B5} = {8BBD4FD8-75EC-44FE-BE3D-858C5104A3A2}
 		{F28AA132-258A-4A42-A7A4-D5495704290B} = {8BBD4FD8-75EC-44FE-BE3D-858C5104A3A2}
-		{7FEEA9E7-C06A-40F5-86E3-02C1F62D6B54} = {0CB78D52-C77E-4D6B-9063-18B1EF52EA50}
-		{E44B0AFC-615A-4C05-AC91-DC794B138D3A} = {7FEEA9E7-C06A-40F5-86E3-02C1F62D6B54}
-		{A13452EB-106C-4B68-9F53-3B1380DAACE0} = {7FEEA9E7-C06A-40F5-86E3-02C1F62D6B54}
 		{96EDD505-1D71-4F61-9B3E-23F35F6770DD} = {E44B0AFC-615A-4C05-AC91-DC794B138D3A}
 		{6C288CF5-4297-4C90-8793-3AA2CFC4318A} = {E44B0AFC-615A-4C05-AC91-DC794B138D3A}
-		{E3616E2C-B5C9-4435-B50B-E15707D19198} = {91A27E12-9845-4DD4-AB34-6FA3531E2734}
-		{25ADA7E3-6861-4793-AEE1-22D10F31A1A3} = {E3616E2C-B5C9-4435-B50B-E15707D19198}
-		{2E5652EE-FC9D-4A1B-88D7-7823B318AAF7} = {E3616E2C-B5C9-4435-B50B-E15707D19198}
-		{D2FBF4E7-159F-407E-B61E-19336356C7F4} = {E3616E2C-B5C9-4435-B50B-E15707D19198}
 		{C31D6C26-A3D5-42B4-830D-9E2E40E0B0DC} = {25ADA7E3-6861-4793-AEE1-22D10F31A1A3}
 		{684249F4-6C87-4077-9650-61D9DAF439A7} = {25ADA7E3-6861-4793-AEE1-22D10F31A1A3}
 		{85DC3C8E-E23C-4BA9-B018-0CF74BAFF6CA} = {25ADA7E3-6861-4793-AEE1-22D10F31A1A3}
@@ -521,15 +533,8 @@ Global
 		{B2AEF83B-DDD3-4572-9F13-EE147EBC3560} = {2E5652EE-FC9D-4A1B-88D7-7823B318AAF7}
 		{4C9F5D5F-A10A-4141-8107-C25B8A18B309} = {2E5652EE-FC9D-4A1B-88D7-7823B318AAF7}
 		{FE157A4E-19D1-44E1-9B90-29405D55585E} = {2E5652EE-FC9D-4A1B-88D7-7823B318AAF7}
-		{F7FB306B-E986-47B0-A47E-9F021E0C74AD} = {91A27E12-9845-4DD4-AB34-6FA3531E2734}
-		{BAD43F10-350F-4A63-974B-6B1D01B82623} = {F7FB306B-E986-47B0-A47E-9F021E0C74AD}
-		{9A819970-C0A0-478F-BB1A-0714AF80E2D8} = {F7FB306B-E986-47B0-A47E-9F021E0C74AD}
-		{5AE97872-141A-4402-B299-3BA700D4F0E7} = {F7FB306B-E986-47B0-A47E-9F021E0C74AD}
 		{A0C95C27-61AE-4A63-BA88-D3A2FD6556F5} = {BAD43F10-350F-4A63-974B-6B1D01B82623}
 		{2E6C931C-53C3-4D03-A9D6-CA2A5625D458} = {9A819970-C0A0-478F-BB1A-0714AF80E2D8}
 		{2577C228-AC8B-4201-B949-A47AFF299549} = {9A819970-C0A0-478F-BB1A-0714AF80E2D8}
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
