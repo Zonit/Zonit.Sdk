@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
 VisualStudioVersion = 18.3.11206.111 d18.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions", "Extensions", "{1A026ED6-59F7-4297-AE5C-A3439FE88D0D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions", "Extensions", "{BFDC0027-AA02-44BE-B87E-14E90F5BAA85}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{0CB78D52-C77E-4D6B-9063-18B1EF52EA50}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{33259B6A-8F19-47D3-8E71-5F0B8CA4C3F1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{91A27E12-9845-4DD4-AB34-6FA3531E2734}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{28536799-5224-4951-AC6A-9441DE30068F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions", "Zonit.Extensions", "{B011882E-6603-4929-B8A0-70E86E68B17D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions", "Zonit.Extensions", "{B0458732-3767-4D6A-91C8-851A091C737F}"
 	ProjectSection(SolutionItems) = preProject
 		Source\Extensions\Zonit.Extensions\.gitattributes = Source\Extensions\Zonit.Extensions\.gitattributes
 		Source\Extensions\Zonit.Extensions\.gitignore = Source\Extensions\Zonit.Extensions\.gitignore
@@ -17,51 +17,53 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions", "Zonit.E
 		Source\Extensions\Zonit.Extensions\Readme.md = Source\Extensions\Zonit.Extensions\Readme.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions.Ai", "Zonit.Extensions.Ai", "{5016AC64-134C-4B58-B249-62CAE76E75A0}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions.Ai", "Zonit.Extensions.Ai", "{87B63694-E0FA-4F6A-A3C8-EE829CB25108}"
 	ProjectSection(SolutionItems) = preProject
 		Source\Extensions\Zonit.Extensions.Ai\.gitattributes = Source\Extensions\Zonit.Extensions.Ai\.gitattributes
 		Source\Extensions\Zonit.Extensions.Ai\.gitignore = Source\Extensions\Zonit.Extensions.Ai\.gitignore
 		Source\Extensions\Zonit.Extensions.Ai\Directory.Packages.props = Source\Extensions\Zonit.Extensions.Ai\Directory.Packages.props
 		Source\Extensions\Zonit.Extensions.Ai\LICENSE.txt = Source\Extensions\Zonit.Extensions.Ai\LICENSE.txt
 		Source\Extensions\Zonit.Extensions.Ai\Readme.md = Source\Extensions\Zonit.Extensions.Ai\Readme.md
+		Source\Extensions\Zonit.Extensions.Ai\Update.ps1 = Source\Extensions\Zonit.Extensions.Ai\Update.ps1
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions.Cultures", "Zonit.Extensions.Cultures", "{09331D18-1D75-4DCF-B0C0-911F9FDDA6DC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions.Cultures", "Zonit.Extensions.Cultures", "{E93F4565-9B55-462F-9E60-4127A5F9D841}"
 	ProjectSection(SolutionItems) = preProject
 		Source\Extensions\Zonit.Extensions.Cultures\.gitattributes = Source\Extensions\Zonit.Extensions.Cultures\.gitattributes
 		Source\Extensions\Zonit.Extensions.Cultures\.gitignore = Source\Extensions\Zonit.Extensions.Cultures\.gitignore
 		Source\Extensions\Zonit.Extensions.Cultures\Readme.md = Source\Extensions\Zonit.Extensions.Cultures\Readme.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions.Databases", "Zonit.Extensions.Databases", "{0EC399E3-A157-454A-8AEB-17BA41EA6EFB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions.Databases", "Zonit.Extensions.Databases", "{049C6BE1-9DF5-4402-99D5-E2F64834FCE0}"
 	ProjectSection(SolutionItems) = preProject
 		Source\Extensions\Zonit.Extensions.Databases\.gitattributes = Source\Extensions\Zonit.Extensions.Databases\.gitattributes
 		Source\Extensions\Zonit.Extensions.Databases\.gitignore = Source\Extensions\Zonit.Extensions.Databases\.gitignore
 		Source\Extensions\Zonit.Extensions.Databases\Readme.md = Source\Extensions\Zonit.Extensions.Databases\Readme.md
+		Source\Extensions\Zonit.Extensions.Databases\Update-AllPackages.ps1 = Source\Extensions\Zonit.Extensions.Databases\Update-AllPackages.ps1
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions.Identity", "Zonit.Extensions.Identity", "{F0A70E5B-E394-4877-BB3E-20E47A3FD16B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions.Identity", "Zonit.Extensions.Identity", "{3497889F-9041-4BB1-9E8C-8AF905B84B94}"
 	ProjectSection(SolutionItems) = preProject
 		Source\Extensions\Zonit.Extensions.Identity\.gitattributes = Source\Extensions\Zonit.Extensions.Identity\.gitattributes
 		Source\Extensions\Zonit.Extensions.Identity\.gitignore = Source\Extensions\Zonit.Extensions.Identity\.gitignore
 		Source\Extensions\Zonit.Extensions.Identity\Readme.md = Source\Extensions\Zonit.Extensions.Identity\Readme.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions.Organizations", "Zonit.Extensions.Organizations", "{A6ACDB08-3E1E-4923-BC13-01C02131972B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions.Organizations", "Zonit.Extensions.Organizations", "{28807EBD-CE9E-4C3B-B396-E4A6B211C00B}"
 	ProjectSection(SolutionItems) = preProject
 		Source\Extensions\Zonit.Extensions.Organizations\.gitattributes = Source\Extensions\Zonit.Extensions.Organizations\.gitattributes
 		Source\Extensions\Zonit.Extensions.Organizations\.gitignore = Source\Extensions\Zonit.Extensions.Organizations\.gitignore
 		Source\Extensions\Zonit.Extensions.Organizations\Readme.md = Source\Extensions\Zonit.Extensions.Organizations\Readme.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions.Projects", "Zonit.Extensions.Projects", "{024CB391-710F-4930-B293-6B5470B3FD88}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions.Projects", "Zonit.Extensions.Projects", "{ACE6E45B-9CB1-4AA0-9F3A-11B48C9F7797}"
 	ProjectSection(SolutionItems) = preProject
 		Source\Extensions\Zonit.Extensions.Projects\.gitattributes = Source\Extensions\Zonit.Extensions.Projects\.gitattributes
 		Source\Extensions\Zonit.Extensions.Projects\.gitignore = Source\Extensions\Zonit.Extensions.Projects\.gitignore
 		Source\Extensions\Zonit.Extensions.Projects\Readme.md = Source\Extensions\Zonit.Extensions.Projects\Readme.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions.Tenants", "Zonit.Extensions.Tenants", "{8863BA87-A776-487B-BBD0-1951D0B80C21}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions.Tenants", "Zonit.Extensions.Tenants", "{0A4C839F-CC7F-49B7-8598-304332BB701E}"
 	ProjectSection(SolutionItems) = preProject
 		Source\Extensions\Zonit.Extensions.Tenants\.gitattributes = Source\Extensions\Zonit.Extensions.Tenants\.gitattributes
 		Source\Extensions\Zonit.Extensions.Tenants\.gitignore = Source\Extensions\Zonit.Extensions.Tenants\.gitignore
@@ -69,7 +71,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Extensions.Tenants", 
 		Source\Extensions\Zonit.Extensions.Tenants\Readme.md = Source\Extensions\Zonit.Extensions.Tenants\Readme.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Plugins", "Zonit.Plugins", "{7FEEA9E7-C06A-40F5-86E3-02C1F62D6B54}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Plugins", "Zonit.Plugins", "{3BFD7DB5-94B6-4B9D-979E-86FD03F525B0}"
 	ProjectSection(SolutionItems) = preProject
 		Source\Plugins\Zonit.Plugins\.gitattributes = Source\Plugins\Zonit.Plugins\.gitattributes
 		Source\Plugins\Zonit.Plugins\.gitignore = Source\Plugins\Zonit.Plugins\.gitignore
@@ -77,200 +79,273 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Plugins", "Zonit.Plug
 		Source\Plugins\Zonit.Plugins\Readme.md = Source\Plugins\Zonit.Plugins\Readme.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Services.Dashboard", "Zonit.Services.Dashboard", "{E3616E2C-B5C9-4435-B50B-E15707D19198}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Services.Dashboard", "Zonit.Services.Dashboard", "{12747E26-40A7-4C5B-9092-F60D5897DC3E}"
 	ProjectSection(SolutionItems) = preProject
 		Source\Services\Zonit.Services.Dashboard\.gitattributes = Source\Services\Zonit.Services.Dashboard\.gitattributes
 		Source\Services\Zonit.Services.Dashboard\.gitignore = Source\Services\Zonit.Services.Dashboard\.gitignore
 		Source\Services\Zonit.Services.Dashboard\Readme.md = Source\Services\Zonit.Services.Dashboard\Readme.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Services.EventMessage", "Zonit.Services.EventMessage", "{F7FB306B-E986-47B0-A47E-9F021E0C74AD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zonit.Services.EventMessage", "Zonit.Services.EventMessage", "{94DAC7CB-4218-488C-922B-C72E3FD89B38}"
 	ProjectSection(SolutionItems) = preProject
 		Source\Services\Zonit.Services.EventMessage\.gitattributes = Source\Services\Zonit.Services.EventMessage\.gitattributes
 		Source\Services\Zonit.Services.EventMessage\.gitignore = Source\Services\Zonit.Services.EventMessage\.gitignore
 		Source\Services\Zonit.Services.EventMessage\Readme.md = Source\Services\Zonit.Services.EventMessage\Readme.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{1A5CCA23-948E-41F3-83A1-62727029C915}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{9A8946C7-2FAA-4DEC-9A43-230D35FCFC9F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{DE42C320-ED82-4863-BC67-546B9C82AA55}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{36CF6B67-FC4F-4373-9897-FBA99057CE2F}"
+	ProjectSection(SolutionItems) = preProject
+		Source\Extensions\Zonit.Extensions\.github\workflows\PublishNuGet.yml = Source\Extensions\Zonit.Extensions\.github\workflows\PublishNuGet.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{786F7A11-FCFE-41A6-9F13-3503B84FD4AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{83BB5130-0B15-4797-BA58-1A427D8D8AB7}"
 	ProjectSection(SolutionItems) = preProject
 		Source\Extensions\Zonit.Extensions\Source\Directory.Packages.props = Source\Extensions\Zonit.Extensions\Source\Directory.Packages.props
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{BF56E844-2959-41BB-817B-6BF563CD7BFA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{38509498-B76C-4641-A514-56F86868AA1C}"
+	ProjectSection(SolutionItems) = preProject
+		Source\Extensions\Zonit.Extensions\Tools\Update-DotNet.ps1 = Source\Extensions\Zonit.Extensions\Tools\Update-DotNet.ps1
+	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{53CB6271-C4D7-4950-B8D3-56102F7DFD56}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{27B905E8-5A8C-40A8-B308-B5F28AE963E4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{34E9A270-9A0F-4B46-8EC5-8EFF5B779EE1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{24D3F5F0-A101-4C6E-B941-982F6B95BDD5}"
+	ProjectSection(SolutionItems) = preProject
+		Source\Extensions\Zonit.Extensions.Ai\.github\workflows\PublishNuGet.yml = Source\Extensions\Zonit.Extensions.Ai\.github\workflows\PublishNuGet.yml
+	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{D1A280F9-6B03-4899-8857-9321487E7B9C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{FA3EB52D-E4A3-4CA1-A783-E560FFE0C0D1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{97B3429B-1E60-4FFD-AA18-284B7A445077}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{FEC63624-679A-4C48-8CE5-F5B1D6B3C479}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{07EA0357-A657-46A3-A850-A3A4FCDE1A37}"
+	ProjectSection(SolutionItems) = preProject
+		Source\Extensions\Zonit.Extensions.Ai\Tools\Update-DotNet.ps1 = Source\Extensions\Zonit.Extensions.Ai\Tools\Update-DotNet.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{9754F260-6AE2-4510-BADE-5EF5CC2A557F}"
 	ProjectSection(SolutionItems) = preProject
 		Source\Extensions\Zonit.Extensions.Cultures\Source\Directory.Packages.props = Source\Extensions\Zonit.Extensions.Cultures\Source\Directory.Packages.props
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{7F5BC6DC-1F1B-44F2-8747-0526B6EE6DB6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{88A5470A-C3BC-4496-8463-09439964F253}"
+	ProjectSection(SolutionItems) = preProject
+		Source\Extensions\Zonit.Extensions.Cultures\Tools\Update-DotNet.ps1 = Source\Extensions\Zonit.Extensions.Cultures\Tools\Update-DotNet.ps1
+	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{565A1ACB-7BBB-4257-9B71-06CE26EFC70C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{3300F89B-9C7E-4E1A-B1EE-C538F7910B3F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{A5771C9E-6131-4525-8DCB-AAF072E653A5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{E6AF2817-D0BA-4684-812F-980BBD98EDC5}"
+	ProjectSection(SolutionItems) = preProject
+		Source\Extensions\Zonit.Extensions.Databases\.github\workflows\PublishNuGet.yml = Source\Extensions\Zonit.Extensions.Databases\.github\workflows\PublishNuGet.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{BDA652BB-EFA6-4619-B41B-D024230505C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{11EEDA30-CB63-4D5D-80B3-59E9696ECFEB}"
 	ProjectSection(SolutionItems) = preProject
 		Source\Extensions\Zonit.Extensions.Databases\Source\Directory.Packages.props = Source\Extensions\Zonit.Extensions.Databases\Source\Directory.Packages.props
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{621CB244-AA88-4E0F-BB24-845B374CDFA6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{D94BCAB4-9A86-42C5-9AA5-9D61FAC28261}"
 	ProjectSection(SolutionItems) = preProject
 		Source\Extensions\Zonit.Extensions.Identity\Source\Directory.Packages.props = Source\Extensions\Zonit.Extensions.Identity\Source\Directory.Packages.props
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{4948D601-A600-46C6-89DA-760120E13740}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{C804DC3D-DBAD-4F39-B857-3601AAC16CD5}"
+	ProjectSection(SolutionItems) = preProject
+		Source\Extensions\Zonit.Extensions.Identity\Tools\Update-DotNet.ps1 = Source\Extensions\Zonit.Extensions.Identity\Tools\Update-DotNet.ps1
+	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{0C2E080A-5B17-4800-991D-CCA779F26BC9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{9D4F228E-6F36-4583-8051-0228C86094C8}"
 	ProjectSection(SolutionItems) = preProject
 		Source\Extensions\Zonit.Extensions.Organizations\Source\Directory.Packages.props = Source\Extensions\Zonit.Extensions.Organizations\Source\Directory.Packages.props
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{863AB565-C83F-4913-AB26-CC03BFBA3AFB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{03042336-CFB2-49B6-B5AC-156FB9C016BF}"
+	ProjectSection(SolutionItems) = preProject
+		Source\Extensions\Zonit.Extensions.Organizations\Tools\Update-DotNet.ps1 = Source\Extensions\Zonit.Extensions.Organizations\Tools\Update-DotNet.ps1
+	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{455C8A11-B7C7-4B90-906B-7069C87E50E7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{13EC7B86-F277-4FA4-8F37-48EEEC59D948}"
 	ProjectSection(SolutionItems) = preProject
 		Source\Extensions\Zonit.Extensions.Projects\Source\Directory.Packages.props = Source\Extensions\Zonit.Extensions.Projects\Source\Directory.Packages.props
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{AC894D08-4959-454E-8AAA-E672FDC1A7E2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{3A5F6448-D97C-4423-9ABD-6C798A60FB2B}"
+	ProjectSection(SolutionItems) = preProject
+		Source\Extensions\Zonit.Extensions.Projects\Tools\Update-DotNet.ps1 = Source\Extensions\Zonit.Extensions.Projects\Tools\Update-DotNet.ps1
+	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{8522AF30-ACFC-4F5A-8735-265CAD8455D6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{413DE263-37A4-46C9-AE64-04A75E778A75}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{8BBD4FD8-75EC-44FE-BE3D-858C5104A3A2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{060EB250-AA9C-48DA-A8FA-AB386D36BA8F}"
+	ProjectSection(SolutionItems) = preProject
+		Source\Extensions\Zonit.Extensions.Tenants\.github\workflows\PublishNuGet.yml = Source\Extensions\Zonit.Extensions.Tenants\.github\workflows\PublishNuGet.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{A5DF2AC3-5837-479B-89A8-393FC07E1E3D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{C3EAF317-7669-4F2A-8302-7628DF69CC4B}"
 	ProjectSection(SolutionItems) = preProject
 		Source\Extensions\Zonit.Extensions.Tenants\Source\Directory.Packages.props = Source\Extensions\Zonit.Extensions.Tenants\Source\Directory.Packages.props
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{882F08F0-DACF-4749-8D86-660CC32C8B83}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{44A7DDA0-7A4E-4A32-99F5-2DC1D6FA46A2}"
+	ProjectSection(SolutionItems) = preProject
+		Source\Extensions\Zonit.Extensions.Tenants\Tools\Update-DotNet.ps1 = Source\Extensions\Zonit.Extensions.Tenants\Tools\Update-DotNet.ps1
+	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{E44B0AFC-615A-4C05-AC91-DC794B138D3A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{06937F32-7B21-4BE7-9400-A9C9199CE3FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{00B2A73A-9B65-4004-83C4-2222BC9038AB}"
+	ProjectSection(SolutionItems) = preProject
+		Source\Plugins\Zonit.Plugins\.github\workflows\PublishNuGet.yml = Source\Plugins\Zonit.Plugins\.github\workflows\PublishNuGet.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{65D59BF5-0A04-4D36-9F2D-C99DDFBF4322}"
 	ProjectSection(SolutionItems) = preProject
 		Source\Plugins\Zonit.Plugins\Source\Directory.Packages.props = Source\Plugins\Zonit.Plugins\Source\Directory.Packages.props
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{A13452EB-106C-4B68-9F53-3B1380DAACE0}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{90C4C3A7-7C7B-49F1-96A7-FFF5A1714475}"
+	ProjectSection(SolutionItems) = preProject
+		Source\Plugins\Zonit.Plugins\Tools\Update-DotNet.ps1 = Source\Plugins\Zonit.Plugins\Tools\Update-DotNet.ps1
+	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{25ADA7E3-6861-4793-AEE1-22D10F31A1A3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{B255ADEE-4BAE-44B1-ACBD-D1FA95A5572A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{306524D7-C561-4A2A-BEA5-85691F27AE8E}"
+	ProjectSection(SolutionItems) = preProject
+		Source\Services\Zonit.Services.Dashboard\.github\workflows\PublishNuGet.yml = Source\Services\Zonit.Services.Dashboard\.github\workflows\PublishNuGet.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{F36B3634-40D8-4AC8-9DBA-DA07F5041899}"
 	ProjectSection(SolutionItems) = preProject
 		Source\Services\Zonit.Services.Dashboard\Example\Directory.Packages.props = Source\Services\Zonit.Services.Dashboard\Example\Directory.Packages.props
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{2E5652EE-FC9D-4A1B-88D7-7823B318AAF7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{196374EB-666D-4FC0-A6EB-7157609A660E}"
 	ProjectSection(SolutionItems) = preProject
 		Source\Services\Zonit.Services.Dashboard\Source\Directory.Packages.props = Source\Services\Zonit.Services.Dashboard\Source\Directory.Packages.props
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{D2FBF4E7-159F-407E-B61E-19336356C7F4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{E86C7D2F-4C4C-440D-A1C7-B1C8155B30A8}"
+	ProjectSection(SolutionItems) = preProject
+		Source\Services\Zonit.Services.Dashboard\Tools\Update-DotNet.ps1 = Source\Services\Zonit.Services.Dashboard\Tools\Update-DotNet.ps1
+	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{BAD43F10-350F-4A63-974B-6B1D01B82623}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{FC29279D-40F7-4A3D-B867-5CE152955CAA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{9A819970-C0A0-478F-BB1A-0714AF80E2D8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{5B78417E-8B8B-439C-B619-CF3AC36AA435}"
+	ProjectSection(SolutionItems) = preProject
+		Source\Services\Zonit.Services.EventMessage\.github\workflows\AutoUpdateNugets.yml.yml = Source\Services\Zonit.Services.EventMessage\.github\workflows\AutoUpdateNugets.yml.yml
+		Source\Services\Zonit.Services.EventMessage\.github\workflows\CheckNugetAndPublish.yml = Source\Services\Zonit.Services.EventMessage\.github\workflows\CheckNugetAndPublish.yml
+		Source\Services\Zonit.Services.EventMessage\.github\workflows\PublishNuGet.yml = Source\Services\Zonit.Services.EventMessage\.github\workflows\PublishNuGet.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{B03A5956-2CD0-47C9-802E-25B01862004C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{A1656A84-CCCD-4895-BF59-A48C6599323D}"
 	ProjectSection(SolutionItems) = preProject
 		Source\Services\Zonit.Services.EventMessage\Source\Directory.Packages.props = Source\Services\Zonit.Services.EventMessage\Source\Directory.Packages.props
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{5AE97872-141A-4402-B299-3BA700D4F0E7}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example", "Source\Extensions\Zonit.Extensions\Example\Example\Example.csproj", "{AFB0603B-4841-4680-8CB9-153A22EF462D}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExampleWebsite", "Source\Extensions\Zonit.Extensions\Example\ExampleWebsite\ExampleWebsite.csproj", "{0F750DE1-CA8D-4E20-B769-206CA36A9877}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions", "Source\Extensions\Zonit.Extensions\Source\Zonit.Extensions\Zonit.Extensions.csproj", "{606E31BD-A728-47DF-ADCE-DA574EBAD160}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Abstractions", "Source\Extensions\Zonit.Extensions\Source\Zonit.Extensions.Abstractions\Zonit.Extensions.Abstractions.csproj", "{D1234592-7268-4EA8-9033-448350DFD3A6}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Website", "Source\Extensions\Zonit.Extensions\Source\Zonit.Extensions.Website\Zonit.Extensions.Website.csproj", "{EE4D100B-B48C-4094-B313-663CC1976218}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Website.Abstractions", "Source\Extensions\Zonit.Extensions\Source\Zonit.Extensions.Website.Abstractions\Zonit.Extensions.Website.Abstractions.csproj", "{A206ACCB-FCAE-46D1-B2B9-04DDA2B53FD2}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example", "Source\Extensions\Zonit.Extensions.Ai\Example\Example\Example.csproj", "{CEA7D904-DC72-4160-B558-561C84CF36CA}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Ai", "Source\Extensions\Zonit.Extensions.Ai\Source\Zonit.Extensions.Ai\Zonit.Extensions.Ai.csproj", "{48FA8F36-B54A-4B2A-BA29-CEA9CCDF9CFC}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Ai.Abstractions", "Source\Extensions\Zonit.Extensions.Ai\Source\Zonit.Extensions.Ai.Abstractions\Zonit.Extensions.Ai.Abstractions.csproj", "{70DD6F4B-D250-442D-AD52-9B6914D46857}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Ai.Application", "Source\Extensions\Zonit.Extensions.Ai\Source\Zonit.Extensions.Ai.Application\Zonit.Extensions.Ai.Application.csproj", "{AD39B470-1D3E-4A0D-BE0B-DB1D17D98BF9}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Ai.Domain", "Source\Extensions\Zonit.Extensions.Ai\Source\Zonit.Extensions.Ai.Domain\Zonit.Extensions.Ai.Domain.csproj", "{F677667A-3E01-423F-8541-06361B5FF782}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Ai.Infrastructure", "Source\Extensions\Zonit.Extensions.Ai\Source\Zonit.Extensions.Ai.Infrastructure\Zonit.Extensions.Ai.Infrastructure.csproj", "{F3C52CF8-D7C9-436A-A49A-FF0746313BB5}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Ai.Llm", "Source\Extensions\Zonit.Extensions.Ai\Source\Zonit.Extensions.Ai.Llm\Zonit.Extensions.Ai.Llm.csproj", "{C81750AB-C6AF-4A75-ABC1-8700A4C542EB}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Ai.Prompts", "Source\Extensions\Zonit.Extensions.Ai\Source\Zonit.Extensions.Ai.Prompts\Zonit.Extensions.Ai.Prompts.csproj", "{4C43A0FC-3E69-40D9-90B9-D28446C0CA23}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Cultures", "Source\Extensions\Zonit.Extensions.Cultures\Source\Zonit.Extensions.Cultures\Zonit.Extensions.Cultures.csproj", "{F2112162-A8AB-4B73-A7DD-1E4B20A57D24}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Cultures.Abstractions", "Source\Extensions\Zonit.Extensions.Cultures\Source\Zonit.Extensions.Cultures.Abstractions\Zonit.Extensions.Cultures.Abstractions.csproj", "{707E5731-3122-4CB5-BD46-7AF5DF4EF44A}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Cultures.Tests", "Source\Extensions\Zonit.Extensions.Cultures\Source\Zonit.Extensions.Cultures.Tests\Zonit.Extensions.Cultures.Tests.csproj", "{AA715B2A-002C-4010-B002-E3D6FB150280}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Databases.Examples", "Source\Extensions\Zonit.Extensions.Databases\Example\Zonit.Extensions.Databases.Examples\Zonit.Extensions.Databases.Examples.csproj", "{4E579CC7-E16F-402D-82D1-70BE917E424D}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Databases.Abstractions", "Source\Extensions\Zonit.Extensions.Databases\Source\Zonit.Extensions.Databases.Abstractions\Zonit.Extensions.Databases.Abstractions.csproj", "{23E5AF91-6C41-46EF-8375-3D1CAA9BBBE3}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Databases.SqlServer", "Source\Extensions\Zonit.Extensions.Databases\Source\Zonit.Extensions.Databases.SqlServer\Zonit.Extensions.Databases.SqlServer.csproj", "{A61A9DD9-9EEC-4DE7-BA47-5FB5037842D8}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Identity", "Source\Extensions\Zonit.Extensions.Identity\Source\Zonit.Extensions.Identity\Zonit.Extensions.Identity.csproj", "{E0FDB86A-3E3F-4009-BCD8-CD9314F4B457}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Identity.Abstractions", "Source\Extensions\Zonit.Extensions.Identity\Source\Zonit.Extensions.Identity.Abstractions\Zonit.Extensions.Identity.Abstractions.csproj", "{C0C37947-A301-4513-BA88-627052CC0879}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Organizations", "Source\Extensions\Zonit.Extensions.Organizations\Source\Zonit.Extensions.Organizations\Zonit.Extensions.Organizations.csproj", "{D9D64C75-0BB7-4F5C-9D3F-C5B133BBC9C7}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Organizations.Abstractions", "Source\Extensions\Zonit.Extensions.Organizations\Source\Zonit.Extensions.Organizations.Abstractions\Zonit.Extensions.Organizations.Abstractions.csproj", "{D3447788-7875-4E1C-98CA-BE3961E262B1}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Projects", "Source\Extensions\Zonit.Extensions.Projects\Source\Zonit.Extensions.Projects\Zonit.Extensions.Projects.csproj", "{837F3A3E-0AEF-4EEE-AB08-AE02CF682895}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Projects.Abstractions", "Source\Extensions\Zonit.Extensions.Projects\Source\Zonit.Extensions.Projects.Abstractions\Zonit.Extensions.Projects.Abstractions.csproj", "{D2EE2EA3-E09B-4C1F-B847-8472BCD91D2B}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example", "Source\Extensions\Zonit.Extensions.Tenants\Example\Example\Example.csproj", "{288D680D-134D-443A-BD4B-9A81D9221DF6}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Tenants", "Source\Extensions\Zonit.Extensions.Tenants\Source\Zonit.Extensions.Tenants\Zonit.Extensions.Tenants.csproj", "{61440403-06DA-4CEA-9325-016B846AC9A7}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Tenants.Abstractions", "Source\Extensions\Zonit.Extensions.Tenants\Source\Zonit.Extensions.Tenants.Abstractions\Zonit.Extensions.Tenants.Abstractions.csproj", "{2B87B8BF-AC70-4237-8E60-258775438EA2}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Tenants.SourceGenerators", "Source\Extensions\Zonit.Extensions.Tenants\Source\Zonit.Extensions.Tenants.SourceGenerators\Zonit.Extensions.Tenants.SourceGenerators.csproj", "{9378885E-6310-4A3D-9347-A66EFD5254B5}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Tenants.Web", "Source\Extensions\Zonit.Extensions.Tenants\Source\Zonit.Extensions.Tenants.Web\Zonit.Extensions.Tenants.Web.csproj", "{F28AA132-258A-4A42-A7A4-D5495704290B}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Plugins.Articles.Abstractions", "Source\Plugins\Zonit.Plugins\Source\Zonit.Plugins.Articles.Abstractions\Zonit.Plugins.Articles.Abstractions.csproj", "{96EDD505-1D71-4F61-9B3E-23F35F6770DD}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Plugins.Wallets.Abstractions", "Source\Plugins\Zonit.Plugins\Source\Zonit.Plugins.Wallets.Abstractions\Zonit.Plugins.Wallets.Abstractions.csproj", "{6C288CF5-4297-4C90-8793-3AA2CFC4318A}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example", "Source\Services\Zonit.Services.Dashboard\Example\Example\Example.csproj", "{C31D6C26-A3D5-42B4-830D-9E2E40E0B0DC}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.Presentation.Management", "Source\Services\Zonit.Services.Dashboard\Example\Example.Presentation.Management\Example.Presentation.Management.csproj", "{684249F4-6C87-4077-9650-61D9DAF439A7}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.Presentation.Manager", "Source\Services\Zonit.Services.Dashboard\Example\Example.Presentation.Manager\Example.Presentation.Manager.csproj", "{85DC3C8E-E23C-4BA9-B018-0CF74BAFF6CA}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Services.Dashboard", "Source\Services\Zonit.Services.Dashboard\Source\Zonit.Services.Dashboard\Zonit.Services.Dashboard.csproj", "{359BAC64-E4F4-4851-BDD9-8273E297670F}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Services.Dashboard.Abstractions", "Source\Services\Zonit.Services.Dashboard\Source\Zonit.Services.Dashboard.Abstractions\Zonit.Services.Dashboard.Abstractions.csproj", "{B2AEF83B-DDD3-4572-9F13-EE147EBC3560}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Services.Dashboard.Application", "Source\Services\Zonit.Services.Dashboard\Source\Zonit.Services.Dashboard.Application\Zonit.Services.Dashboard.Application.csproj", "{4C9F5D5F-A10A-4141-8107-C25B8A18B309}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Services.Dashboard.Components", "Source\Services\Zonit.Services.Dashboard\Source\Zonit.Services.Dashboard.Components\Zonit.Services.Dashboard.Components.csproj", "{FE157A4E-19D1-44E1-9B90-29405D55585E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example", "Source\Services\Zonit.Services.EventMessage\Example\Example\Example.csproj", "{A0C95C27-61AE-4A63-BA88-D3A2FD6556F5}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Services.EventMessage", "Source\Services\Zonit.Services.EventMessage\Source\Zonit.Services.EventMessage\Zonit.Services.EventMessage.csproj", "{2E6C931C-53C3-4D03-A9D6-CA2A5625D458}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Services.EventMessage.Abstractions", "Source\Services\Zonit.Services.EventMessage\Source\Zonit.Services.EventMessage.Abstractions\Zonit.Services.EventMessage.Abstractions.csproj", "{2577C228-AC8B-4201-B949-A47AFF299549}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementy rozwiązania", "Elementy rozwiązania", "{9FEAD799-9A55-4AEC-BC95-B12177A122EB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{AF0809DD-3237-47AC-9174-B102A764F5D3}"
 	ProjectSection(SolutionItems) = preProject
-		LICENSE.txt = LICENSE.txt
-		README-UpdateZonitSolution.md = README-UpdateZonitSolution.md
-		README.md = README.md
-		Update-ZonitSolution.ps1 = Update-ZonitSolution.ps1
+		Source\Services\Zonit.Services.EventMessage\Tools\Update-DotNet.ps1 = Source\Services\Zonit.Services.EventMessage\Tools\Update-DotNet.ps1
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example", "Source\Extensions\Zonit.Extensions\Example\Example\Example.csproj", "{35DE4E44-FF19-4E03-972C-C80E52243B59}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExampleWebsite", "Source\Extensions\Zonit.Extensions\Example\ExampleWebsite\ExampleWebsite.csproj", "{F5445B3F-321B-4735-A42A-874370850AA1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions", "Source\Extensions\Zonit.Extensions\Source\Zonit.Extensions\Zonit.Extensions.csproj", "{9D2306DD-0AFF-4078-ADFF-8A246FE7C0B9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Abstractions", "Source\Extensions\Zonit.Extensions\Source\Zonit.Extensions.Abstractions\Zonit.Extensions.Abstractions.csproj", "{CD2D88B2-B7E4-4A84-9C3D-DC2F3EAA34D1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Website", "Source\Extensions\Zonit.Extensions\Source\Zonit.Extensions.Website\Zonit.Extensions.Website.csproj", "{368AFF6B-1B92-4F16-BB5D-2B70803AED95}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Website.Abstractions", "Source\Extensions\Zonit.Extensions\Source\Zonit.Extensions.Website.Abstractions\Zonit.Extensions.Website.Abstractions.csproj", "{451F749E-42E5-41AA-BF73-C7CE4DFE171D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example", "Source\Extensions\Zonit.Extensions.Ai\Example\Example\Example.csproj", "{E80A2EF3-82B2-463D-884F-719AD2876C14}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Ai", "Source\Extensions\Zonit.Extensions.Ai\Source\Zonit.Extensions.Ai\Zonit.Extensions.Ai.csproj", "{CE269EE0-4A75-431C-A801-9A35ACFD7FE6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Ai.Abstractions", "Source\Extensions\Zonit.Extensions.Ai\Source\Zonit.Extensions.Ai.Abstractions\Zonit.Extensions.Ai.Abstractions.csproj", "{2CB70E98-9717-482B-8A42-8492509F9DF2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Ai.Application", "Source\Extensions\Zonit.Extensions.Ai\Source\Zonit.Extensions.Ai.Application\Zonit.Extensions.Ai.Application.csproj", "{EB46A9A5-A959-4EAE-A1AA-26C6D6A8A17C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Ai.Domain", "Source\Extensions\Zonit.Extensions.Ai\Source\Zonit.Extensions.Ai.Domain\Zonit.Extensions.Ai.Domain.csproj", "{C61B0DE3-2087-4F25-B5E4-AA98F3715ADF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Ai.Infrastructure", "Source\Extensions\Zonit.Extensions.Ai\Source\Zonit.Extensions.Ai.Infrastructure\Zonit.Extensions.Ai.Infrastructure.csproj", "{17333A30-9152-4564-80E4-83C985FE3D97}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Ai.Llm", "Source\Extensions\Zonit.Extensions.Ai\Source\Zonit.Extensions.Ai.Llm\Zonit.Extensions.Ai.Llm.csproj", "{D80D02B9-589F-4400-894A-8CE60B790605}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Ai.Prompts", "Source\Extensions\Zonit.Extensions.Ai\Source\Zonit.Extensions.Ai.Prompts\Zonit.Extensions.Ai.Prompts.csproj", "{D766A6F9-04A6-4A2E-A1F4-E9A6CDD53B42}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Cultures", "Source\Extensions\Zonit.Extensions.Cultures\Source\Zonit.Extensions.Cultures\Zonit.Extensions.Cultures.csproj", "{B7A30587-EA14-421E-B1B9-09E1C802A535}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Cultures.Abstractions", "Source\Extensions\Zonit.Extensions.Cultures\Source\Zonit.Extensions.Cultures.Abstractions\Zonit.Extensions.Cultures.Abstractions.csproj", "{4C4C0662-FA16-401E-8872-4FED20505B14}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Cultures.Tests", "Source\Extensions\Zonit.Extensions.Cultures\Source\Zonit.Extensions.Cultures.Tests\Zonit.Extensions.Cultures.Tests.csproj", "{11013FAE-62AB-4F04-9AF5-F65DB637D118}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Databases.Examples", "Source\Extensions\Zonit.Extensions.Databases\Example\Zonit.Extensions.Databases.Examples\Zonit.Extensions.Databases.Examples.csproj", "{ABE971E0-3AED-4882-ABD1-1A618A4BC231}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Databases.Abstractions", "Source\Extensions\Zonit.Extensions.Databases\Source\Zonit.Extensions.Databases.Abstractions\Zonit.Extensions.Databases.Abstractions.csproj", "{1F419994-26A3-4C7E-A29E-6758F0E4D804}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Databases.SqlServer", "Source\Extensions\Zonit.Extensions.Databases\Source\Zonit.Extensions.Databases.SqlServer\Zonit.Extensions.Databases.SqlServer.csproj", "{0F2F2A66-8F58-49C2-86B7-EE4584E1ABDF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Identity", "Source\Extensions\Zonit.Extensions.Identity\Source\Zonit.Extensions.Identity\Zonit.Extensions.Identity.csproj", "{4C772D12-4714-4A5F-97FF-5335D7AFC9DE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Identity.Abstractions", "Source\Extensions\Zonit.Extensions.Identity\Source\Zonit.Extensions.Identity.Abstractions\Zonit.Extensions.Identity.Abstractions.csproj", "{9D8AB81B-0901-4936-9E74-108AF13FB61A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Organizations", "Source\Extensions\Zonit.Extensions.Organizations\Source\Zonit.Extensions.Organizations\Zonit.Extensions.Organizations.csproj", "{A8826866-C535-4F1D-894B-3D9B0E66E6C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Organizations.Abstractions", "Source\Extensions\Zonit.Extensions.Organizations\Source\Zonit.Extensions.Organizations.Abstractions\Zonit.Extensions.Organizations.Abstractions.csproj", "{9738AE72-334F-4F15-BECA-D86F848C276E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Projects", "Source\Extensions\Zonit.Extensions.Projects\Source\Zonit.Extensions.Projects\Zonit.Extensions.Projects.csproj", "{A2C39954-8E4F-4C33-8412-66722091C61F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Projects.Abstractions", "Source\Extensions\Zonit.Extensions.Projects\Source\Zonit.Extensions.Projects.Abstractions\Zonit.Extensions.Projects.Abstractions.csproj", "{EC0D0FF3-6644-48B9-94A4-68A0FFA95330}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example", "Source\Extensions\Zonit.Extensions.Tenants\Example\Example\Example.csproj", "{88B9FCD5-9B2A-4F71-B80A-A14C0DB2A537}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Tenants", "Source\Extensions\Zonit.Extensions.Tenants\Source\Zonit.Extensions.Tenants\Zonit.Extensions.Tenants.csproj", "{B42EBBD4-E5EC-4B16-B1FE-44227D26E8E5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Tenants.Abstractions", "Source\Extensions\Zonit.Extensions.Tenants\Source\Zonit.Extensions.Tenants.Abstractions\Zonit.Extensions.Tenants.Abstractions.csproj", "{AF9A9A71-C6B8-4F23-924F-DF8AA4E6383A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Tenants.SourceGenerators", "Source\Extensions\Zonit.Extensions.Tenants\Source\Zonit.Extensions.Tenants.SourceGenerators\Zonit.Extensions.Tenants.SourceGenerators.csproj", "{6370EC52-D1A0-4414-AD1A-3A3128210872}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Extensions.Tenants.Web", "Source\Extensions\Zonit.Extensions.Tenants\Source\Zonit.Extensions.Tenants.Web\Zonit.Extensions.Tenants.Web.csproj", "{E659166F-456E-4110-8CF2-5960F9AEB4B8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Plugins.Articles.Abstractions", "Source\Plugins\Zonit.Plugins\Source\Zonit.Plugins.Articles.Abstractions\Zonit.Plugins.Articles.Abstractions.csproj", "{CC771567-A28C-4BC5-B362-450C3577F0F4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Plugins.Wallets.Abstractions", "Source\Plugins\Zonit.Plugins\Source\Zonit.Plugins.Wallets.Abstractions\Zonit.Plugins.Wallets.Abstractions.csproj", "{2FAC9E89-3CE3-4E62-9D3D-91C497ACED41}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example", "Source\Services\Zonit.Services.Dashboard\Example\Example\Example.csproj", "{B3542B95-9E59-4F31-A32F-5481921BC838}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.Presentation.Management", "Source\Services\Zonit.Services.Dashboard\Example\Example.Presentation.Management\Example.Presentation.Management.csproj", "{1D9F8750-7480-4CDE-B298-BBE22F4F61DF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.Presentation.Manager", "Source\Services\Zonit.Services.Dashboard\Example\Example.Presentation.Manager\Example.Presentation.Manager.csproj", "{23320386-F6D9-4C36-A25F-A1A7854C314D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Services.Dashboard", "Source\Services\Zonit.Services.Dashboard\Source\Zonit.Services.Dashboard\Zonit.Services.Dashboard.csproj", "{22CB834F-009C-4988-8A0C-245CAF65025E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Services.Dashboard.Abstractions", "Source\Services\Zonit.Services.Dashboard\Source\Zonit.Services.Dashboard.Abstractions\Zonit.Services.Dashboard.Abstractions.csproj", "{38E1F0B8-04F8-4422-BA52-A4525454227B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Services.Dashboard.Application", "Source\Services\Zonit.Services.Dashboard\Source\Zonit.Services.Dashboard.Application\Zonit.Services.Dashboard.Application.csproj", "{3674CF79-DB5B-4FA4-A3A2-7913EFD53EF5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Services.Dashboard.Components", "Source\Services\Zonit.Services.Dashboard\Source\Zonit.Services.Dashboard.Components\Zonit.Services.Dashboard.Components.csproj", "{E740ED61-8BAD-4848-9026-23D3CDE61AF0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example", "Source\Services\Zonit.Services.EventMessage\Example\Example\Example.csproj", "{F766B5B0-EBFB-4EA2-B995-8E0F1E40A84A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Services.EventMessage", "Source\Services\Zonit.Services.EventMessage\Source\Zonit.Services.EventMessage\Zonit.Services.EventMessage.csproj", "{F33BDC3C-8578-42D1-A000-ACAF23CAB1C7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zonit.Services.EventMessage.Abstractions", "Source\Services\Zonit.Services.EventMessage\Source\Zonit.Services.EventMessage.Abstractions\Zonit.Services.EventMessage.Abstractions.csproj", "{3BEC81AC-6BE0-4137-9508-7C4DDDD8FE9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -278,263 +353,280 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AFB0603B-4841-4680-8CB9-153A22EF462D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AFB0603B-4841-4680-8CB9-153A22EF462D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AFB0603B-4841-4680-8CB9-153A22EF462D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AFB0603B-4841-4680-8CB9-153A22EF462D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0F750DE1-CA8D-4E20-B769-206CA36A9877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0F750DE1-CA8D-4E20-B769-206CA36A9877}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0F750DE1-CA8D-4E20-B769-206CA36A9877}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0F750DE1-CA8D-4E20-B769-206CA36A9877}.Release|Any CPU.Build.0 = Release|Any CPU
-		{606E31BD-A728-47DF-ADCE-DA574EBAD160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{606E31BD-A728-47DF-ADCE-DA574EBAD160}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{606E31BD-A728-47DF-ADCE-DA574EBAD160}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{606E31BD-A728-47DF-ADCE-DA574EBAD160}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D1234592-7268-4EA8-9033-448350DFD3A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D1234592-7268-4EA8-9033-448350DFD3A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D1234592-7268-4EA8-9033-448350DFD3A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D1234592-7268-4EA8-9033-448350DFD3A6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EE4D100B-B48C-4094-B313-663CC1976218}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE4D100B-B48C-4094-B313-663CC1976218}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EE4D100B-B48C-4094-B313-663CC1976218}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EE4D100B-B48C-4094-B313-663CC1976218}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A206ACCB-FCAE-46D1-B2B9-04DDA2B53FD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A206ACCB-FCAE-46D1-B2B9-04DDA2B53FD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A206ACCB-FCAE-46D1-B2B9-04DDA2B53FD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A206ACCB-FCAE-46D1-B2B9-04DDA2B53FD2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CEA7D904-DC72-4160-B558-561C84CF36CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CEA7D904-DC72-4160-B558-561C84CF36CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CEA7D904-DC72-4160-B558-561C84CF36CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CEA7D904-DC72-4160-B558-561C84CF36CA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{48FA8F36-B54A-4B2A-BA29-CEA9CCDF9CFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{48FA8F36-B54A-4B2A-BA29-CEA9CCDF9CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{48FA8F36-B54A-4B2A-BA29-CEA9CCDF9CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{48FA8F36-B54A-4B2A-BA29-CEA9CCDF9CFC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{70DD6F4B-D250-442D-AD52-9B6914D46857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{70DD6F4B-D250-442D-AD52-9B6914D46857}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{70DD6F4B-D250-442D-AD52-9B6914D46857}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{70DD6F4B-D250-442D-AD52-9B6914D46857}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AD39B470-1D3E-4A0D-BE0B-DB1D17D98BF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AD39B470-1D3E-4A0D-BE0B-DB1D17D98BF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AD39B470-1D3E-4A0D-BE0B-DB1D17D98BF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AD39B470-1D3E-4A0D-BE0B-DB1D17D98BF9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F677667A-3E01-423F-8541-06361B5FF782}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F677667A-3E01-423F-8541-06361B5FF782}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F677667A-3E01-423F-8541-06361B5FF782}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F677667A-3E01-423F-8541-06361B5FF782}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F3C52CF8-D7C9-436A-A49A-FF0746313BB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F3C52CF8-D7C9-436A-A49A-FF0746313BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F3C52CF8-D7C9-436A-A49A-FF0746313BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F3C52CF8-D7C9-436A-A49A-FF0746313BB5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C81750AB-C6AF-4A75-ABC1-8700A4C542EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C81750AB-C6AF-4A75-ABC1-8700A4C542EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C81750AB-C6AF-4A75-ABC1-8700A4C542EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C81750AB-C6AF-4A75-ABC1-8700A4C542EB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4C43A0FC-3E69-40D9-90B9-D28446C0CA23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C43A0FC-3E69-40D9-90B9-D28446C0CA23}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C43A0FC-3E69-40D9-90B9-D28446C0CA23}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C43A0FC-3E69-40D9-90B9-D28446C0CA23}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F2112162-A8AB-4B73-A7DD-1E4B20A57D24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F2112162-A8AB-4B73-A7DD-1E4B20A57D24}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F2112162-A8AB-4B73-A7DD-1E4B20A57D24}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F2112162-A8AB-4B73-A7DD-1E4B20A57D24}.Release|Any CPU.Build.0 = Release|Any CPU
-		{707E5731-3122-4CB5-BD46-7AF5DF4EF44A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{707E5731-3122-4CB5-BD46-7AF5DF4EF44A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{707E5731-3122-4CB5-BD46-7AF5DF4EF44A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{707E5731-3122-4CB5-BD46-7AF5DF4EF44A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AA715B2A-002C-4010-B002-E3D6FB150280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AA715B2A-002C-4010-B002-E3D6FB150280}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AA715B2A-002C-4010-B002-E3D6FB150280}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AA715B2A-002C-4010-B002-E3D6FB150280}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4E579CC7-E16F-402D-82D1-70BE917E424D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4E579CC7-E16F-402D-82D1-70BE917E424D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4E579CC7-E16F-402D-82D1-70BE917E424D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4E579CC7-E16F-402D-82D1-70BE917E424D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{23E5AF91-6C41-46EF-8375-3D1CAA9BBBE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{23E5AF91-6C41-46EF-8375-3D1CAA9BBBE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23E5AF91-6C41-46EF-8375-3D1CAA9BBBE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{23E5AF91-6C41-46EF-8375-3D1CAA9BBBE3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A61A9DD9-9EEC-4DE7-BA47-5FB5037842D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A61A9DD9-9EEC-4DE7-BA47-5FB5037842D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A61A9DD9-9EEC-4DE7-BA47-5FB5037842D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A61A9DD9-9EEC-4DE7-BA47-5FB5037842D8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E0FDB86A-3E3F-4009-BCD8-CD9314F4B457}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E0FDB86A-3E3F-4009-BCD8-CD9314F4B457}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E0FDB86A-3E3F-4009-BCD8-CD9314F4B457}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E0FDB86A-3E3F-4009-BCD8-CD9314F4B457}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C0C37947-A301-4513-BA88-627052CC0879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C0C37947-A301-4513-BA88-627052CC0879}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C0C37947-A301-4513-BA88-627052CC0879}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C0C37947-A301-4513-BA88-627052CC0879}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D9D64C75-0BB7-4F5C-9D3F-C5B133BBC9C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D9D64C75-0BB7-4F5C-9D3F-C5B133BBC9C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D9D64C75-0BB7-4F5C-9D3F-C5B133BBC9C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D9D64C75-0BB7-4F5C-9D3F-C5B133BBC9C7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D3447788-7875-4E1C-98CA-BE3961E262B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D3447788-7875-4E1C-98CA-BE3961E262B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D3447788-7875-4E1C-98CA-BE3961E262B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D3447788-7875-4E1C-98CA-BE3961E262B1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{837F3A3E-0AEF-4EEE-AB08-AE02CF682895}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{837F3A3E-0AEF-4EEE-AB08-AE02CF682895}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{837F3A3E-0AEF-4EEE-AB08-AE02CF682895}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{837F3A3E-0AEF-4EEE-AB08-AE02CF682895}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D2EE2EA3-E09B-4C1F-B847-8472BCD91D2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D2EE2EA3-E09B-4C1F-B847-8472BCD91D2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D2EE2EA3-E09B-4C1F-B847-8472BCD91D2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D2EE2EA3-E09B-4C1F-B847-8472BCD91D2B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{288D680D-134D-443A-BD4B-9A81D9221DF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{288D680D-134D-443A-BD4B-9A81D9221DF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{288D680D-134D-443A-BD4B-9A81D9221DF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{288D680D-134D-443A-BD4B-9A81D9221DF6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{61440403-06DA-4CEA-9325-016B846AC9A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{61440403-06DA-4CEA-9325-016B846AC9A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{61440403-06DA-4CEA-9325-016B846AC9A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{61440403-06DA-4CEA-9325-016B846AC9A7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2B87B8BF-AC70-4237-8E60-258775438EA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2B87B8BF-AC70-4237-8E60-258775438EA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2B87B8BF-AC70-4237-8E60-258775438EA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2B87B8BF-AC70-4237-8E60-258775438EA2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9378885E-6310-4A3D-9347-A66EFD5254B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9378885E-6310-4A3D-9347-A66EFD5254B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9378885E-6310-4A3D-9347-A66EFD5254B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9378885E-6310-4A3D-9347-A66EFD5254B5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F28AA132-258A-4A42-A7A4-D5495704290B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F28AA132-258A-4A42-A7A4-D5495704290B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F28AA132-258A-4A42-A7A4-D5495704290B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F28AA132-258A-4A42-A7A4-D5495704290B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{96EDD505-1D71-4F61-9B3E-23F35F6770DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{96EDD505-1D71-4F61-9B3E-23F35F6770DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{96EDD505-1D71-4F61-9B3E-23F35F6770DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{96EDD505-1D71-4F61-9B3E-23F35F6770DD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6C288CF5-4297-4C90-8793-3AA2CFC4318A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6C288CF5-4297-4C90-8793-3AA2CFC4318A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6C288CF5-4297-4C90-8793-3AA2CFC4318A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6C288CF5-4297-4C90-8793-3AA2CFC4318A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C31D6C26-A3D5-42B4-830D-9E2E40E0B0DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C31D6C26-A3D5-42B4-830D-9E2E40E0B0DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C31D6C26-A3D5-42B4-830D-9E2E40E0B0DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C31D6C26-A3D5-42B4-830D-9E2E40E0B0DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{684249F4-6C87-4077-9650-61D9DAF439A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{684249F4-6C87-4077-9650-61D9DAF439A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{684249F4-6C87-4077-9650-61D9DAF439A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{684249F4-6C87-4077-9650-61D9DAF439A7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{85DC3C8E-E23C-4BA9-B018-0CF74BAFF6CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{85DC3C8E-E23C-4BA9-B018-0CF74BAFF6CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{85DC3C8E-E23C-4BA9-B018-0CF74BAFF6CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{85DC3C8E-E23C-4BA9-B018-0CF74BAFF6CA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{359BAC64-E4F4-4851-BDD9-8273E297670F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{359BAC64-E4F4-4851-BDD9-8273E297670F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{359BAC64-E4F4-4851-BDD9-8273E297670F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{359BAC64-E4F4-4851-BDD9-8273E297670F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B2AEF83B-DDD3-4572-9F13-EE147EBC3560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B2AEF83B-DDD3-4572-9F13-EE147EBC3560}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B2AEF83B-DDD3-4572-9F13-EE147EBC3560}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B2AEF83B-DDD3-4572-9F13-EE147EBC3560}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4C9F5D5F-A10A-4141-8107-C25B8A18B309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C9F5D5F-A10A-4141-8107-C25B8A18B309}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C9F5D5F-A10A-4141-8107-C25B8A18B309}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C9F5D5F-A10A-4141-8107-C25B8A18B309}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FE157A4E-19D1-44E1-9B90-29405D55585E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FE157A4E-19D1-44E1-9B90-29405D55585E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FE157A4E-19D1-44E1-9B90-29405D55585E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FE157A4E-19D1-44E1-9B90-29405D55585E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A0C95C27-61AE-4A63-BA88-D3A2FD6556F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A0C95C27-61AE-4A63-BA88-D3A2FD6556F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A0C95C27-61AE-4A63-BA88-D3A2FD6556F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A0C95C27-61AE-4A63-BA88-D3A2FD6556F5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2E6C931C-53C3-4D03-A9D6-CA2A5625D458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2E6C931C-53C3-4D03-A9D6-CA2A5625D458}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2E6C931C-53C3-4D03-A9D6-CA2A5625D458}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2E6C931C-53C3-4D03-A9D6-CA2A5625D458}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2577C228-AC8B-4201-B949-A47AFF299549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2577C228-AC8B-4201-B949-A47AFF299549}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2577C228-AC8B-4201-B949-A47AFF299549}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2577C228-AC8B-4201-B949-A47AFF299549}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35DE4E44-FF19-4E03-972C-C80E52243B59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35DE4E44-FF19-4E03-972C-C80E52243B59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35DE4E44-FF19-4E03-972C-C80E52243B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35DE4E44-FF19-4E03-972C-C80E52243B59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5445B3F-321B-4735-A42A-874370850AA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5445B3F-321B-4735-A42A-874370850AA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5445B3F-321B-4735-A42A-874370850AA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5445B3F-321B-4735-A42A-874370850AA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D2306DD-0AFF-4078-ADFF-8A246FE7C0B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D2306DD-0AFF-4078-ADFF-8A246FE7C0B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D2306DD-0AFF-4078-ADFF-8A246FE7C0B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D2306DD-0AFF-4078-ADFF-8A246FE7C0B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD2D88B2-B7E4-4A84-9C3D-DC2F3EAA34D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD2D88B2-B7E4-4A84-9C3D-DC2F3EAA34D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD2D88B2-B7E4-4A84-9C3D-DC2F3EAA34D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD2D88B2-B7E4-4A84-9C3D-DC2F3EAA34D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{368AFF6B-1B92-4F16-BB5D-2B70803AED95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{368AFF6B-1B92-4F16-BB5D-2B70803AED95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{368AFF6B-1B92-4F16-BB5D-2B70803AED95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{368AFF6B-1B92-4F16-BB5D-2B70803AED95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{451F749E-42E5-41AA-BF73-C7CE4DFE171D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{451F749E-42E5-41AA-BF73-C7CE4DFE171D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{451F749E-42E5-41AA-BF73-C7CE4DFE171D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{451F749E-42E5-41AA-BF73-C7CE4DFE171D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E80A2EF3-82B2-463D-884F-719AD2876C14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E80A2EF3-82B2-463D-884F-719AD2876C14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E80A2EF3-82B2-463D-884F-719AD2876C14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E80A2EF3-82B2-463D-884F-719AD2876C14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE269EE0-4A75-431C-A801-9A35ACFD7FE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE269EE0-4A75-431C-A801-9A35ACFD7FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE269EE0-4A75-431C-A801-9A35ACFD7FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE269EE0-4A75-431C-A801-9A35ACFD7FE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CB70E98-9717-482B-8A42-8492509F9DF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CB70E98-9717-482B-8A42-8492509F9DF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CB70E98-9717-482B-8A42-8492509F9DF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CB70E98-9717-482B-8A42-8492509F9DF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB46A9A5-A959-4EAE-A1AA-26C6D6A8A17C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB46A9A5-A959-4EAE-A1AA-26C6D6A8A17C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB46A9A5-A959-4EAE-A1AA-26C6D6A8A17C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB46A9A5-A959-4EAE-A1AA-26C6D6A8A17C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C61B0DE3-2087-4F25-B5E4-AA98F3715ADF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C61B0DE3-2087-4F25-B5E4-AA98F3715ADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C61B0DE3-2087-4F25-B5E4-AA98F3715ADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C61B0DE3-2087-4F25-B5E4-AA98F3715ADF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17333A30-9152-4564-80E4-83C985FE3D97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17333A30-9152-4564-80E4-83C985FE3D97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17333A30-9152-4564-80E4-83C985FE3D97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17333A30-9152-4564-80E4-83C985FE3D97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D80D02B9-589F-4400-894A-8CE60B790605}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D80D02B9-589F-4400-894A-8CE60B790605}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D80D02B9-589F-4400-894A-8CE60B790605}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D80D02B9-589F-4400-894A-8CE60B790605}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D766A6F9-04A6-4A2E-A1F4-E9A6CDD53B42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D766A6F9-04A6-4A2E-A1F4-E9A6CDD53B42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D766A6F9-04A6-4A2E-A1F4-E9A6CDD53B42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D766A6F9-04A6-4A2E-A1F4-E9A6CDD53B42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7A30587-EA14-421E-B1B9-09E1C802A535}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7A30587-EA14-421E-B1B9-09E1C802A535}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7A30587-EA14-421E-B1B9-09E1C802A535}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7A30587-EA14-421E-B1B9-09E1C802A535}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C4C0662-FA16-401E-8872-4FED20505B14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C4C0662-FA16-401E-8872-4FED20505B14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C4C0662-FA16-401E-8872-4FED20505B14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C4C0662-FA16-401E-8872-4FED20505B14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11013FAE-62AB-4F04-9AF5-F65DB637D118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11013FAE-62AB-4F04-9AF5-F65DB637D118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11013FAE-62AB-4F04-9AF5-F65DB637D118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11013FAE-62AB-4F04-9AF5-F65DB637D118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABE971E0-3AED-4882-ABD1-1A618A4BC231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABE971E0-3AED-4882-ABD1-1A618A4BC231}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABE971E0-3AED-4882-ABD1-1A618A4BC231}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABE971E0-3AED-4882-ABD1-1A618A4BC231}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F419994-26A3-4C7E-A29E-6758F0E4D804}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F419994-26A3-4C7E-A29E-6758F0E4D804}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F419994-26A3-4C7E-A29E-6758F0E4D804}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F419994-26A3-4C7E-A29E-6758F0E4D804}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F2F2A66-8F58-49C2-86B7-EE4584E1ABDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F2F2A66-8F58-49C2-86B7-EE4584E1ABDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F2F2A66-8F58-49C2-86B7-EE4584E1ABDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F2F2A66-8F58-49C2-86B7-EE4584E1ABDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C772D12-4714-4A5F-97FF-5335D7AFC9DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C772D12-4714-4A5F-97FF-5335D7AFC9DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C772D12-4714-4A5F-97FF-5335D7AFC9DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C772D12-4714-4A5F-97FF-5335D7AFC9DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D8AB81B-0901-4936-9E74-108AF13FB61A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D8AB81B-0901-4936-9E74-108AF13FB61A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D8AB81B-0901-4936-9E74-108AF13FB61A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D8AB81B-0901-4936-9E74-108AF13FB61A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8826866-C535-4F1D-894B-3D9B0E66E6C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8826866-C535-4F1D-894B-3D9B0E66E6C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8826866-C535-4F1D-894B-3D9B0E66E6C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8826866-C535-4F1D-894B-3D9B0E66E6C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9738AE72-334F-4F15-BECA-D86F848C276E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9738AE72-334F-4F15-BECA-D86F848C276E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9738AE72-334F-4F15-BECA-D86F848C276E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9738AE72-334F-4F15-BECA-D86F848C276E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2C39954-8E4F-4C33-8412-66722091C61F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2C39954-8E4F-4C33-8412-66722091C61F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2C39954-8E4F-4C33-8412-66722091C61F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2C39954-8E4F-4C33-8412-66722091C61F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC0D0FF3-6644-48B9-94A4-68A0FFA95330}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC0D0FF3-6644-48B9-94A4-68A0FFA95330}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC0D0FF3-6644-48B9-94A4-68A0FFA95330}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC0D0FF3-6644-48B9-94A4-68A0FFA95330}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88B9FCD5-9B2A-4F71-B80A-A14C0DB2A537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88B9FCD5-9B2A-4F71-B80A-A14C0DB2A537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88B9FCD5-9B2A-4F71-B80A-A14C0DB2A537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88B9FCD5-9B2A-4F71-B80A-A14C0DB2A537}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B42EBBD4-E5EC-4B16-B1FE-44227D26E8E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B42EBBD4-E5EC-4B16-B1FE-44227D26E8E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B42EBBD4-E5EC-4B16-B1FE-44227D26E8E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B42EBBD4-E5EC-4B16-B1FE-44227D26E8E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF9A9A71-C6B8-4F23-924F-DF8AA4E6383A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF9A9A71-C6B8-4F23-924F-DF8AA4E6383A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF9A9A71-C6B8-4F23-924F-DF8AA4E6383A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF9A9A71-C6B8-4F23-924F-DF8AA4E6383A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6370EC52-D1A0-4414-AD1A-3A3128210872}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6370EC52-D1A0-4414-AD1A-3A3128210872}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6370EC52-D1A0-4414-AD1A-3A3128210872}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6370EC52-D1A0-4414-AD1A-3A3128210872}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E659166F-456E-4110-8CF2-5960F9AEB4B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E659166F-456E-4110-8CF2-5960F9AEB4B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E659166F-456E-4110-8CF2-5960F9AEB4B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E659166F-456E-4110-8CF2-5960F9AEB4B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC771567-A28C-4BC5-B362-450C3577F0F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC771567-A28C-4BC5-B362-450C3577F0F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC771567-A28C-4BC5-B362-450C3577F0F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC771567-A28C-4BC5-B362-450C3577F0F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FAC9E89-3CE3-4E62-9D3D-91C497ACED41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FAC9E89-3CE3-4E62-9D3D-91C497ACED41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FAC9E89-3CE3-4E62-9D3D-91C497ACED41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FAC9E89-3CE3-4E62-9D3D-91C497ACED41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3542B95-9E59-4F31-A32F-5481921BC838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3542B95-9E59-4F31-A32F-5481921BC838}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3542B95-9E59-4F31-A32F-5481921BC838}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3542B95-9E59-4F31-A32F-5481921BC838}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D9F8750-7480-4CDE-B298-BBE22F4F61DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D9F8750-7480-4CDE-B298-BBE22F4F61DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D9F8750-7480-4CDE-B298-BBE22F4F61DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D9F8750-7480-4CDE-B298-BBE22F4F61DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23320386-F6D9-4C36-A25F-A1A7854C314D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23320386-F6D9-4C36-A25F-A1A7854C314D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23320386-F6D9-4C36-A25F-A1A7854C314D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23320386-F6D9-4C36-A25F-A1A7854C314D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22CB834F-009C-4988-8A0C-245CAF65025E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22CB834F-009C-4988-8A0C-245CAF65025E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22CB834F-009C-4988-8A0C-245CAF65025E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22CB834F-009C-4988-8A0C-245CAF65025E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38E1F0B8-04F8-4422-BA52-A4525454227B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38E1F0B8-04F8-4422-BA52-A4525454227B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38E1F0B8-04F8-4422-BA52-A4525454227B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38E1F0B8-04F8-4422-BA52-A4525454227B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3674CF79-DB5B-4FA4-A3A2-7913EFD53EF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3674CF79-DB5B-4FA4-A3A2-7913EFD53EF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3674CF79-DB5B-4FA4-A3A2-7913EFD53EF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3674CF79-DB5B-4FA4-A3A2-7913EFD53EF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E740ED61-8BAD-4848-9026-23D3CDE61AF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E740ED61-8BAD-4848-9026-23D3CDE61AF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E740ED61-8BAD-4848-9026-23D3CDE61AF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E740ED61-8BAD-4848-9026-23D3CDE61AF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F766B5B0-EBFB-4EA2-B995-8E0F1E40A84A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F766B5B0-EBFB-4EA2-B995-8E0F1E40A84A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F766B5B0-EBFB-4EA2-B995-8E0F1E40A84A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F766B5B0-EBFB-4EA2-B995-8E0F1E40A84A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F33BDC3C-8578-42D1-A000-ACAF23CAB1C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F33BDC3C-8578-42D1-A000-ACAF23CAB1C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F33BDC3C-8578-42D1-A000-ACAF23CAB1C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F33BDC3C-8578-42D1-A000-ACAF23CAB1C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BEC81AC-6BE0-4137-9508-7C4DDDD8FE9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BEC81AC-6BE0-4137-9508-7C4DDDD8FE9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BEC81AC-6BE0-4137-9508-7C4DDDD8FE9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BEC81AC-6BE0-4137-9508-7C4DDDD8FE9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{B011882E-6603-4929-B8A0-70E86E68B17D} = {1A026ED6-59F7-4297-AE5C-A3439FE88D0D}
-		{5016AC64-134C-4B58-B249-62CAE76E75A0} = {1A026ED6-59F7-4297-AE5C-A3439FE88D0D}
-		{09331D18-1D75-4DCF-B0C0-911F9FDDA6DC} = {1A026ED6-59F7-4297-AE5C-A3439FE88D0D}
-		{0EC399E3-A157-454A-8AEB-17BA41EA6EFB} = {1A026ED6-59F7-4297-AE5C-A3439FE88D0D}
-		{F0A70E5B-E394-4877-BB3E-20E47A3FD16B} = {1A026ED6-59F7-4297-AE5C-A3439FE88D0D}
-		{A6ACDB08-3E1E-4923-BC13-01C02131972B} = {1A026ED6-59F7-4297-AE5C-A3439FE88D0D}
-		{024CB391-710F-4930-B293-6B5470B3FD88} = {1A026ED6-59F7-4297-AE5C-A3439FE88D0D}
-		{8863BA87-A776-487B-BBD0-1951D0B80C21} = {1A026ED6-59F7-4297-AE5C-A3439FE88D0D}
-		{7FEEA9E7-C06A-40F5-86E3-02C1F62D6B54} = {0CB78D52-C77E-4D6B-9063-18B1EF52EA50}
-		{E3616E2C-B5C9-4435-B50B-E15707D19198} = {91A27E12-9845-4DD4-AB34-6FA3531E2734}
-		{F7FB306B-E986-47B0-A47E-9F021E0C74AD} = {91A27E12-9845-4DD4-AB34-6FA3531E2734}
-		{1A5CCA23-948E-41F3-83A1-62727029C915} = {B011882E-6603-4929-B8A0-70E86E68B17D}
-		{DE42C320-ED82-4863-BC67-546B9C82AA55} = {B011882E-6603-4929-B8A0-70E86E68B17D}
-		{BF56E844-2959-41BB-817B-6BF563CD7BFA} = {B011882E-6603-4929-B8A0-70E86E68B17D}
-		{53CB6271-C4D7-4950-B8D3-56102F7DFD56} = {5016AC64-134C-4B58-B249-62CAE76E75A0}
-		{34E9A270-9A0F-4B46-8EC5-8EFF5B779EE1} = {5016AC64-134C-4B58-B249-62CAE76E75A0}
-		{D1A280F9-6B03-4899-8857-9321487E7B9C} = {5016AC64-134C-4B58-B249-62CAE76E75A0}
-		{97B3429B-1E60-4FFD-AA18-284B7A445077} = {09331D18-1D75-4DCF-B0C0-911F9FDDA6DC}
-		{7F5BC6DC-1F1B-44F2-8747-0526B6EE6DB6} = {09331D18-1D75-4DCF-B0C0-911F9FDDA6DC}
-		{565A1ACB-7BBB-4257-9B71-06CE26EFC70C} = {0EC399E3-A157-454A-8AEB-17BA41EA6EFB}
-		{A5771C9E-6131-4525-8DCB-AAF072E653A5} = {0EC399E3-A157-454A-8AEB-17BA41EA6EFB}
-		{621CB244-AA88-4E0F-BB24-845B374CDFA6} = {F0A70E5B-E394-4877-BB3E-20E47A3FD16B}
-		{4948D601-A600-46C6-89DA-760120E13740} = {F0A70E5B-E394-4877-BB3E-20E47A3FD16B}
-		{0C2E080A-5B17-4800-991D-CCA779F26BC9} = {A6ACDB08-3E1E-4923-BC13-01C02131972B}
-		{863AB565-C83F-4913-AB26-CC03BFBA3AFB} = {A6ACDB08-3E1E-4923-BC13-01C02131972B}
-		{455C8A11-B7C7-4B90-906B-7069C87E50E7} = {024CB391-710F-4930-B293-6B5470B3FD88}
-		{AC894D08-4959-454E-8AAA-E672FDC1A7E2} = {024CB391-710F-4930-B293-6B5470B3FD88}
-		{8522AF30-ACFC-4F5A-8735-265CAD8455D6} = {8863BA87-A776-487B-BBD0-1951D0B80C21}
-		{8BBD4FD8-75EC-44FE-BE3D-858C5104A3A2} = {8863BA87-A776-487B-BBD0-1951D0B80C21}
-		{882F08F0-DACF-4749-8D86-660CC32C8B83} = {8863BA87-A776-487B-BBD0-1951D0B80C21}
-		{E44B0AFC-615A-4C05-AC91-DC794B138D3A} = {7FEEA9E7-C06A-40F5-86E3-02C1F62D6B54}
-		{A13452EB-106C-4B68-9F53-3B1380DAACE0} = {7FEEA9E7-C06A-40F5-86E3-02C1F62D6B54}
-		{25ADA7E3-6861-4793-AEE1-22D10F31A1A3} = {E3616E2C-B5C9-4435-B50B-E15707D19198}
-		{2E5652EE-FC9D-4A1B-88D7-7823B318AAF7} = {E3616E2C-B5C9-4435-B50B-E15707D19198}
-		{D2FBF4E7-159F-407E-B61E-19336356C7F4} = {E3616E2C-B5C9-4435-B50B-E15707D19198}
-		{BAD43F10-350F-4A63-974B-6B1D01B82623} = {F7FB306B-E986-47B0-A47E-9F021E0C74AD}
-		{9A819970-C0A0-478F-BB1A-0714AF80E2D8} = {F7FB306B-E986-47B0-A47E-9F021E0C74AD}
-		{5AE97872-141A-4402-B299-3BA700D4F0E7} = {F7FB306B-E986-47B0-A47E-9F021E0C74AD}
-		{AFB0603B-4841-4680-8CB9-153A22EF462D} = {1A5CCA23-948E-41F3-83A1-62727029C915}
-		{0F750DE1-CA8D-4E20-B769-206CA36A9877} = {1A5CCA23-948E-41F3-83A1-62727029C915}
-		{606E31BD-A728-47DF-ADCE-DA574EBAD160} = {DE42C320-ED82-4863-BC67-546B9C82AA55}
-		{D1234592-7268-4EA8-9033-448350DFD3A6} = {DE42C320-ED82-4863-BC67-546B9C82AA55}
-		{EE4D100B-B48C-4094-B313-663CC1976218} = {DE42C320-ED82-4863-BC67-546B9C82AA55}
-		{A206ACCB-FCAE-46D1-B2B9-04DDA2B53FD2} = {DE42C320-ED82-4863-BC67-546B9C82AA55}
-		{CEA7D904-DC72-4160-B558-561C84CF36CA} = {53CB6271-C4D7-4950-B8D3-56102F7DFD56}
-		{48FA8F36-B54A-4B2A-BA29-CEA9CCDF9CFC} = {34E9A270-9A0F-4B46-8EC5-8EFF5B779EE1}
-		{70DD6F4B-D250-442D-AD52-9B6914D46857} = {34E9A270-9A0F-4B46-8EC5-8EFF5B779EE1}
-		{AD39B470-1D3E-4A0D-BE0B-DB1D17D98BF9} = {34E9A270-9A0F-4B46-8EC5-8EFF5B779EE1}
-		{F677667A-3E01-423F-8541-06361B5FF782} = {34E9A270-9A0F-4B46-8EC5-8EFF5B779EE1}
-		{F3C52CF8-D7C9-436A-A49A-FF0746313BB5} = {34E9A270-9A0F-4B46-8EC5-8EFF5B779EE1}
-		{C81750AB-C6AF-4A75-ABC1-8700A4C542EB} = {34E9A270-9A0F-4B46-8EC5-8EFF5B779EE1}
-		{4C43A0FC-3E69-40D9-90B9-D28446C0CA23} = {34E9A270-9A0F-4B46-8EC5-8EFF5B779EE1}
-		{F2112162-A8AB-4B73-A7DD-1E4B20A57D24} = {97B3429B-1E60-4FFD-AA18-284B7A445077}
-		{707E5731-3122-4CB5-BD46-7AF5DF4EF44A} = {97B3429B-1E60-4FFD-AA18-284B7A445077}
-		{AA715B2A-002C-4010-B002-E3D6FB150280} = {97B3429B-1E60-4FFD-AA18-284B7A445077}
-		{4E579CC7-E16F-402D-82D1-70BE917E424D} = {565A1ACB-7BBB-4257-9B71-06CE26EFC70C}
-		{23E5AF91-6C41-46EF-8375-3D1CAA9BBBE3} = {A5771C9E-6131-4525-8DCB-AAF072E653A5}
-		{A61A9DD9-9EEC-4DE7-BA47-5FB5037842D8} = {A5771C9E-6131-4525-8DCB-AAF072E653A5}
-		{E0FDB86A-3E3F-4009-BCD8-CD9314F4B457} = {621CB244-AA88-4E0F-BB24-845B374CDFA6}
-		{C0C37947-A301-4513-BA88-627052CC0879} = {621CB244-AA88-4E0F-BB24-845B374CDFA6}
-		{D9D64C75-0BB7-4F5C-9D3F-C5B133BBC9C7} = {0C2E080A-5B17-4800-991D-CCA779F26BC9}
-		{D3447788-7875-4E1C-98CA-BE3961E262B1} = {0C2E080A-5B17-4800-991D-CCA779F26BC9}
-		{837F3A3E-0AEF-4EEE-AB08-AE02CF682895} = {455C8A11-B7C7-4B90-906B-7069C87E50E7}
-		{D2EE2EA3-E09B-4C1F-B847-8472BCD91D2B} = {455C8A11-B7C7-4B90-906B-7069C87E50E7}
-		{288D680D-134D-443A-BD4B-9A81D9221DF6} = {8522AF30-ACFC-4F5A-8735-265CAD8455D6}
-		{61440403-06DA-4CEA-9325-016B846AC9A7} = {8BBD4FD8-75EC-44FE-BE3D-858C5104A3A2}
-		{2B87B8BF-AC70-4237-8E60-258775438EA2} = {8BBD4FD8-75EC-44FE-BE3D-858C5104A3A2}
-		{9378885E-6310-4A3D-9347-A66EFD5254B5} = {8BBD4FD8-75EC-44FE-BE3D-858C5104A3A2}
-		{F28AA132-258A-4A42-A7A4-D5495704290B} = {8BBD4FD8-75EC-44FE-BE3D-858C5104A3A2}
-		{96EDD505-1D71-4F61-9B3E-23F35F6770DD} = {E44B0AFC-615A-4C05-AC91-DC794B138D3A}
-		{6C288CF5-4297-4C90-8793-3AA2CFC4318A} = {E44B0AFC-615A-4C05-AC91-DC794B138D3A}
-		{C31D6C26-A3D5-42B4-830D-9E2E40E0B0DC} = {25ADA7E3-6861-4793-AEE1-22D10F31A1A3}
-		{684249F4-6C87-4077-9650-61D9DAF439A7} = {25ADA7E3-6861-4793-AEE1-22D10F31A1A3}
-		{85DC3C8E-E23C-4BA9-B018-0CF74BAFF6CA} = {25ADA7E3-6861-4793-AEE1-22D10F31A1A3}
-		{359BAC64-E4F4-4851-BDD9-8273E297670F} = {2E5652EE-FC9D-4A1B-88D7-7823B318AAF7}
-		{B2AEF83B-DDD3-4572-9F13-EE147EBC3560} = {2E5652EE-FC9D-4A1B-88D7-7823B318AAF7}
-		{4C9F5D5F-A10A-4141-8107-C25B8A18B309} = {2E5652EE-FC9D-4A1B-88D7-7823B318AAF7}
-		{FE157A4E-19D1-44E1-9B90-29405D55585E} = {2E5652EE-FC9D-4A1B-88D7-7823B318AAF7}
-		{A0C95C27-61AE-4A63-BA88-D3A2FD6556F5} = {BAD43F10-350F-4A63-974B-6B1D01B82623}
-		{2E6C931C-53C3-4D03-A9D6-CA2A5625D458} = {9A819970-C0A0-478F-BB1A-0714AF80E2D8}
-		{2577C228-AC8B-4201-B949-A47AFF299549} = {9A819970-C0A0-478F-BB1A-0714AF80E2D8}
+		{B0458732-3767-4D6A-91C8-851A091C737F} = {BFDC0027-AA02-44BE-B87E-14E90F5BAA85}
+		{87B63694-E0FA-4F6A-A3C8-EE829CB25108} = {BFDC0027-AA02-44BE-B87E-14E90F5BAA85}
+		{E93F4565-9B55-462F-9E60-4127A5F9D841} = {BFDC0027-AA02-44BE-B87E-14E90F5BAA85}
+		{049C6BE1-9DF5-4402-99D5-E2F64834FCE0} = {BFDC0027-AA02-44BE-B87E-14E90F5BAA85}
+		{3497889F-9041-4BB1-9E8C-8AF905B84B94} = {BFDC0027-AA02-44BE-B87E-14E90F5BAA85}
+		{28807EBD-CE9E-4C3B-B396-E4A6B211C00B} = {BFDC0027-AA02-44BE-B87E-14E90F5BAA85}
+		{ACE6E45B-9CB1-4AA0-9F3A-11B48C9F7797} = {BFDC0027-AA02-44BE-B87E-14E90F5BAA85}
+		{0A4C839F-CC7F-49B7-8598-304332BB701E} = {BFDC0027-AA02-44BE-B87E-14E90F5BAA85}
+		{3BFD7DB5-94B6-4B9D-979E-86FD03F525B0} = {33259B6A-8F19-47D3-8E71-5F0B8CA4C3F1}
+		{12747E26-40A7-4C5B-9092-F60D5897DC3E} = {28536799-5224-4951-AC6A-9441DE30068F}
+		{94DAC7CB-4218-488C-922B-C72E3FD89B38} = {28536799-5224-4951-AC6A-9441DE30068F}
+		{9A8946C7-2FAA-4DEC-9A43-230D35FCFC9F} = {B0458732-3767-4D6A-91C8-851A091C737F}
+		{36CF6B67-FC4F-4373-9897-FBA99057CE2F} = {9A8946C7-2FAA-4DEC-9A43-230D35FCFC9F}
+		{786F7A11-FCFE-41A6-9F13-3503B84FD4AF} = {B0458732-3767-4D6A-91C8-851A091C737F}
+		{83BB5130-0B15-4797-BA58-1A427D8D8AB7} = {B0458732-3767-4D6A-91C8-851A091C737F}
+		{38509498-B76C-4641-A514-56F86868AA1C} = {B0458732-3767-4D6A-91C8-851A091C737F}
+		{27B905E8-5A8C-40A8-B308-B5F28AE963E4} = {87B63694-E0FA-4F6A-A3C8-EE829CB25108}
+		{24D3F5F0-A101-4C6E-B941-982F6B95BDD5} = {27B905E8-5A8C-40A8-B308-B5F28AE963E4}
+		{FA3EB52D-E4A3-4CA1-A783-E560FFE0C0D1} = {87B63694-E0FA-4F6A-A3C8-EE829CB25108}
+		{FEC63624-679A-4C48-8CE5-F5B1D6B3C479} = {87B63694-E0FA-4F6A-A3C8-EE829CB25108}
+		{07EA0357-A657-46A3-A850-A3A4FCDE1A37} = {87B63694-E0FA-4F6A-A3C8-EE829CB25108}
+		{9754F260-6AE2-4510-BADE-5EF5CC2A557F} = {E93F4565-9B55-462F-9E60-4127A5F9D841}
+		{88A5470A-C3BC-4496-8463-09439964F253} = {E93F4565-9B55-462F-9E60-4127A5F9D841}
+		{3300F89B-9C7E-4E1A-B1EE-C538F7910B3F} = {049C6BE1-9DF5-4402-99D5-E2F64834FCE0}
+		{E6AF2817-D0BA-4684-812F-980BBD98EDC5} = {3300F89B-9C7E-4E1A-B1EE-C538F7910B3F}
+		{BDA652BB-EFA6-4619-B41B-D024230505C7} = {049C6BE1-9DF5-4402-99D5-E2F64834FCE0}
+		{11EEDA30-CB63-4D5D-80B3-59E9696ECFEB} = {049C6BE1-9DF5-4402-99D5-E2F64834FCE0}
+		{D94BCAB4-9A86-42C5-9AA5-9D61FAC28261} = {3497889F-9041-4BB1-9E8C-8AF905B84B94}
+		{C804DC3D-DBAD-4F39-B857-3601AAC16CD5} = {3497889F-9041-4BB1-9E8C-8AF905B84B94}
+		{9D4F228E-6F36-4583-8051-0228C86094C8} = {28807EBD-CE9E-4C3B-B396-E4A6B211C00B}
+		{03042336-CFB2-49B6-B5AC-156FB9C016BF} = {28807EBD-CE9E-4C3B-B396-E4A6B211C00B}
+		{13EC7B86-F277-4FA4-8F37-48EEEC59D948} = {ACE6E45B-9CB1-4AA0-9F3A-11B48C9F7797}
+		{3A5F6448-D97C-4423-9ABD-6C798A60FB2B} = {ACE6E45B-9CB1-4AA0-9F3A-11B48C9F7797}
+		{413DE263-37A4-46C9-AE64-04A75E778A75} = {0A4C839F-CC7F-49B7-8598-304332BB701E}
+		{060EB250-AA9C-48DA-A8FA-AB386D36BA8F} = {413DE263-37A4-46C9-AE64-04A75E778A75}
+		{A5DF2AC3-5837-479B-89A8-393FC07E1E3D} = {0A4C839F-CC7F-49B7-8598-304332BB701E}
+		{C3EAF317-7669-4F2A-8302-7628DF69CC4B} = {0A4C839F-CC7F-49B7-8598-304332BB701E}
+		{44A7DDA0-7A4E-4A32-99F5-2DC1D6FA46A2} = {0A4C839F-CC7F-49B7-8598-304332BB701E}
+		{06937F32-7B21-4BE7-9400-A9C9199CE3FB} = {3BFD7DB5-94B6-4B9D-979E-86FD03F525B0}
+		{00B2A73A-9B65-4004-83C4-2222BC9038AB} = {06937F32-7B21-4BE7-9400-A9C9199CE3FB}
+		{65D59BF5-0A04-4D36-9F2D-C99DDFBF4322} = {3BFD7DB5-94B6-4B9D-979E-86FD03F525B0}
+		{90C4C3A7-7C7B-49F1-96A7-FFF5A1714475} = {3BFD7DB5-94B6-4B9D-979E-86FD03F525B0}
+		{B255ADEE-4BAE-44B1-ACBD-D1FA95A5572A} = {12747E26-40A7-4C5B-9092-F60D5897DC3E}
+		{306524D7-C561-4A2A-BEA5-85691F27AE8E} = {B255ADEE-4BAE-44B1-ACBD-D1FA95A5572A}
+		{F36B3634-40D8-4AC8-9DBA-DA07F5041899} = {12747E26-40A7-4C5B-9092-F60D5897DC3E}
+		{196374EB-666D-4FC0-A6EB-7157609A660E} = {12747E26-40A7-4C5B-9092-F60D5897DC3E}
+		{E86C7D2F-4C4C-440D-A1C7-B1C8155B30A8} = {12747E26-40A7-4C5B-9092-F60D5897DC3E}
+		{FC29279D-40F7-4A3D-B867-5CE152955CAA} = {94DAC7CB-4218-488C-922B-C72E3FD89B38}
+		{5B78417E-8B8B-439C-B619-CF3AC36AA435} = {FC29279D-40F7-4A3D-B867-5CE152955CAA}
+		{B03A5956-2CD0-47C9-802E-25B01862004C} = {94DAC7CB-4218-488C-922B-C72E3FD89B38}
+		{A1656A84-CCCD-4895-BF59-A48C6599323D} = {94DAC7CB-4218-488C-922B-C72E3FD89B38}
+		{AF0809DD-3237-47AC-9174-B102A764F5D3} = {94DAC7CB-4218-488C-922B-C72E3FD89B38}
+		{35DE4E44-FF19-4E03-972C-C80E52243B59} = {786F7A11-FCFE-41A6-9F13-3503B84FD4AF}
+		{F5445B3F-321B-4735-A42A-874370850AA1} = {786F7A11-FCFE-41A6-9F13-3503B84FD4AF}
+		{9D2306DD-0AFF-4078-ADFF-8A246FE7C0B9} = {83BB5130-0B15-4797-BA58-1A427D8D8AB7}
+		{CD2D88B2-B7E4-4A84-9C3D-DC2F3EAA34D1} = {83BB5130-0B15-4797-BA58-1A427D8D8AB7}
+		{368AFF6B-1B92-4F16-BB5D-2B70803AED95} = {83BB5130-0B15-4797-BA58-1A427D8D8AB7}
+		{451F749E-42E5-41AA-BF73-C7CE4DFE171D} = {83BB5130-0B15-4797-BA58-1A427D8D8AB7}
+		{E80A2EF3-82B2-463D-884F-719AD2876C14} = {FA3EB52D-E4A3-4CA1-A783-E560FFE0C0D1}
+		{CE269EE0-4A75-431C-A801-9A35ACFD7FE6} = {FEC63624-679A-4C48-8CE5-F5B1D6B3C479}
+		{2CB70E98-9717-482B-8A42-8492509F9DF2} = {FEC63624-679A-4C48-8CE5-F5B1D6B3C479}
+		{EB46A9A5-A959-4EAE-A1AA-26C6D6A8A17C} = {FEC63624-679A-4C48-8CE5-F5B1D6B3C479}
+		{C61B0DE3-2087-4F25-B5E4-AA98F3715ADF} = {FEC63624-679A-4C48-8CE5-F5B1D6B3C479}
+		{17333A30-9152-4564-80E4-83C985FE3D97} = {FEC63624-679A-4C48-8CE5-F5B1D6B3C479}
+		{D80D02B9-589F-4400-894A-8CE60B790605} = {FEC63624-679A-4C48-8CE5-F5B1D6B3C479}
+		{D766A6F9-04A6-4A2E-A1F4-E9A6CDD53B42} = {FEC63624-679A-4C48-8CE5-F5B1D6B3C479}
+		{B7A30587-EA14-421E-B1B9-09E1C802A535} = {9754F260-6AE2-4510-BADE-5EF5CC2A557F}
+		{4C4C0662-FA16-401E-8872-4FED20505B14} = {9754F260-6AE2-4510-BADE-5EF5CC2A557F}
+		{11013FAE-62AB-4F04-9AF5-F65DB637D118} = {9754F260-6AE2-4510-BADE-5EF5CC2A557F}
+		{ABE971E0-3AED-4882-ABD1-1A618A4BC231} = {BDA652BB-EFA6-4619-B41B-D024230505C7}
+		{1F419994-26A3-4C7E-A29E-6758F0E4D804} = {11EEDA30-CB63-4D5D-80B3-59E9696ECFEB}
+		{0F2F2A66-8F58-49C2-86B7-EE4584E1ABDF} = {11EEDA30-CB63-4D5D-80B3-59E9696ECFEB}
+		{4C772D12-4714-4A5F-97FF-5335D7AFC9DE} = {D94BCAB4-9A86-42C5-9AA5-9D61FAC28261}
+		{9D8AB81B-0901-4936-9E74-108AF13FB61A} = {D94BCAB4-9A86-42C5-9AA5-9D61FAC28261}
+		{A8826866-C535-4F1D-894B-3D9B0E66E6C0} = {9D4F228E-6F36-4583-8051-0228C86094C8}
+		{9738AE72-334F-4F15-BECA-D86F848C276E} = {9D4F228E-6F36-4583-8051-0228C86094C8}
+		{A2C39954-8E4F-4C33-8412-66722091C61F} = {13EC7B86-F277-4FA4-8F37-48EEEC59D948}
+		{EC0D0FF3-6644-48B9-94A4-68A0FFA95330} = {13EC7B86-F277-4FA4-8F37-48EEEC59D948}
+		{88B9FCD5-9B2A-4F71-B80A-A14C0DB2A537} = {A5DF2AC3-5837-479B-89A8-393FC07E1E3D}
+		{B42EBBD4-E5EC-4B16-B1FE-44227D26E8E5} = {C3EAF317-7669-4F2A-8302-7628DF69CC4B}
+		{AF9A9A71-C6B8-4F23-924F-DF8AA4E6383A} = {C3EAF317-7669-4F2A-8302-7628DF69CC4B}
+		{6370EC52-D1A0-4414-AD1A-3A3128210872} = {C3EAF317-7669-4F2A-8302-7628DF69CC4B}
+		{E659166F-456E-4110-8CF2-5960F9AEB4B8} = {C3EAF317-7669-4F2A-8302-7628DF69CC4B}
+		{CC771567-A28C-4BC5-B362-450C3577F0F4} = {65D59BF5-0A04-4D36-9F2D-C99DDFBF4322}
+		{2FAC9E89-3CE3-4E62-9D3D-91C497ACED41} = {65D59BF5-0A04-4D36-9F2D-C99DDFBF4322}
+		{B3542B95-9E59-4F31-A32F-5481921BC838} = {F36B3634-40D8-4AC8-9DBA-DA07F5041899}
+		{1D9F8750-7480-4CDE-B298-BBE22F4F61DF} = {F36B3634-40D8-4AC8-9DBA-DA07F5041899}
+		{23320386-F6D9-4C36-A25F-A1A7854C314D} = {F36B3634-40D8-4AC8-9DBA-DA07F5041899}
+		{22CB834F-009C-4988-8A0C-245CAF65025E} = {196374EB-666D-4FC0-A6EB-7157609A660E}
+		{38E1F0B8-04F8-4422-BA52-A4525454227B} = {196374EB-666D-4FC0-A6EB-7157609A660E}
+		{3674CF79-DB5B-4FA4-A3A2-7913EFD53EF5} = {196374EB-666D-4FC0-A6EB-7157609A660E}
+		{E740ED61-8BAD-4848-9026-23D3CDE61AF0} = {196374EB-666D-4FC0-A6EB-7157609A660E}
+		{F766B5B0-EBFB-4EA2-B995-8E0F1E40A84A} = {B03A5956-2CD0-47C9-802E-25B01862004C}
+		{F33BDC3C-8578-42D1-A000-ACAF23CAB1C7} = {A1656A84-CCCD-4895-BF59-A48C6599323D}
+		{3BEC81AC-6BE0-4137-9508-7C4DDDD8FE9B} = {A1656A84-CCCD-4895-BF59-A48C6599323D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9C0A86CD-A3C4-4134-983B-CFD4F6BFB02B}
 	EndGlobalSection
 EndGlobal

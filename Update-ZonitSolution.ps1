@@ -1,28 +1,28 @@
-#!/usr/bin/env pwsh
+Ôªø#!/usr/bin/env pwsh
 <#
 .SYNOPSIS
-    Automatycznie aktualizuje plik Zonit.sln z projektami z submodu≥Ûw Git.
+    Automatycznie aktualizuje plik Zonit.sln z projektami z submodu≈Ç√≥w Git.
 
 .DESCRIPTION
-    Tworzy hierarchicznπ strukturÍ w Visual Studio z grupowaniem wed≥ug kategorii:
+    Tworzy hierarchicznƒÖ strukturƒô w Visual Studio z grupowaniem wed≈Çug kategorii:
     ?? Extensions (kategoria)
-      ?? Zonit.Extensions.Identity (submodu≥)
+      ?? Zonit.Extensions.Identity (submodu≈Ç)
         ?? README.md
         ?? Source
           ?? Directory.Packages.props
           ?? Zonit.Extensions.Identity (PROJEKT)
     ?? Services (kategoria)
-      ?? Zonit.Services.Dashboard (submodu≥)
+      ?? Zonit.Services.Dashboard (submodu≈Ç)
         ...
 
 .PARAMETER UpdateSubmodules
-    Aktualizuje submodu≥y do najnowszych wersji z remote
+    Aktualizuje submodu≈Çy do najnowszych wersji z remote
 
 .PARAMETER CleanRebuild
     Przebudowuje solution od zera
 
 .PARAMETER DryRun
-    Tylko podglπd bez zmian
+    Tylko podglƒÖd bez zmian
 
 .EXAMPLE
     ./Update-ZonitSolution.ps1 -UpdateSubmodules -CleanRebuild
@@ -49,7 +49,7 @@ function New-ProjectGuid {
 function Get-CategoryFromPath {
     param([string]$SubmodulePath)
     
-    # Mapowanie úcieøek na kategorie
+    # Mapowanie ≈õcie≈ºek na kategorie
     if ($SubmodulePath -match "Source[\\/]Extensions[\\/]") {
         return "Extensions"
     } elseif ($SubmodulePath -match "Source[\\/]Services[\\/]") {
@@ -75,14 +75,14 @@ function Get-GitSubmodules {
         Where-Object { $_ } | 
         Sort-Object -Unique
     
-    Write-Host "?? Znaleziono $($submodules.Count) submodu≥Ûw" -ForegroundColor Cyan
+    Write-Host "?? Znaleziono $($submodules.Count) submodu≈Ç√≥w" -ForegroundColor Cyan
     return $submodules
 }
 
 function Update-GitSubmodules {
     param([array]$SubmodulePaths)
     
-    Write-Host "`n?? Aktualizowanie submodu≥Ûw..." -ForegroundColor Cyan
+    Write-Host "`n?? Aktualizowanie submodu≈Ç√≥w..." -ForegroundColor Cyan
     
     try {
         git submodule init 2>&1 | Out-Null
@@ -97,11 +97,11 @@ function Update-GitSubmodules {
             Push-Location $submodule
             
             try {
-                # Wy≥πcz output z git (zarÛwno stdout jak stderr)
+                # Wy≈ÇƒÖcz output z git (zar√≥wno stdout jak stderr)
                 $env:GIT_TERMINAL_PROMPT = '0'
                 git fetch origin --quiet 2>&1 | Out-Null
                 
-                # Znajdü g≥Ûwnπ ga≥πü (main/master)
+                # Znajd≈∫ g≈Ç√≥wnƒÖ ga≈ÇƒÖ≈∫ (main/master)
                 $branch = (git symbolic-ref refs/remotes/origin/HEAD 2>$null) -replace 'refs/remotes/origin/', ''
                 
                 if (-not $branch) {
@@ -116,7 +116,7 @@ function Update-GitSubmodules {
                 }
                 
                 if ($branch) {
-                    # Sprawdü czy jesteúmy juø na tej ga≥Ízi
+                    # Sprawd≈∫ czy jeste≈õmy ju≈º na tej ga≈Çƒôzi
                     $currentBranch = git branch --show-current 2>&1
                     
                     if ($currentBranch -ne $branch) {
@@ -132,7 +132,7 @@ function Update-GitSubmodules {
                         Write-Host "    ? $branch ($hash) - zaktualizowano" -ForegroundColor Green
                     }
                 } else {
-                    Write-Warning "    ??  Nie znaleziono g≥Ûwnej ga≥Ízi"
+                    Write-Warning "    ??  Nie znaleziono g≈Ç√≥wnej ga≈Çƒôzi"
                 }
             } catch {
                 Write-Warning "    ??  $($_.Exception.Message)"
@@ -141,9 +141,9 @@ function Update-GitSubmodules {
             }
         }
         
-        Write-Host "? Submodu≥y zaktualizowane" -ForegroundColor Green
+        Write-Host "? Submodu≈Çy zaktualizowane" -ForegroundColor Green
     } catch {
-        Write-Error "? B≥πd podczas aktualizacji: $($_.Exception.Message)"
+        Write-Error "? B≈ÇƒÖd podczas aktualizacji: $($_.Exception.Message)"
     }
 }
 
@@ -152,11 +152,11 @@ function Get-SubmoduleStructure {
         [string]$SubmodulePath,
         [string]$SubmoduleName,
         [string]$Category,
-        [string]$BasePath  # Dodany parametr - úcieøka do katalogu g≥Ûwnego
+        [string]$BasePath  # Dodany parametr - ≈õcie≈ºka do katalogu g≈Ç√≥wnego
     )
     
     if (-not (Test-Path $SubmodulePath)) {
-        Write-Warning "??  Brak katalogu: $SubmodulePath"
+        Write-Warning "‚ö†Ô∏è  Brak katalogu: $SubmodulePath"
         return @{
             RootFolder = $null
             Folders = @()
@@ -170,7 +170,7 @@ function Get-SubmoduleStructure {
     $projects = @()
     $files = @()
     
-    # G≥Ûwny folder submodu≥u
+    # G≈Ç√≥wny folder submodu≈Çu
     $rootFolder = @{
         Name = $SubmoduleName
         Path = $SubmoduleName
@@ -181,10 +181,13 @@ function Get-SubmoduleStructure {
         Category = $Category
     }
     
-    # Wzorce plikÛw do uwzglÍdnienia w Solution Items
+    # Wzorce plik√≥w do uwzglƒôdnienia w Solution Items
     $filePatterns = @(
         "*.md", 
         "*.txt", 
+        "*.yml",
+        "*.yaml",
+        "*.ps1",
         ".gitignore", 
         ".gitattributes", 
         "Directory.*.props", 
@@ -195,13 +198,12 @@ function Get-SubmoduleStructure {
         "LICENSE*"
     )
     
-    # Foldery do pominiÍcia (zgodnie z .gitignore)
+    # Foldery do pominiƒôcia (zgodnie z .gitignore)
     $excludeDirs = @(
         '.git', 
         '.vs', 
         '.vscode',
         '.idea',
-        '.github', 
         'bin', 
         'obj', 
         'node_modules',
@@ -210,7 +212,7 @@ function Get-SubmoduleStructure {
         '.nuget'
     )
     
-    # Funkcja pomocnicza do konwersji pe≥nej úcieøki na wzglÍdnπ od solution
+    # Funkcja pomocnicza do konwersji pe≈Çnej ≈õcie≈ºki na wzglƒôdnƒÖ od solution
     function Get-RelativePathFromSolution {
         param([string]$FullPath)
         
@@ -221,7 +223,7 @@ function Get-SubmoduleStructure {
         return $FullPath
     }
     
-    # Pliki w katalogu g≥Ûwnym submodu≥u
+    # Pliki w katalogu g≈Ç√≥wnym submodu≈Çu
     foreach ($pattern in $filePatterns) {
         Get-ChildItem -Path $SubmodulePath -Filter $pattern -File -ErrorAction SilentlyContinue | 
             ForEach-Object {
@@ -236,10 +238,10 @@ function Get-SubmoduleStructure {
             }
     }
     
-    # Pobierz wszystkie projekty z ca≥ego submodu≥u
+    # Pobierz wszystkie projekty z ca≈Çego submodu≈Çu
     $allProjectFiles = Get-ChildItem -Path $SubmodulePath -Recurse -Include "*.csproj" -ErrorAction SilentlyContinue
     
-    # Rekurencyjne skanowanie podfolderÛw pierwszego poziomu (Source, Example, Tools, etc.)
+    # Skanuj tylko foldery pierwszego poziomu (Source, Example, Tools, .github, etc.)
     Get-ChildItem -Path $SubmodulePath -Directory -ErrorAction SilentlyContinue | 
         Where-Object { $_.Name -notin $excludeDirs } | 
         ForEach-Object {
@@ -272,13 +274,43 @@ function Get-SubmoduleStructure {
                     }
             }
             
-            # Znajdü projekty ktÛre naleøπ do tego folderu
+            # Specjalne traktowanie dla .github - skanuj workflows
+            if ($dirName -eq ".github") {
+                $workflowsPath = Join-Path $dirFullPath "workflows"
+                if (Test-Path $workflowsPath) {
+                    $workflowsFolder = @{
+                        Name = "workflows"
+                        Path = "$dirRelPath\workflows"
+                        FullPath = $workflowsPath
+                        Guid = New-ProjectGuid
+                        Level = 2
+                        ParentGuid = $folder.Guid
+                    }
+                    $folders += $workflowsFolder
+                    
+                    # Pliki workflow
+                    foreach ($pattern in $filePatterns) {
+                        Get-ChildItem -Path $workflowsPath -Filter $pattern -File -ErrorAction SilentlyContinue | 
+                            ForEach-Object {
+                                $relativePath = Get-RelativePathFromSolution -FullPath $_.FullName
+                                
+                                $files += @{
+                                    Name = $_.Name
+                                    RelativePath = $relativePath
+                                    ParentPath = "$dirRelPath\workflows"
+                                    ParentGuid = $workflowsFolder.Guid
+                                }
+                            }
+                    }
+                }
+            }
+            
+            # Znajd≈∫ wszystkie projekty w tym folderze (rekurencyjnie)
             $folderProjects = $allProjectFiles | Where-Object {
                 $_.FullName.StartsWith($dirFullPath + "\")
             }
             
             foreach ($projFile in $folderProjects) {
-                # Normalizuj úcieøkÍ - uøyj funkcji pomocniczej
                 $projRelPath = Get-RelativePathFromSolution -FullPath $projFile.FullName
                 
                 $projects += @{
@@ -323,14 +355,14 @@ function New-SolutionFile {
         $lines += "EndProject"
     }
     
-    # 2. G≥Ûwne foldery submodu≥Ûw z Solution Items
+    # 2. G≈Ç√≥wne foldery submodu≈Ç√≥w z Solution Items
     foreach ($struct in $AllStructures) {
         $root = $struct.RootFolder
         if (-not $root) { continue }
         
         $lines += "Project(`"{2150E333-8FDC-42A3-9474-1A3956D46DE8}`") = `"$($root.Name)`", `"$($root.Name)`", `"$($root.Guid)`""
         
-        # Pliki w g≥Ûwnym folderze
+        # Pliki w g≈Ç√≥wnym folderze
         $rootFiles = $struct.Files | Where-Object { $_.ParentGuid -eq $root.Guid }
         if ($rootFiles) {
             $lines += "`tProjectSection(SolutionItems) = preProject"
@@ -377,7 +409,7 @@ function New-SolutionFile {
     $lines += "`t`tRelease|Any CPU = Release|Any CPU"
     $lines += "`tEndGlobalSection"
     
-    # 6. Konfiguracje projektÛw
+    # 6. Konfiguracje projekt√≥w
     $lines += "`tGlobalSection(ProjectConfigurationPlatforms) = postSolution"
     foreach ($struct in $AllStructures) {
         foreach ($project in $struct.Projects) {
@@ -392,7 +424,7 @@ function New-SolutionFile {
     # 7. Nested Projects (hierarchia)
     $lines += "`tGlobalSection(NestedProjects) = preSolution"
     
-    # G≥Ûwne foldery submodu≥Ûw sπ zagnieødøone w folderach kategorii
+    # G≈Ç√≥wne foldery submodu≈Ç√≥w sƒÖ zagnie≈ºd≈ºone w folderach kategorii
     foreach ($struct in $AllStructures) {
         $root = $struct.RootFolder
         if (-not $root) { continue }
@@ -402,12 +434,13 @@ function New-SolutionFile {
             $lines += "`t`t$($root.Guid) = $($categoryFolder.Guid)"
         }
         
-        # Podfoldery sπ zagnieødøone w g≥Ûwnym folderze submodu≥u
+        # Podfoldery sƒÖ zagnie≈ºd≈ºone w swoich folderach nadrzƒôdnych
         foreach ($folder in $struct.Folders) {
-            $lines += "`t`t$($folder.Guid) = $($root.Guid)"
+            # ParentGuid wskazuje na folder nadrzƒôdny (mo≈ºe byƒá rootFolder lub inny folder)
+            $lines += "`t`t$($folder.Guid) = $($folder.ParentGuid)"
         }
         
-        # Projekty sπ zagnieødøone w odpowiednich folderach
+        # Projekty sƒÖ zagnie≈ºd≈ºone w odpowiednich folderach
         foreach ($project in $struct.Projects) {
             $lines += "`t`t$($project.Guid) = $($project.ParentGuid)"
         }
@@ -432,7 +465,7 @@ function Show-DryRunPreview {
     
     Write-Host "`n" -NoNewline
     Write-Host "???????????????????????????????????????????????????????" -ForegroundColor Yellow
-    Write-Host "  DRY RUN - Podglπd struktury solution" -ForegroundColor Yellow
+    Write-Host "  DRY RUN - PodglƒÖd struktury solution" -ForegroundColor Yellow
     Write-Host "???????????????????????????????????????????????????????" -ForegroundColor Yellow
     Write-Host ""
     
@@ -440,7 +473,7 @@ function Show-DryRunPreview {
     $totalFolders = 0
     $totalFiles = 0
     
-    # Grupuj wed≥ug kategorii
+    # Grupuj wed≈Çug kategorii
     $groupedByCategory = $AllStructures | Group-Object -Property { $_.RootFolder.Category }
     
     foreach ($categoryGroup in ($groupedByCategory | Sort-Object Name)) {
@@ -456,32 +489,52 @@ function Show-DryRunPreview {
             Write-Host "  ?? $($root.Name)" -ForegroundColor Cyan
             $totalFolders++
             
-            # Pliki w g≥Ûwnym folderze
+            # Pliki w g≈Ç√≥wnym folderze
             $rootFiles = $struct.Files | Where-Object { $_.ParentGuid -eq $root.Guid }
             foreach ($file in $rootFiles) {
                 Write-Host "    ?? $($file.Name)" -ForegroundColor DarkGray
                 $totalFiles++
             }
             
-            # Podfoldery
-            foreach ($folder in $struct.Folders) {
-                Write-Host "    ?? $($folder.Name)" -ForegroundColor White
-                $totalFolders++
+            # Funkcja pomocnicza do rekurencyjnego wy≈õwietlania folder√≥w
+            function Show-FolderTree {
+                param(
+                    [string]$ParentGuid,
+                    [int]$Indent,
+                    [array]$AllFolders,
+                    [array]$AllFiles,
+                    [array]$AllProjects
+                )
                 
-                # Pliki w folderze
-                $folderFiles = $struct.Files | Where-Object { $_.ParentGuid -eq $folder.Guid }
-                foreach ($file in $folderFiles) {
-                    Write-Host "      ?? $($file.Name)" -ForegroundColor DarkGray
-                    $totalFiles++
-                }
+                $indentStr = "  " * $Indent
                 
-                # Projekty w folderze
-                $folderProjects = $struct.Projects | Where-Object { $_.ParentGuid -eq $folder.Guid }
-                foreach ($project in $folderProjects) {
-                    Write-Host "      ?? $($project.Name)" -ForegroundColor Green
-                    $totalProjects++
+                # Foldery bezpo≈õrednio pod tym rodzicem
+                $childFolders = $AllFolders | Where-Object { $_.ParentGuid -eq $ParentGuid }
+                foreach ($folder in $childFolders) {
+                    Write-Host "$indentStr?? $($folder.Name)" -ForegroundColor White
+                    $script:totalFolders++
+                    
+                    # Pliki w tym folderze
+                    $folderFiles = $AllFiles | Where-Object { $_.ParentGuid -eq $folder.Guid }
+                    foreach ($file in $folderFiles) {
+                        Write-Host "$indentStr  ?? $($file.Name)" -ForegroundColor DarkGray
+                        $script:totalFiles++
+                    }
+                    
+                    # Projekty w tym folderze
+                    $folderProjects = $AllProjects | Where-Object { $_.ParentGuid -eq $folder.Guid }
+                    foreach ($project in $folderProjects) {
+                        Write-Host "$indentStr  ?? $($project.Name)" -ForegroundColor Green
+                        $script:totalProjects++
+                    }
+                    
+                    # Rekurencyjne wy≈õwietlanie podfolder√≥w
+                    Show-FolderTree -ParentGuid $folder.Guid -Indent ($Indent + 1) -AllFolders $AllFolders -AllFiles $AllFiles -AllProjects $AllProjects
                 }
             }
+            
+            # Wy≈õwietl foldery pierwszego poziomu i ich zawarto≈õƒá
+            Show-FolderTree -ParentGuid $root.Guid -Indent 2 -AllFolders $struct.Folders -AllFiles $struct.Files -AllProjects $struct.Projects
             
             Write-Host ""
         }
@@ -500,34 +553,34 @@ function Show-DryRunPreview {
 # ===========================
 
 try {
-    Write-Host "`n?? Rozpoczynam aktualizacjÍ solution..." -ForegroundColor Green
+    Write-Host "`n?? Rozpoczynam aktualizacjƒô solution..." -ForegroundColor Green
     
-    # 1. Pobierz listÍ submodu≥Ûw
+    # 1. Pobierz listƒô submodu≈Ç√≥w
     $submodules = Get-GitSubmodules -GitModulesPath $GitModulesPath
     if ($submodules.Count -eq 0) {
-        Write-Error "? Nie znaleziono øadnych submodu≥Ûw"
+        Write-Error "? Nie znaleziono ≈ºadnych submodu≈Ç√≥w"
         exit 1
     }
     
-    # 2. Aktualizuj submodu≥y (jeúli trzeba)
+    # 2. Aktualizuj submodu≈Çy (je≈õli trzeba)
     if ($UpdateSubmodules) {
         Update-GitSubmodules -SubmodulePaths $submodules
     }
     
-    # 3. Skanuj strukturÍ kaødego submodu≥u
-    Write-Host "`n?? Skanowanie struktury submodu≥Ûw..." -ForegroundColor Cyan
+    # 3. Skanuj strukturƒô ka≈ºdego submodu≈Çu
+    Write-Host "`n?? Skanowanie struktury submodu≈Ç√≥w..." -ForegroundColor Cyan
     $allStructures = @()
     $categoryFolders = @{
     }
     
-    # Pobierz úcieøkÍ bazowπ (katalog g≥Ûwny solution)
+    # Pobierz ≈õcie≈ºkƒô bazowƒÖ (katalog g≈Ç√≥wny solution)
     $basePath = (Get-Location).Path
     
     foreach ($submodule in $submodules) {
         $name = Split-Path $submodule -Leaf
         $category = Get-CategoryFromPath -SubmodulePath $submodule
         
-        # UtwÛrz folder kategorii jeúli nie istnieje
+        # Utw√≥rz folder kategorii je≈õli nie istnieje
         if (-not $categoryFolders.ContainsKey($category)) {
             $categoryFolders[$category] = @{
                 Name = $category
@@ -537,22 +590,22 @@ try {
         
         Write-Host "  ?? $name ($category)" -ForegroundColor Gray
         
-        # Przekaø $basePath do funkcji
+        # Przeka≈º $basePath do funkcji
         $structure = Get-SubmoduleStructure -SubmodulePath $submodule -SubmoduleName $name -Category $category -BasePath $basePath
         
         if ($structure.RootFolder) {
             $allStructures += $structure
-            Write-Host "     ? $($structure.Projects.Count) projektÛw, $($structure.Folders.Count) folderÛw, $($structure.Files.Count) plikÛw" -ForegroundColor DarkGray
+            Write-Host "     ? $($structure.Projects.Count) projekt√≥w, $($structure.Folders.Count) folder√≥w, $($structure.Files.Count) plik√≥w" -ForegroundColor DarkGray
         }
     }
     
-    # 4. Wyúwietl podglπd lub utwÛrz plik solution
+    # 4. Wy≈õwietl podglƒÖd lub utw√≥rz plik solution
     if ($DryRun) {
         Show-DryRunPreview -AllStructures $allStructures -CategoryFolders $categoryFolders
         return
     }
     
-    # 5. UtwÛrz backup i nowy plik solution
+    # 5. Utw√≥rz backup i nowy plik solution
     if ($CleanRebuild -or -not (Test-Path $SolutionPath)) {
         if (Test-Path $SolutionPath) {
             $backupPath = "$SolutionPath.backup"
@@ -563,10 +616,10 @@ try {
         New-SolutionFile -SolutionPath $SolutionPath -AllStructures $allStructures -CategoryFolders $categoryFolders
     }
     
-    Write-Host "`n? ZakoÒczono!" -ForegroundColor Green
+    Write-Host "`n? Zako≈Ñczono!" -ForegroundColor Green
     
 } catch {
-    Write-host "`n? B≥πd: $($_.Exception.Message)" -ForegroundColor Red
+    Write-host "`n? B≈ÇƒÖd: $($_.Exception.Message)" -ForegroundColor Red
     Write-Host $_.ScriptStackTrace -ForegroundColor Red
     exit 1
 }
