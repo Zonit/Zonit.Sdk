@@ -1,0 +1,215 @@
+<Solution>
+  <Folder Name="/Extensions/" />
+  <Folder Name="/Extensions/Zonit.Extensions.Ai/">
+    <File Path="Source/Extensions/Zonit.Extensions.Ai/.gitattributes" />
+    <File Path="Source/Extensions/Zonit.Extensions.Ai/.gitignore" />
+    <File Path="Source/Extensions/Zonit.Extensions.Ai/Directory.Packages.props" />
+    <File Path="Source/Extensions/Zonit.Extensions.Ai/LICENSE.txt" />
+    <File Path="Source/Extensions/Zonit.Extensions.Ai/Readme.md" />
+    <File Path="Source/Extensions/Zonit.Extensions.Ai/Update.ps1" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Ai/.github/" />
+  <Folder Name="/Extensions/Zonit.Extensions.Ai/.github/workflows/">
+    <File Path="Source/Extensions/Zonit.Extensions.Ai/.github/workflows/PublishNuGet.yml" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Ai/Example/">
+    <Project Path="Source/Extensions/Zonit.Extensions.Ai/Example/Example/Example.csproj" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Ai/Source/">
+    <Project Path="Source/Extensions/Zonit.Extensions.Ai/Source/Zonit.Extensions.Ai.Abstractions/Zonit.Extensions.Ai.Abstractions.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Ai/Source/Zonit.Extensions.Ai.Application/Zonit.Extensions.Ai.Application.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Ai/Source/Zonit.Extensions.Ai.Domain/Zonit.Extensions.Ai.Domain.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Ai/Source/Zonit.Extensions.Ai.Infrastructure/Zonit.Extensions.Ai.Infrastructure.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Ai/Source/Zonit.Extensions.Ai.Llm/Zonit.Extensions.Ai.Llm.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Ai/Source/Zonit.Extensions.Ai.Prompts/Zonit.Extensions.Ai.Prompts.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Ai/Source/Zonit.Extensions.Ai/Zonit.Extensions.Ai.csproj" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Ai/Tools/">
+    <File Path="Source/Extensions/Zonit.Extensions.Ai/Tools/Update-DotNet.ps1" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Cultures/">
+    <File Path="Source/Extensions/Zonit.Extensions.Cultures/.gitattributes" />
+    <File Path="Source/Extensions/Zonit.Extensions.Cultures/.gitignore" />
+    <File Path="Source/Extensions/Zonit.Extensions.Cultures/Readme.md" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Cultures/Source/">
+    <File Path="Source/Extensions/Zonit.Extensions.Cultures/Source/Directory.Packages.props" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Cultures/Source/Zonit.Extensions.Cultures.Abstractions/Zonit.Extensions.Cultures.Abstractions.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Cultures/Source/Zonit.Extensions.Cultures.Tests/Zonit.Extensions.Cultures.Tests.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Cultures/Source/Zonit.Extensions.Cultures/Zonit.Extensions.Cultures.csproj" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Cultures/Tools/">
+    <File Path="Source/Extensions/Zonit.Extensions.Cultures/Tools/Update-DotNet.ps1" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Databases/">
+    <File Path="Source/Extensions/Zonit.Extensions.Databases/.gitattributes" />
+    <File Path="Source/Extensions/Zonit.Extensions.Databases/.gitignore" />
+    <File Path="Source/Extensions/Zonit.Extensions.Databases/Readme.md" />
+    <File Path="Source/Extensions/Zonit.Extensions.Databases/Update-AllPackages.ps1" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Databases/.github/" />
+  <Folder Name="/Extensions/Zonit.Extensions.Databases/.github/workflows/">
+    <File Path="Source/Extensions/Zonit.Extensions.Databases/.github/workflows/PublishNuGet.yml" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Databases/Example/">
+    <Project Path="Source/Extensions/Zonit.Extensions.Databases/Example/Zonit.Extensions.Databases.Examples/Zonit.Extensions.Databases.Examples.csproj" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Databases/Source/">
+    <File Path="Source/Extensions/Zonit.Extensions.Databases/Source/Directory.Packages.props" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Databases/Source/Zonit.Extensions.Databases.Abstractions/Zonit.Extensions.Databases.Abstractions.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Databases/Source/Zonit.Extensions.Databases.SqlServer/Zonit.Extensions.Databases.SqlServer.csproj" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Identity/">
+    <File Path="Source/Extensions/Zonit.Extensions.Identity/.gitattributes" />
+    <File Path="Source/Extensions/Zonit.Extensions.Identity/.gitignore" />
+    <File Path="Source/Extensions/Zonit.Extensions.Identity/Readme.md" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Identity/Source/">
+    <File Path="Source/Extensions/Zonit.Extensions.Identity/Source/Directory.Packages.props" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Identity/Source/Zonit.Extensions.Identity.Abstractions/Zonit.Extensions.Identity.Abstractions.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Identity/Source/Zonit.Extensions.Identity/Zonit.Extensions.Identity.csproj" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Identity/Tools/">
+    <File Path="Source/Extensions/Zonit.Extensions.Identity/Tools/Update-DotNet.ps1" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Organizations/">
+    <File Path="Source/Extensions/Zonit.Extensions.Organizations/.gitattributes" />
+    <File Path="Source/Extensions/Zonit.Extensions.Organizations/.gitignore" />
+    <File Path="Source/Extensions/Zonit.Extensions.Organizations/Readme.md" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Organizations/Source/">
+    <File Path="Source/Extensions/Zonit.Extensions.Organizations/Source/Directory.Packages.props" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Organizations/Source/Zonit.Extensions.Organizations.Abstractions/Zonit.Extensions.Organizations.Abstractions.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Organizations/Source/Zonit.Extensions.Organizations/Zonit.Extensions.Organizations.csproj" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Organizations/Tools/">
+    <File Path="Source/Extensions/Zonit.Extensions.Organizations/Tools/Update-DotNet.ps1" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Projects/">
+    <File Path="Source/Extensions/Zonit.Extensions.Projects/.gitattributes" />
+    <File Path="Source/Extensions/Zonit.Extensions.Projects/.gitignore" />
+    <File Path="Source/Extensions/Zonit.Extensions.Projects/Readme.md" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Projects/Source/">
+    <File Path="Source/Extensions/Zonit.Extensions.Projects/Source/Directory.Packages.props" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Projects/Source/Zonit.Extensions.Projects.Abstractions/Zonit.Extensions.Projects.Abstractions.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Projects/Source/Zonit.Extensions.Projects/Zonit.Extensions.Projects.csproj" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Projects/Tools/">
+    <File Path="Source/Extensions/Zonit.Extensions.Projects/Tools/Update-DotNet.ps1" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Tenants/">
+    <File Path="Source/Extensions/Zonit.Extensions.Tenants/.gitattributes" />
+    <File Path="Source/Extensions/Zonit.Extensions.Tenants/.gitignore" />
+    <File Path="Source/Extensions/Zonit.Extensions.Tenants/LICENSE.txt" />
+    <File Path="Source/Extensions/Zonit.Extensions.Tenants/Readme.md" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Tenants/.github/" />
+  <Folder Name="/Extensions/Zonit.Extensions.Tenants/.github/workflows/">
+    <File Path="Source/Extensions/Zonit.Extensions.Tenants/.github/workflows/PublishNuGet.yml" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Tenants/Example/">
+    <Project Path="Source/Extensions/Zonit.Extensions.Tenants/Example/Example/Example.csproj" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Tenants/Source/">
+    <File Path="Source/Extensions/Zonit.Extensions.Tenants/Source/Directory.Packages.props" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Tenants/Source/Zonit.Extensions.Tenants.Abstractions/Zonit.Extensions.Tenants.Abstractions.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Tenants/Source/Zonit.Extensions.Tenants.SourceGenerators/Zonit.Extensions.Tenants.SourceGenerators.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Tenants/Source/Zonit.Extensions.Tenants.Web/Zonit.Extensions.Tenants.Web.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Tenants/Source/Zonit.Extensions.Tenants/Zonit.Extensions.Tenants.csproj" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Tenants/Tools/">
+    <File Path="Source/Extensions/Zonit.Extensions.Tenants/Tools/Update-DotNet.ps1" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions/">
+    <File Path="Source/Extensions/Zonit.Extensions/.gitattributes" />
+    <File Path="Source/Extensions/Zonit.Extensions/.gitignore" />
+    <File Path="Source/Extensions/Zonit.Extensions/LICENSE.txt" />
+    <File Path="Source/Extensions/Zonit.Extensions/Readme.md" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions/.github/" />
+  <Folder Name="/Extensions/Zonit.Extensions/.github/workflows/">
+    <File Path="Source/Extensions/Zonit.Extensions/.github/workflows/PublishNuGet.yml" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions/Example/">
+    <Project Path="Source/Extensions/Zonit.Extensions/Example/Example/Example.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions/Example/ExampleWebsite/ExampleWebsite.csproj" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions/Source/">
+    <File Path="Source/Extensions/Zonit.Extensions/Source/Directory.Packages.props" />
+    <Project Path="Source/Extensions/Zonit.Extensions/Source/Zonit.Extensions.Abstractions/Zonit.Extensions.Abstractions.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions/Source/Zonit.Extensions.Website.Abstractions/Zonit.Extensions.Website.Abstractions.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions/Source/Zonit.Extensions.Website/Zonit.Extensions.Website.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions/Source/Zonit.Extensions/Zonit.Extensions.csproj" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions/Tools/">
+    <File Path="Source/Extensions/Zonit.Extensions/Tools/Update-DotNet.ps1" />
+  </Folder>
+  <Folder Name="/Plugins/" />
+  <Folder Name="/Plugins/Zonit.Plugins/">
+    <File Path="Source/Plugins/Zonit.Plugins/.gitattributes" />
+    <File Path="Source/Plugins/Zonit.Plugins/.gitignore" />
+    <File Path="Source/Plugins/Zonit.Plugins/LICENSE.txt" />
+    <File Path="Source/Plugins/Zonit.Plugins/Readme.md" />
+  </Folder>
+  <Folder Name="/Plugins/Zonit.Plugins/.github/" />
+  <Folder Name="/Plugins/Zonit.Plugins/.github/workflows/">
+    <File Path="Source/Plugins/Zonit.Plugins/.github/workflows/PublishNuGet.yml" />
+  </Folder>
+  <Folder Name="/Plugins/Zonit.Plugins/Source/">
+    <File Path="Source/Plugins/Zonit.Plugins/Source/Directory.Packages.props" />
+    <Project Path="Source/Plugins/Zonit.Plugins/Source/Zonit.Plugins.Articles.Abstractions/Zonit.Plugins.Articles.Abstractions.csproj" />
+    <Project Path="Source/Plugins/Zonit.Plugins/Source/Zonit.Plugins.Wallets.Abstractions/Zonit.Plugins.Wallets.Abstractions.csproj" />
+  </Folder>
+  <Folder Name="/Plugins/Zonit.Plugins/Tools/">
+    <File Path="Source/Plugins/Zonit.Plugins/Tools/Update-DotNet.ps1" />
+  </Folder>
+  <Folder Name="/Services/" />
+  <Folder Name="/Services/Zonit.Services.Dashboard/">
+    <File Path="Source/Services/Zonit.Services.Dashboard/.gitattributes" />
+    <File Path="Source/Services/Zonit.Services.Dashboard/.gitignore" />
+    <File Path="Source/Services/Zonit.Services.Dashboard/Readme.md" />
+  </Folder>
+  <Folder Name="/Services/Zonit.Services.Dashboard/.github/" />
+  <Folder Name="/Services/Zonit.Services.Dashboard/.github/workflows/">
+    <File Path="Source/Services/Zonit.Services.Dashboard/.github/workflows/PublishNuGet.yml" />
+  </Folder>
+  <Folder Name="/Services/Zonit.Services.Dashboard/Example/">
+    <File Path="Source/Services/Zonit.Services.Dashboard/Example/Directory.Packages.props" />
+    <Project Path="Source/Services/Zonit.Services.Dashboard/Example/Example.Presentation.Management/Example.Presentation.Management.csproj" />
+    <Project Path="Source/Services/Zonit.Services.Dashboard/Example/Example.Presentation.Manager/Example.Presentation.Manager.csproj" />
+    <Project Path="Source/Services/Zonit.Services.Dashboard/Example/Example/Example.csproj" />
+  </Folder>
+  <Folder Name="/Services/Zonit.Services.Dashboard/Source/">
+    <File Path="Source/Services/Zonit.Services.Dashboard/Source/Directory.Packages.props" />
+    <Project Path="Source/Services/Zonit.Services.Dashboard/Source/Zonit.Services.Dashboard.Abstractions/Zonit.Services.Dashboard.Abstractions.csproj" />
+    <Project Path="Source/Services/Zonit.Services.Dashboard/Source/Zonit.Services.Dashboard.Application/Zonit.Services.Dashboard.Application.csproj" />
+    <Project Path="Source/Services/Zonit.Services.Dashboard/Source/Zonit.Services.Dashboard.Components/Zonit.Services.Dashboard.Components.csproj" />
+    <Project Path="Source/Services/Zonit.Services.Dashboard/Source/Zonit.Services.Dashboard/Zonit.Services.Dashboard.csproj" />
+  </Folder>
+  <Folder Name="/Services/Zonit.Services.Dashboard/Tools/">
+    <File Path="Source/Services/Zonit.Services.Dashboard/Tools/Update-DotNet.ps1" />
+  </Folder>
+  <Folder Name="/Services/Zonit.Services.EventMessage/">
+    <File Path="Source/Services/Zonit.Services.EventMessage/.gitattributes" />
+    <File Path="Source/Services/Zonit.Services.EventMessage/.gitignore" />
+    <File Path="Source/Services/Zonit.Services.EventMessage/Readme.md" />
+  </Folder>
+  <Folder Name="/Services/Zonit.Services.EventMessage/.github/" />
+  <Folder Name="/Services/Zonit.Services.EventMessage/.github/workflows/">
+    <File Path="Source/Services/Zonit.Services.EventMessage/.github/workflows/AutoUpdateNugets.yml.yml" />
+    <File Path="Source/Services/Zonit.Services.EventMessage/.github/workflows/CheckNugetAndPublish.yml" />
+    <File Path="Source/Services/Zonit.Services.EventMessage/.github/workflows/PublishNuGet.yml" />
+  </Folder>
+  <Folder Name="/Services/Zonit.Services.EventMessage/Example/">
+    <Project Path="Source/Services/Zonit.Services.EventMessage/Example/Example/Example.csproj" />
+  </Folder>
+  <Folder Name="/Services/Zonit.Services.EventMessage/Source/">
+    <File Path="Source/Services/Zonit.Services.EventMessage/Source/Directory.Packages.props" />
+    <Project Path="Source/Services/Zonit.Services.EventMessage/Source/Zonit.Services.EventMessage.Abstractions/Zonit.Services.EventMessage.Abstractions.csproj" />
+    <Project Path="Source/Services/Zonit.Services.EventMessage/Source/Zonit.Services.EventMessage/Zonit.Services.EventMessage.csproj" />
+  </Folder>
+  <Folder Name="/Services/Zonit.Services.EventMessage/Tools/">
+    <File Path="Source/Services/Zonit.Services.EventMessage/Tools/Update-DotNet.ps1" />
+  </Folder>
+</Solution>
