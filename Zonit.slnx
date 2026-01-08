@@ -206,6 +206,9 @@
   </Folder>
   <Folder Name="/Services/Zonit.Services.EventMessage/Source/">
     <File Path="Source/Services/Zonit.Services.EventMessage/Source/Directory.Packages.props" />
+    <Project Path="Source/Services/Zonit.Services.EventMessage/Source/Zonit.Messaging.Commands.Abstractions/Zonit.Messaging.Commands.Abstractions.csproj" />
+    <Project Path="Source/Services/Zonit.Services.EventMessage/Source/Zonit.Messaging.Commands/Zonit.Messaging.Commands.csproj" />
+    <Project Path="Source/Services/Zonit.Services.EventMessage/Source/Zonit.Messaging.Commands.SourceGenerators/Zonit.Messaging.Commands.SourceGenerators.csproj" />
     <Project Path="Source/Services/Zonit.Services.EventMessage/Source/Zonit.Services.EventMessage.Abstractions/Zonit.Services.EventMessage.Abstractions.csproj" />
     <Project Path="Source/Services/Zonit.Services.EventMessage/Source/Zonit.Services.EventMessage/Zonit.Services.EventMessage.csproj" />
   </Folder>
