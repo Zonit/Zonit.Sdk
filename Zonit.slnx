@@ -205,16 +205,17 @@
     <Project Path="Source/Services/Zonit.Services.EventMessage/Example/Example/Example.csproj" />
   </Folder>
   <Folder Name="/Services/Zonit.Services.EventMessage/Source/">
+    <File Path="Source/Services/Zonit.Services.EventMessage/Source/Directory.Build.props" />
     <File Path="Source/Services/Zonit.Services.EventMessage/Source/Directory.Packages.props" />
     <Project Path="Source/Services/Zonit.Services.EventMessage/Source/Zonit.Messaging.Commands.Abstractions/Zonit.Messaging.Commands.Abstractions.csproj" />
-    <Project Path="Source/Services/Zonit.Services.EventMessage/Source/Zonit.Messaging.Commands/Zonit.Messaging.Commands.csproj" />
     <Project Path="Source/Services/Zonit.Services.EventMessage/Source/Zonit.Messaging.Commands.SourceGenerators/Zonit.Messaging.Commands.SourceGenerators.csproj" />
+    <Project Path="Source/Services/Zonit.Services.EventMessage/Source/Zonit.Messaging.Commands/Zonit.Messaging.Commands.csproj" />
     <Project Path="Source/Services/Zonit.Services.EventMessage/Source/Zonit.Messaging.Events.Abstractions/Zonit.Messaging.Events.Abstractions.csproj" />
-    <Project Path="Source/Services/Zonit.Services.EventMessage/Source/Zonit.Messaging.Events/Zonit.Messaging.Events.csproj" />
     <Project Path="Source/Services/Zonit.Services.EventMessage/Source/Zonit.Messaging.Events.SourceGenerators/Zonit.Messaging.Events.SourceGenerators.csproj" />
+    <Project Path="Source/Services/Zonit.Services.EventMessage/Source/Zonit.Messaging.Events/Zonit.Messaging.Events.csproj" />
     <Project Path="Source/Services/Zonit.Services.EventMessage/Source/Zonit.Messaging.Tasks.Abstractions/Zonit.Messaging.Tasks.Abstractions.csproj" />
-    <Project Path="Source/Services/Zonit.Services.EventMessage/Source/Zonit.Messaging.Tasks/Zonit.Messaging.Tasks.csproj" />
     <Project Path="Source/Services/Zonit.Services.EventMessage/Source/Zonit.Messaging.Tasks.SourceGenerators/Zonit.Messaging.Tasks.SourceGenerators.csproj" />
+    <Project Path="Source/Services/Zonit.Services.EventMessage/Source/Zonit.Messaging.Tasks/Zonit.Messaging.Tasks.csproj" />
     <Project Path="Source/Services/Zonit.Services.EventMessage/Source/Zonit.Services.EventMessage.Abstractions/Zonit.Services.EventMessage.Abstractions.csproj" />
     <Project Path="Source/Services/Zonit.Services.EventMessage/Source/Zonit.Services.EventMessage/Zonit.Services.EventMessage.csproj" />
   </Folder>
