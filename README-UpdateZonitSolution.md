@@ -1,229 +1,229 @@
 # Update-ZonitSolution.ps1
 
-Skrypt PowerShell do automatycznego zarz¹dzania plikiem `Zonit.sln` z projektami pobranymi z submodu³ów Git.
+PowerShell script for automatic management of `Zonit.sln` file with projects from Git submodules.
 
-## ?? Funkcjonalnoœæ
+## ğŸ¯ Features
 
-Skrypt automatycznie:
-- Pobiera listê submodu³ów z pliku `.gitmodules`
-- Aktualizuje submodu³y do najnowszych wersji z g³ównej ga³êzi (main/master)
-- **Grupuje submodu³y wed³ug kategorii (Extensions, Services, Plugins)**
-- Skanuje strukturê katalogów w submodu³ach
-- Generuje plik solution Visual Studio z prawid³ow¹ hierarchi¹ folderów
-- Uwzglêdnia pliki konfiguracyjne (README, .gitignore, Directory.Packages.props, itp.)
-- Pomija katalogi zdefiniowane w .gitignore (bin, obj, .vs, itp.)
+The script automatically:
+- Retrieves submodule list from `.gitmodules` file
+- Updates submodules to latest versions from main branch (main/master)
+- **Groups submodules by category (Extensions, Services, Plugins)**
+- Scans directory structure in submodules
+- Generates Visual Studio solution file with proper folder hierarchy
+- Includes configuration files (README, .gitignore, Directory.Packages.props, etc.)
+- Ignores directories defined in .gitignore (bin, obj, .vs, etc.)
 
-## ?? Generowana struktura
+## ğŸ“‚ Generated Structure
 
 ```
-?? Extensions (kategoria)
-  ?? Zonit.Extensions.Identity (submodu³)
-    ?? README.md
-    ?? .gitignore
-    ?? Source
-      ?? Directory.Packages.props
-      ?? Zonit.Extensions.Identity (PROJEKT)
-      ?? Zonit.Extensions.Identity.Abstractions (PROJEKT)
-    ?? Example
-      ?? Example.Project (PROJEKT)
-?? Services (kategoria)
-  ?? Zonit.Services.Dashboard (submodu³)
-    ?? README.md
-    ?? Source
-      ?? Projekty...
-?? Plugins (kategoria)
-  ?? Zonit.Plugins (submodu³)
+ğŸ“ Extensions (category)
+  ğŸ“ Zonit.Extensions.Identity (submodule)
+    ğŸ“„ README.md
+    ğŸ“„ .gitignore
+    ğŸ“ Source
+      ğŸ“„ Directory.Packages.props
+      ğŸ“¦ Zonit.Extensions.Identity (PROJECT)
+      ğŸ“¦ Zonit.Extensions.Identity.Abstractions (PROJECT)
+    ğŸ“ Example
+      ğŸ“¦ Example.Project (PROJECT)
+ğŸ“ Services (category)
+  ğŸ“ Zonit.Services.Dashboard (submodule)
+    ğŸ“„ README.md
+    ğŸ“ Source
+      ğŸ“¦ Projects...
+ğŸ“ Plugins (category)
+  ğŸ“ Zonit.Plugins (submodule)
     ...
 ```
 
-## ?? U¿ycie
+## ğŸš€ Usage
 
-### Podstawowe u¿ycie
+### Basic Usage
 ```powershell
-# Tylko podgl¹d struktury (bez zmian)
+# Preview structure only (no changes)
 ./Update-ZonitSolution.ps1 -DryRun
 
-# Utworzenie/aktualizacja pliku solution
+# Create/update solution file
 ./Update-ZonitSolution.ps1 -CleanRebuild
 
-# Pe³na aktualizacja: submodu³y + przebudowa solution
+# Full update: submodules + rebuild solution
 ./Update-ZonitSolution.ps1 -UpdateSubmodules -CleanRebuild
 ```
 
-### Parametry
+### Parameters
 
-| Parametr | Opis | Domyœlnie |
-|----------|------|-----------|
-| `-SolutionPath` | Œcie¿ka do pliku solution | `Zonit.sln` |
-| `-GitModulesPath` | Œcie¿ka do pliku .gitmodules | `.gitmodules` |
-| `-DryRun` | Tylko podgl¹d bez zmian | `false` |
-| `-UpdateSubmodules` | Aktualizuj submodu³y z remote | `false` |
-| `-CleanRebuild` | Przebuduj solution od zera | `false` |
+| Parameter | Description | Default |
+|----------|-------------|---------|
+| `-SolutionPath` | Path to solution file | `Zonit.sln` |
+| `-GitModulesPath` | Path to .gitmodules file | `.gitmodules` |
+| `-DryRun` | Preview only without changes | `false` |
+| `-UpdateSubmodules` | Update submodules from remote | `false` |
+| `-CleanRebuild` | Rebuild solution from scratch | `false` |
 
-## ?? Przyk³ady
+## ğŸ“‹ Examples
 
-### 1. Pierwsza konfiguracja
+### 1. Initial Setup
 ```powershell
-# Pobierz najnowsze wersje submodu³ów i utwórz solution
+# Download latest submodule versions and create solution
 ./Update-ZonitSolution.ps1 -UpdateSubmodules -CleanRebuild
 ```
 
-### 2. Codzienne u¿ycie
+### 2. Daily Usage
 ```powershell
-# SprawdŸ czy s¹ zmiany w submodu³ach
+# Check for changes in submodules
 ./Update-ZonitSolution.ps1 -DryRun
 
-# Aktualizuj wszystko
+# Update everything
 ./Update-ZonitSolution.ps1 -UpdateSubmodules -CleanRebuild
 ```
 
-### 3. Po dodaniu nowego submodu³u
+### 3. After Adding New Submodule
 ```powershell
-# Dodaj submodu³ w Git (np. w kategorii Extensions)
+# Add submodule in Git (e.g., in Extensions category)
 git submodule add https://github.com/Zonit/New.Package Source/Extensions/New.Package
 
-# Przebuduj solution
+# Rebuild solution
 ./Update-ZonitSolution.ps1 -CleanRebuild
 ```
 
-## ??? Kategorie
+## ğŸ—‚ï¸ Categories
 
-Skrypt automatycznie rozpoznaje kategorie na podstawie œcie¿ki submodu³u:
+The script automatically recognizes categories based on submodule path:
 
-| Œcie¿ka | Kategoria |
-|---------|-----------|
+| Path | Category |
+|------|----------|
 | `Source/Extensions/*` | **Extensions** |
 | `Source/Services/*` | **Services** |
 | `Source/Plugins/*` | **Plugins** |
-| Inne | **Other** |
+| Other | **Other** |
 
-To pozwala na lepsz¹ organizacjê gdy bêdzie wiele pluginów, services czy extensions.
+This allows better organization when there are many plugins, services, or extensions.
 
-## ?? Szczegó³y techniczne
+## ğŸ”§ Technical Details
 
-### Wykrywane pliki Solution Items
-- `*.md` (README, CHANGELOG, itp.)
-- `*.txt` (LICENSE, itp.)
+### Detected Solution Items
+- `*.md` (README, CHANGELOG, etc.)
+- `*.txt` (LICENSE, etc.)
 - `.gitignore`, `.gitattributes`
 - `Directory.*.props`, `Directory.*.targets`
 - `.editorconfig`
 - `global.json`
 - `nuget.config`
 
-### Pomijane katalogi
+### Ignored Directories
 - `.git`, `.vs`, `.vscode`, `.idea`
 - `.github`, `.nuget`
 - `bin`, `obj`
 - `node_modules`, `packages`
 - `TestResults`
 
-### Aktualizacja submodu³ów
-- Automatycznie wykrywa g³ówn¹ ga³¹Ÿ (main/master)
-- U¿ywa `git fetch` + `git pull` do aktualizacji
-- Wyœwietla hash commita po aktualizacji
-- Pokazuje czy by³y zmiany
+### Submodule Update Process
+- Automatically detects main branch (main/master)
+- Uses `git fetch` + `git pull` for updates
+- Displays commit hash after update
+- Shows if there were changes
 
-## ?? Backup
+## ğŸ’¾ Backup
 
-Przed ka¿d¹ przebudow¹ solution (`-CleanRebuild`), skrypt tworzy kopiê zapasow¹:
+Before each solution rebuild (`-CleanRebuild`), the script creates a backup:
 ```
 Zonit.sln.backup
 ```
 
-## ?? Uwagi
+## ğŸ“ Notes
 
-1. Uruchom skrypt z katalogu g³ównego repozytorium (tam gdzie jest `.gitmodules`)
-2. Upewnij siê ¿e masz zainstalowany Git i PowerShell
-3. Przy pierwszym uruchomieniu u¿yj `-UpdateSubmodules` aby pobraæ zawartoœæ submodu³ów
+1. Run the script from the main repository directory (where `.gitmodules` is located)
+2. Make sure you have Git and PowerShell installed
+3. On first run, use `-UpdateSubmodules` to download submodule contents
 
-## ?? Rozwi¹zywanie problemów
+## ğŸ› Troubleshooting
 
-### "Brak pliku .gitmodules"
+### "Missing .gitmodules file"
 ```powershell
-# SprawdŸ czy jesteœ w katalogu g³ównym
+# Check if you're in the main directory
 Get-Location
-# Powinno byæ: C:\...\Zonit.Sdk
+# Should be: C:\...\Zonit.Sdk
 ```
 
-### "Nie mo¿na odnaleŸæ pliku projektu"
+### "Cannot find project file"
 ```powershell
-# Przebuduj solution
+# Rebuild solution
 ./Update-ZonitSolution.ps1 -CleanRebuild
 ```
 
-### "Submodu³y s¹ puste"
+### "Submodules are empty"
 ```powershell
-# Zainicjalizuj i pobierz submodu³y
+# Initialize and download submodules
 git submodule update --init --recursive
 ./Update-ZonitSolution.ps1 -UpdateSubmodules -CleanRebuild
 ```
 
-## ?? Wiêcej informacji
+## ğŸ“š More Information
 
-Skrypt zosta³ stworzony do zarz¹dzania mono-repo Zonit SDK sk³adaj¹cym siê z wielu paczek NuGet jako submodu³y Git.
+This script was created to manage the Zonit SDK mono-repo consisting of multiple NuGet packages as Git submodules.
 
-### Struktura repozytorium
+### Repository Structure
 ```
 Zonit.Sdk/
-??? .gitmodules
-??? Zonit.sln
-??? Update-ZonitSolution.ps1
-??? Source/
-    ??? Extensions/          ? Kategoria Extensions
-    ?   ??? Zonit.Extensions/
-    ?   ??? Zonit.Extensions.Ai/
-    ?   ??? Zonit.Extensions.Identity/
-    ?   ??? ...
-    ??? Services/            ? Kategoria Services
-    ?   ??? Zonit.Services.Dashboard/
-    ?   ??? ...
-    ??? Plugins/             ? Kategoria Plugins
-        ??? Zonit.Plugins/
+â”œâ”€â”€ .gitmodules
+â”œâ”€â”€ Zonit.sln
+â”œâ”€â”€ Update-ZonitSolution.ps1
+â””â”€â”€ Source/
+    â”œâ”€â”€ Extensions/          â†’ Extensions Category
+    â”‚   â”œâ”€â”€ Zonit.Extensions/
+    â”‚   â”œâ”€â”€ Zonit.Extensions.Ai/
+    â”‚   â”œâ”€â”€ Zonit.Extensions.Identity/
+    â”‚   â””â”€â”€ ...
+    â”œâ”€â”€ Services/            â†’ Services Category
+    â”‚   â”œâ”€â”€ Zonit.Services.Dashboard/
+    â”‚   â””â”€â”€ ...
+    â””â”€â”€ Plugins/             â†’ Plugins Category
+        â””â”€â”€ Zonit.Plugins/
 ```
 
-Ka¿dy submodu³ to osobne repozytorium Git z w³asn¹ struktur¹:
+Each submodule is a separate Git repository with its own structure:
 ```
 Zonit.Extensions.Identity/
-??? README.md
-??? .gitignore
-??? Source/
-?   ??? Directory.Packages.props
-?   ??? Zonit.Extensions.Identity/
-?   ?   ??? Zonit.Extensions.Identity.csproj
-?   ??? Zonit.Extensions.Identity.Abstractions/
-?       ??? Zonit.Extensions.Identity.Abstractions.csproj
-??? Example/
-    ??? Example/
-        ??? Example.csproj
+â”œâ”€â”€ README.md
+â”œâ”€â”€ .gitignore
+â”œâ”€â”€ Source/
+â”‚   â”œâ”€â”€ Directory.Packages.props
+â”‚   â”œâ”€â”€ Zonit.Extensions.Identity/
+â”‚   â”‚   â””â”€â”€ Zonit.Extensions.Identity.csproj
+â”‚   â””â”€â”€ Zonit.Extensions.Identity.Abstractions/
+â”‚       â””â”€â”€ Zonit.Extensions.Identity.Abstractions.csproj
+â””â”€â”€ Example/
+    â””â”€â”€ Example/
+        â””â”€â”€ Example.csproj
 ```
 
-### Wynikowa struktura w Visual Studio
+### Resulting Visual Studio Structure
 
 ```
 Solution 'Zonit.sln'
-??? ?? Extensions
-?   ??? ?? Zonit.Extensions
-?   ??? ?? Zonit.Extensions.Ai
-?   ??? ?? Zonit.Extensions.Cultures
-?   ??? ?? Zonit.Extensions.Databases
-?   ??? ?? Zonit.Extensions.Identity
-?   ??? ?? Zonit.Extensions.Organizations
-?   ??? ?? Zonit.Extensions.Projects
-?   ??? ?? Zonit.Extensions.Tenants
-??? ?? Services
-?   ??? ?? Zonit.Services.Dashboard
-?   ??? ?? Zonit.Services.EventMessage
-??? ?? Plugins
-    ??? ?? Zonit.Plugins
+â”œâ”€â”€ ğŸ“ Extensions
+â”‚   â”œâ”€â”€ ğŸ“ Zonit.Extensions
+â”‚   â”œâ”€â”€ ğŸ“ Zonit.Extensions.Ai
+â”‚   â”œâ”€â”€ ğŸ“ Zonit.Extensions.Cultures
+â”‚   â”œâ”€â”€ ğŸ“ Zonit.Extensions.Databases
+â”‚   â”œâ”€â”€ ğŸ“ Zonit.Extensions.Identity
+â”‚   â”œâ”€â”€ ğŸ“ Zonit.Extensions.Organizations
+â”‚   â”œâ”€â”€ ğŸ“ Zonit.Extensions.Projects
+â”‚   â””â”€â”€ ğŸ“ Zonit.Extensions.Tenants
+â”œâ”€â”€ ğŸ“ Services
+â”‚   â”œâ”€â”€ ğŸ“ Zonit.Services.Dashboard
+â”‚   â””â”€â”€ ğŸ“ Zonit.Services.EventMessage
+â””â”€â”€ ğŸ“ Plugins
+    â””â”€â”€ ğŸ“ Zonit.Plugins
 ```
 
-## ?? Kolory w konsoli
+## ğŸ¨ Console Colors
 
-Skrypt u¿ywa kolorowego output w PowerShell:
-- ?? **Zielony** - sukces, projekty
-- ?? **Cyan** - nag³ówki, g³ówne foldery
-- ?? **Magenta** - kategorie (Extensions, Services, Plugins)
-- ? **Bia³y** - podfoldery
-- ? **Szary** - pliki, szczegó³y
-- ?? **¯ó³ty** - ostrze¿enia, DRY RUN
-- ?? **Czerwony** - b³êdy
+The script uses colored output in PowerShell:
+- ğŸŸ¢ **Green** - success, projects
+- ğŸ”µ **Cyan** - headers, main folders
+- ğŸŸ£ **Magenta** - categories (Extensions, Services, Plugins)
+- âšª **White** - subfolders
+- âš« **Gray** - files, details
+- ğŸŸ¡ **Yellow** - warnings, DRY RUN
+- ğŸ”´ **Red** - errors
