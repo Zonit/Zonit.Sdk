@@ -139,6 +139,7 @@
     <File Path="Source/Extensions/Zonit.Extensions/Source/Directory.Packages.props" />
     <Project Path="Source/Extensions/Zonit.Extensions/Source/Zonit.Extensions.Abstractions/Zonit.Extensions.Abstractions.csproj" />
     <Project Path="Source/Extensions/Zonit.Extensions/Source/Zonit.Extensions.Website.Abstractions/Zonit.Extensions.Website.Abstractions.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions/Source/Zonit.Extensions.Website.MudBlazor/Zonit.Extensions.Website.MudBlazor.csproj" />
     <Project Path="Source/Extensions/Zonit.Extensions/Source/Zonit.Extensions.Website/Zonit.Extensions.Website.csproj" />
     <Project Path="Source/Extensions/Zonit.Extensions/Source/Zonit.Extensions/Zonit.Extensions.csproj" />
   </Folder>
