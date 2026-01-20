@@ -3,7 +3,6 @@
   <Folder Name="/Extensions/Zonit.Extensions.Ai/">
     <File Path="Source/Extensions/Zonit.Extensions.Ai/.gitattributes" />
     <File Path="Source/Extensions/Zonit.Extensions.Ai/.gitignore" />
-    <File Path="Source/Extensions/Zonit.Extensions.Ai/Directory.Packages.props" />
     <File Path="Source/Extensions/Zonit.Extensions.Ai/LICENSE.txt" />
     <File Path="Source/Extensions/Zonit.Extensions.Ai/Readme.md" />
     <File Path="Source/Extensions/Zonit.Extensions.Ai/Update.ps1" />
@@ -16,12 +15,15 @@
     <Project Path="Source/Extensions/Zonit.Extensions.Ai/Example/Example/Example.csproj" />
   </Folder>
   <Folder Name="/Extensions/Zonit.Extensions.Ai/Source/">
+    <File Path="Source/Extensions/Zonit.Extensions.Ai/Source/Directory.Build.props" />
+    <File Path="Source/Extensions/Zonit.Extensions.Ai/Source/Directory.Packages.props" />
     <Project Path="Source/Extensions/Zonit.Extensions.Ai/Source/Zonit.Extensions.Ai.Abstractions/Zonit.Extensions.Ai.Abstractions.csproj" />
-    <Project Path="Source/Extensions/Zonit.Extensions.Ai/Source/Zonit.Extensions.Ai.Application/Zonit.Extensions.Ai.Application.csproj" />
-    <Project Path="Source/Extensions/Zonit.Extensions.Ai/Source/Zonit.Extensions.Ai.Domain/Zonit.Extensions.Ai.Domain.csproj" />
-    <Project Path="Source/Extensions/Zonit.Extensions.Ai/Source/Zonit.Extensions.Ai.Infrastructure/Zonit.Extensions.Ai.Infrastructure.csproj" />
-    <Project Path="Source/Extensions/Zonit.Extensions.Ai/Source/Zonit.Extensions.Ai.Llm/Zonit.Extensions.Ai.Llm.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Ai/Source/Zonit.Extensions.Ai.Anthropic/Zonit.Extensions.Ai.Anthropic.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Ai/Source/Zonit.Extensions.Ai.Google/Zonit.Extensions.Ai.Google.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Ai/Source/Zonit.Extensions.Ai.Models/Zonit.Extensions.Ai.Models.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Ai/Source/Zonit.Extensions.Ai.OpenAi/Zonit.Extensions.Ai.OpenAi.csproj" />
     <Project Path="Source/Extensions/Zonit.Extensions.Ai/Source/Zonit.Extensions.Ai.Prompts/Zonit.Extensions.Ai.Prompts.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Ai/Source/Zonit.Extensions.Ai.X/Zonit.Extensions.Ai.X.csproj" />
     <Project Path="Source/Extensions/Zonit.Extensions.Ai/Source/Zonit.Extensions.Ai/Zonit.Extensions.Ai.csproj" />
   </Folder>
   <Folder Name="/Extensions/Zonit.Extensions.Ai/Tools/">
