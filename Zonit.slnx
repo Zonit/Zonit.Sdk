@@ -25,6 +25,9 @@
     <Project Path="Source/Extensions/Zonit.Extensions.Ai/Source/Zonit.Extensions.Ai.X/Zonit.Extensions.Ai.X.csproj" />
     <Project Path="Source/Extensions/Zonit.Extensions.Ai/Source/Zonit.Extensions.Ai/Zonit.Extensions.Ai.csproj" />
   </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Ai/Test/">
+    <Project Path="Source/Extensions/Zonit.Extensions.Ai/Test/Zonit.Extensions.Ai.Tests/Zonit.Extensions.Ai.Tests.csproj" />
+  </Folder>
   <Folder Name="/Extensions/Zonit.Extensions.Ai/Tools/">
     <File Path="Source/Extensions/Zonit.Extensions.Ai/Tools/Update-DotNet.ps1" />
   </Folder>
