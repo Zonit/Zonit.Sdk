@@ -170,6 +170,31 @@
     <File Path="Source/Plugins/Zonit.Plugins/Tools/Update-DotNet.ps1" />
   </Folder>
   <Folder Name="/Services/" />
+  <Folder Name="/Services/Zonit.Services.Browser/">
+    <File Path="Source/Services/Zonit.Services.Browser/.gitattributes" />
+    <File Path="Source/Services/Zonit.Services.Browser/.gitignore" />
+    <File Path="Source/Services/Zonit.Services.Browser/LICENSE.txt" />
+    <File Path="Source/Services/Zonit.Services.Browser/README.md" />
+    <File Path="Source/Services/Zonit.Services.Browser/Update.ps1" />
+  </Folder>
+  <Folder Name="/Services/Zonit.Services.Browser/.github/" />
+  <Folder Name="/Services/Zonit.Services.Browser/.github/workflows/">
+    <File Path="Source/Services/Zonit.Services.Browser/.github/workflows/build.yml" />
+  </Folder>
+  <Folder Name="/Services/Zonit.Services.Browser/Example/">
+    <Project Path="Source/Services/Zonit.Services.Browser/Example/Example/Example.csproj" />
+  </Folder>
+  <Folder Name="/Services/Zonit.Services.Browser/Source/">
+    <File Path="Source/Services/Zonit.Services.Browser/Source/Directory.Build.props" />
+    <File Path="Source/Services/Zonit.Services.Browser/Source/Directory.Packages.props" />
+    <Project Path="Source/Services/Zonit.Services.Browser/Source/Zonit.Services.Browser.Abstractions/Zonit.Services.Browser.Abstractions.csproj" />
+    <Project Path="Source/Services/Zonit.Services.Browser/Source/Zonit.Services.Browser.Application/Zonit.Services.Browser.Application.csproj" />
+    <Project Path="Source/Services/Zonit.Services.Browser/Source/Zonit.Services.Browser.Domain/Zonit.Services.Browser.Domain.csproj" />
+    <Project Path="Source/Services/Zonit.Services.Browser/Source/Zonit.Services.Browser.Infrastructure/Zonit.Services.Browser.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/Services/Zonit.Services.Browser/Tools/">
+    <File Path="Source/Services/Zonit.Services.Browser/Tools/Update-DotNet.ps1" />
+  </Folder>
   <Folder Name="/Services/Zonit.Services.Dashboard/">
     <File Path="Source/Services/Zonit.Services.Dashboard/.gitattributes" />
     <File Path="Source/Services/Zonit.Services.Dashboard/.gitignore" />

@@ -40,3 +40,6 @@
 [submodule "Source/Plugins/Zonit.Plugins"]
 	path = Source/Plugins/Zonit.Plugins
 	url = https://github.com/Zonit/Zonit.Plugins
+[submodule "Source/Services/Zonit.Services.Browser"]
+	path = Source/Services/Zonit.Services.Browser
+	url = https://github.com/Zonit/Zonit.Services.Browser
