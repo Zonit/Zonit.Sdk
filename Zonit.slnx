@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/A/">
+    <Project Path="Source/A/Bot/Bot.csproj" Id="d1f7cd75-75ed-46b9-b451-0fb298e4ebe3" />
+  </Folder>
   <Folder Name="/Extensions/" />
   <Folder Name="/Extensions/Zonit.Extensions.Ai/">
     <File Path="Source/Extensions/Zonit.Extensions.Ai/.gitattributes" />
@@ -61,7 +64,12 @@
   <Folder Name="/Extensions/Zonit.Extensions.Databases/Source/">
     <File Path="Source/Extensions/Zonit.Extensions.Databases/Source/Directory.Packages.props" />
     <Project Path="Source/Extensions/Zonit.Extensions.Databases/Source/Zonit.Extensions.Databases.Abstractions/Zonit.Extensions.Databases.Abstractions.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Databases/Source/Zonit.Extensions.Databases.SourceGenerators/Zonit.Extensions.Databases.SourceGenerators.csproj" />
     <Project Path="Source/Extensions/Zonit.Extensions.Databases/Source/Zonit.Extensions.Databases.SqlServer/Zonit.Extensions.Databases.SqlServer.csproj" />
+    <Project Path="Source/Extensions/Zonit.Extensions.Databases/Source/Zonit.Extensions.Databases/Zonit.Extensions.Databases.csproj" />
+  </Folder>
+  <Folder Name="/Extensions/Zonit.Extensions.Databases/Test/">
+    <Project Path="Source/Extensions/Zonit.Extensions.Databases/Tests/Zonit.Extensions.Databases.Tests/Zonit.Extensions.Databases.Tests.csproj" />
   </Folder>
   <Folder Name="/Extensions/Zonit.Extensions.Identity/">
     <File Path="Source/Extensions/Zonit.Extensions.Identity/.gitattributes" />
@@ -183,14 +191,16 @@
   </Folder>
   <Folder Name="/Services/Zonit.Services.Browser/Example/">
     <Project Path="Source/Services/Zonit.Services.Browser/Example/Example/Example.csproj" />
+    <Project Path="Source/Services/Zonit.Services.Browser/Example/ExampleTest/ExampleTest.csproj" />
   </Folder>
   <Folder Name="/Services/Zonit.Services.Browser/Source/">
     <File Path="Source/Services/Zonit.Services.Browser/Source/Directory.Build.props" />
     <File Path="Source/Services/Zonit.Services.Browser/Source/Directory.Packages.props" />
-    <Project Path="Source/Services/Zonit.Services.Browser/Source/Zonit.Services.Browser.Abstractions/Zonit.Services.Browser.Abstractions.csproj" />
-    <Project Path="Source/Services/Zonit.Services.Browser/Source/Zonit.Services.Browser.Application/Zonit.Services.Browser.Application.csproj" />
-    <Project Path="Source/Services/Zonit.Services.Browser/Source/Zonit.Services.Browser.Domain/Zonit.Services.Browser.Domain.csproj" />
-    <Project Path="Source/Services/Zonit.Services.Browser/Source/Zonit.Services.Browser.Infrastructure/Zonit.Services.Browser.Infrastructure.csproj" />
+    <Project Path="Source/Services/Zonit.Services.Browser/Source/Zonit.Browser.AntiCaptcha/Zonit.Browser.AntiCaptcha.csproj" />
+    <Project Path="Source/Services/Zonit.Services.Browser/Source/Zonit.Services.Browser.Abstractions/Zonit.Browser.Abstractions.csproj" />
+    <Project Path="Source/Services/Zonit.Services.Browser/Source/Zonit.Services.Browser.SourceGenerators/Zonit.Browser.SourceGenerators.csproj" />
+    <Project Path="Source/Services/Zonit.Services.Browser/Source/Zonit.Services.Browser.Stealth/Zonit.Browser.Stealth.csproj" />
+    <Project Path="Source/Services/Zonit.Services.Browser/Source/Zonit.Services.Browser/Zonit.Browser.csproj" />
   </Folder>
   <Folder Name="/Services/Zonit.Services.Browser/Tools/">
     <File Path="Source/Services/Zonit.Services.Browser/Tools/Update-DotNet.ps1" />
